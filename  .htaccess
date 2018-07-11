@@ -1,0 +1,27 @@
+# # av:php5-engine
+AddHandler av-php56 .php
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+## Force +https://*
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteRule ^(.*)$ https://www.typerror.altervista.org$1 [R=301,L]
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+# Fonts
+# Add correct content-type for fonts
+AddType application/vnd.ms-fontobject .eot 
+AddType application/x-font-ttf .ttf
+AddType application/x-font-opentype .otf
+AddType application/x-font-woff .woff
+AddType application/x-font-woff2 .woff2
+AddType image/svg+xml .svg
+
+# Compress compressible fonts
+# only uncomment if you dont have compression turned on already. Otherwise it will cause all other filestypes not to get compressed
+# AddOutputFilterByType DEFLATE application/x-font-ttf application/x-font-opentype image/svg+xml
