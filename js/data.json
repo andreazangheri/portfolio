@@ -1,0 +1,107 @@
+{
+	"progetti":[
+		{
+        "name": "Borders Web App",
+        "year": "2018",
+        "id": "0",
+        "class": "borders-web-app",
+        "firstTopic": "Grafica",
+        "secondTopic": "Web",
+		"img": ["../data/img/borderswebapp/img_0.jpg"],
+		"descrizione": ["Frontiers can be both protective and comfortable as well as exclusive and dividers. There can be many types of frontiers — cultural, ideological, physical — but they all have something in common. The research of these common things is what really pushed me and what brought me to design Borders."]
+        },
+        {
+        "name": "Aa",
+        "year": "2018",
+        "id": "1",
+        "class": "aa",
+        "firstTopic": "Grafica",
+        "secondTopic": "Web",
+		"img": ["../data/img/aa/img_0.png"],
+		"descrizione": ["Mi chiamo Andrea Zangheri e sono nato a Pesaro il 19/02/1992. Sin da piccolo ho sempre amato contemplare e conoscere la natura  attraverso l’osservazione, l’ascolto e il disegno. Tuttora sento la progettazione come processo conoscitivo. Semplifico il lavoro ricercando le componenti minime per formare sistemi grafici complessi. Credo che la qualità delle relazioni e della ricerca siano le componenti che alimentano e danno forma al progetto. Il confronto così come l’introspezione sono per me fonte di generazione e crescita."]
+        },
+        {
+        "name": "Borders",
+        "year": "2017",
+        "id": "2",
+        "class": "borders",
+        "firstTopic": "Grafica",
+        "secondTopic": "Stampa",
+		"img": ["../data/img/borders/img_0.jpg"],
+		"descrizione": ["What are the borders? What separates us from each other? What are borders founded on? Frontiers can be both protective and comfortable as well as exclusive and dividers. There can be many types of frontiers — cultural, ideological, physical — but they all have something in common. The research of these common things is what really pushed me and what brought me to design Borders. After some weeks of research I found out that, although there are different types of factual boundaries, these are all created, shared, transmitted and reproduced with the same tools, the same methods and the same dynamics."]
+        },
+        {
+        "name": "Falegname",
+        "year": "2017",
+        "id": "3",
+        "class": "falegname",
+        "firstTopic": "Video",
+        "secondTopic": "Sound",
+		"img": ["../data/img/falegname/img_0.jpg"],
+		"descrizione": ["Digital Video about the wood craftsman's job. A man who creates works through technical, material and manual knowledge. In the performance the craftsman becomes one with the environment and tools. The repetition of movements and sounds creates the artwork."]
+        },
+        {
+        "name": "Why Not Associates",
+        "year": "2017",
+        "id": "4",
+        "class": "why-not-associates",
+        "firstTopic": "Grafica",
+        "secondTopic": "Stampa",
+		"img": ["../data/img/whynotassociates/img_0.jpg"],
+		"descrizione": ["The project started as an academic research about the histrionic studio why not associates™, founded by David Ellis, Andy Altmann and Howard Greenhalgh. The material gathered brought to a short monograph and retrospective book of the multidisciplinary London-based studio, which occupy a pivotal position on the experimental wing of British graphic design, a new wave of energy and invention in typography and graphics, firmly rooted in local traditions and culture."]
+        },
+        {
+        "name": "Matsuo Bashō",
+        "year": "2016",
+        "id": "5",
+        "class": "matsuo-basho",
+        "firstTopic": "Graphic",
+        "secondTopic": "Stampa",
+		"img": ["../data/img/matsuobasho/img_0.jpg"],
+		"descrizione": ["Haiku is a poetic form of Japanese poetry which usually describe a rapid an intense scene by juxtaposing images from different emotional, spiritual and cultural fields. It is characterized by a structure of three lines, composed of 5, 7, 5 'morae', which are loosely correlated to syllables and a 'kigo' which is a seasonal reference. The posters are composed around 'Shaking The Grave' haiku from the Japanese poet Matsuo Bashō. shaking the grave my weeping voice autumn wind. tomba, piegata al vento d'autunno – i miei singhiozzi. Matsuo Bashō"]
+        },
+        {
+        "name": "Pinhole",
+        "year": "2017",
+        "id": "6",
+        "class": "pinhole",
+        "firstTopic": "Fotografia",
+        "secondTopic": "Stampa",
+		"img": ["../data/img/pinhole/img_0.gif"],
+		"descrizione": ["Curabitur urna purus, facilisis a sapien vel, ornare hendrerit turpis. Integer pretium quis odio a viverra. Aliquam erat volutpat. Donec ultrices leo vitae libero lacinia luctus. Phasellus nec odio a ante fringilla consectetur. Proin ac magna tempor, tempor nisl nec, rhoncus urna. Suspendisse vitae ante ac mauris congue sagittis. Nam molestie sed diam vitae accumsan. Nam hendrerit gravida rutrum. Donec pulvinar est at urna consequat viverra. Aenean volutpat, turpis sed hendrerit maximus, libero ex finibus tellus, ac venenatis tortor quam vitae metus."]
+        },
+        {
+        "name": "Eric Gill",
+        "year": "2016",
+        "id": "7",
+        "class": "eric-gill",
+        "firstTopic": "Grafica",
+        "secondTopic": "Web",
+		"img": ["../data/img/ericgill/img_0.jpg"],
+		"descrizione": ["Maecenas ut consequat elit. Aliquam ut eros odio. Ut malesuada, dui nec efficitur sodales, metus magna elementum urna, vel euismod augue odio sollicitudin orci. Ut finibus ultrices fermentum. Vestibulum erat orci, convallis a convallis a, ullamcorper non libero. Proin commodo faucibus dapibus. Maecenas interdum, erat at semper malesuada, elit nisl gravida eros, ut sollicitudin nulla orci sed enim. Aenean ut mattis quam."]
+        },
+        {
+        "name": "Province",
+        "year": "2016",
+        "id": "8",
+        "class": "province",
+        "firstTopic": "Type",
+        "secondTopic": "Lettering",
+		"img": ["../data/img/province/img_0.jpg"],
+		"descrizione": ["Sed a ex vel sem vehicula condimentum ac sit amet dolor. Vestibulum eget enim mollis, ultrices nulla quis, consequat ante. Vestibulum faucibus vitae urna non sollicitudin. Proin mi odio, interdum id tortor sagittis, dictum feugiat orci. Maecenas risus lacus, gravida ac odio ut, efficitur rhoncus metus. Proin vestibulum elit arcu. Duis molestie massa est."]
+        }
+		],
+		"me":
+	{
+		"name": "Andrea Zangheri",
+		"pro": "Multimedia Designer",
+		"desc": "Mi chiamo Andrea Zangheri e sono nato a Pesaro il 19/02/1992. Sin da piccolo ho sempre amato contemplare e conoscere la natura  attraverso l’osservazione, l’ascolto e il disegno. Tuttora sento la progettazione come processo conoscitivo. Semplifico il lavoro ricercando le componenti minime per formare sistemi grafici complessi. Credo che la qualità delle relazioni e della ricerca siano le componenti che alimentano e danno forma al progetto. Il confronto così come l’introspezione sono per me fonte di generazione e crescita.",
+		"chiama": "chiamami per un incontro",
+		"tel": "+39 3313107894",
+		"scrivi": "o scrivimi un messaggio",
+		"email": "arkznh@gmail.com",
+		"menu1": "all works &#8594;",
+		"menu2": "resources &#8594;",
+		"menu3": "library &#8594;"
+	}
+}
