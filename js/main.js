@@ -110,7 +110,7 @@ class Ente {
 
 function draw() {
 	clear();
-  background('rgba(255,255,255, 0)');
+  background(255);
 	
 	for(let i = 0; i < enti.length; i++){
 		enti[i].vedi();
