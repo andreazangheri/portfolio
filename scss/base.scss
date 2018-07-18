@@ -136,12 +136,12 @@ footer #right {
 }
 
 .wf-loading * {
-	cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="60" style="font-family: SharpGrotesk-Thin20; font-size: 30px;"><text y="22">&#8593;</text></svg>'), auto;
+	//cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="60" style="font-family: SharpGrotesk-Thin20; font-size: 30px;"><text y="22">&#8593;</text></svg>'), auto;
 	visibility: hidden;
 }
 
 .wf-active *, .wf-inactive * {
-	cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="60" style="font-family: SharpGrotesk-Thin20; font-size: 30px;"><text y="22">&#8593;</text></svg>'), auto;
+	//cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="60" style="font-family: SharpGrotesk-Thin20; font-size: 30px;"><text y="22">&#8593;</text></svg>'), auto;
 	visibility: visible;
 }
 
