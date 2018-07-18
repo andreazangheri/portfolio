@@ -80,28 +80,28 @@ table {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   /* make transparent link selection, adjust last value opacity 0 to 1.0 */ }
 
-@font-face {
-  font-family: "Ogg";
-  src: url("../font/OggRoman.eot?") format("eot"), url("../font/OggRoman.woff2") format("woff2"), url("../font/OggRoman.woff") format("woff"), url("../font/OggRoman.ttf") format("truetype"), url("../font/OggRoman.svg#Ogg") format("svg"); }
+/*@include font-face(Ogg,  "../font/OggRoman");*/
 @font-face {
   font-family: "SharpThin";
   src: url("../font/SharpGrotesk-Thin20.eot?") format("eot"), url("../font/SharpGrotesk-Thin20.woff2") format("woff2"), url("../font/SharpGrotesk-Thin20.woff") format("woff"), url("../font/SharpGrotesk-Thin20.ttf") format("truetype"), url("../font/SharpGrotesk-Thin20.svg#SharpThin") format("svg"); }
 @font-face {
   font-family: "SharpLight";
   src: url("../font/SharpGrotesk-Light20.eot?") format("eot"), url("../font/SharpGrotesk-Light20.woff2") format("woff2"), url("../font/SharpGrotesk-Light20.woff") format("woff"), url("../font/SharpGrotesk-Light20.ttf") format("truetype"), url("../font/SharpGrotesk-Light20.svg#SharpLight") format("svg"); }
-@font-face {
-  font-family: "SharpReg";
-  src: url("../font/SharpGrotesk-Book20.eot?") format("eot"), url("../font/SharpGrotesk-Book20.woff2") format("woff2"), url("../font/SharpGrotesk-Book20.woff") format("woff"), url("../font/SharpGrotesk-Book20.ttf") format("truetype"), url("../font/SharpGrotesk-Book20.svg#SharpReg") format("svg"); }
+/*@include font-face(SharpReg, "../font/SharpGrotesk-Book20");*/
 /* === MAIN ==== */
 /* === Primary Colours === */
 /* === Layout ===*/
 /* === Typography === */
-a {
-  text-decoration: none;
+.wf-loading a {
+  visibility: hidden; }
+
+.wf-active a, .wf-inactive a {
+  background-color: #fff;
+  border-radius: 10px;
   color: #000;
   font-family: "SharpThin", sans-serif;
-  background-color: #fff;
-  border-radius: 10px; }
+  text-decoration: none;
+  visibility: visible; }
 
 /*
 div a:hover, footer a:hover {
@@ -126,7 +126,7 @@ canvas {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: -2; }
+  z-index: 0; }
 
 div#about-mid-head ul li {
   margin-bottom: 3vh; }
@@ -135,12 +135,14 @@ div#menu {
   margin-top: 4vh; }
 
 div#div-mid-head {
-  margin-top: 20vh; }
+  margin-top: 20vh;
+  z-index: 3; }
 
 div#upper {
   padding: 3vh 0;
   position: fixed;
-  width: 100%; }
+  width: 100%;
+  z-index: 2; }
 
 div#works-list {
   margin-top: 4vh; }
@@ -149,7 +151,7 @@ div#works-section {
   position: absolute;
   top: 19vh;
   margin-bottom: 8vw;
-  z-index: -1; }
+  z-index: 1; }
 
 .fixed {
   position: fixed; }
@@ -169,8 +171,13 @@ footer #right {
   position: absolute;
   right: 1vw; }
 
-* {
-  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="60" style="font-family: SharpGrotesk-Thin20; font-size: 30px;"><text y="22">&#8593;</text></svg>'), auto; }
+.wf-loading * {
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="60" style="font-family: SharpGrotesk-Thin20; font-size: 30px;"><text y="22">&#8593;</text></svg>'), auto;
+  visibility: hidden; }
+
+.wf-active *, .wf-inactive * {
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="60" style="font-family: SharpGrotesk-Thin20; font-size: 30px;"><text y="22">&#8593;</text></svg>'), auto;
+  visibility: visible; }
 
 .hide {
   display: none; }
@@ -229,7 +236,11 @@ li#logo a:hover {
   height: auto;
   padding: 0; }
 
-.light {
+.wf-loading .light {
+  visibility: hidden; }
+
+.wf-active .light, .wf-inactive .light {
+  visibility: visible;
   font-family: "SharpLight", sans-serif; }
 
 li.work-list {
@@ -243,17 +254,14 @@ li.work-list {
   position: fixed;
   top: 62vh; }
 
-.ogg {
-  font-family: "Ogg", serif; }
-
 .portfolio-immagine {
   width: 100%; }
 
 .portfolio-paragrafo {
   width: 100%; }
 
-.regular {
-  font-family: "SharpReg", sans-serif; }
+.relative {
+  position: relative; }
 
 .rotating {
   display: inline-block;
@@ -268,13 +276,17 @@ li.work-list {
 .show {
   display: block; }
 
-.thin {
+.wf-loading .thin {
+  visibility: hidden; }
+
+.wf-active .thin, .wf-inactive .thin {
+  visibility: visible;
   font-family: "SharpThin", sans-serif; }
 
 ul#head {
   display: flex;
   align-items: center;
-  z-index: 1; }
+  z-index: 2; }
 
 ul#menu-ul {
   line-height: 1.8em; }
@@ -320,6 +332,9 @@ video {
 
 .work {
   font-size: 1.5em; }
+
+.z-3 {
+  z-index: 3; }
 
 /* === ANIMATION === */
 @keyframes rotating {
@@ -392,7 +407,7 @@ video {
     top: 19vh;
     left: 40vw;
     margin-bottom: 8vw;
-    z-index: -1; } }
+    z-index: 1; } }
 @media screen and (orientation: landscape) and (max-height: 500px) {
   #works-list-ajax {
     margin-top: 38vh;

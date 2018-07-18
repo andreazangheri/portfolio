@@ -5,10 +5,10 @@
 @import 'mixins';
 @import 'fluid-type';
 
-@include font-face(Ogg,  "../font/OggRoman");
+/*@include font-face(Ogg,  "../font/OggRoman");*/
 @include font-face(SharpThin, "../font/SharpGrotesk-Thin20");
 @include font-face(SharpLight, "../font/SharpGrotesk-Light20");
-@include font-face(SharpReg, "../font/SharpGrotesk-Book20");
+/*@include font-face(SharpReg, "../font/SharpGrotesk-Book20");*/
 
 /* === MAIN ==== */
 
@@ -41,12 +41,17 @@ $max_width: 1200px;
 $min_font: 14px;
 $max_font: 20px;
 
-a {
-	text-decoration: none;
-	color: $dark;
-	font-family: $SharpThin;
+.wf-loading a {
+	visibility: hidden;
+}
+
+.wf-active a, .wf-inactive a {
 	background-color: $light;
     border-radius: 10px;
+	color: $dark;
+	font-family: $SharpThin;
+	text-decoration: none;
+	visibility: visible;
 }
 /*
 div a:hover, footer a:hover {
@@ -74,7 +79,7 @@ canvas {
 	position: fixed;
 	top: 0;
 	left: 0;
-	z-index: -2;
+	z-index: 0;
 }
 
 div#about-mid-head ul li {
@@ -87,12 +92,14 @@ div#menu {
 
 div#div-mid-head {
 	margin-top: 20vh;
+	z-index: 3;
 }
 
 div#upper {
 	padding: $margin-top-outer 0;
 	position: fixed;
 	width: 100%;
+	z-index: 2;
 }
 
 div#works-list {
@@ -103,7 +110,7 @@ div#works-section {
 	position: absolute;
     top: 19vh;
 	margin-bottom: 8vw;
-    z-index: -1;
+    z-index: 1;
 }
 
 .fixed {
@@ -128,8 +135,14 @@ footer #right {
 	right: 1vw;
 }
 
-* {
+.wf-loading * {
 	cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="60" style="font-family: SharpGrotesk-Thin20; font-size: 30px;"><text y="22">&#8593;</text></svg>'), auto;
+	visibility: hidden;
+}
+
+.wf-active *, .wf-inactive * {
+	cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="60" style="font-family: SharpGrotesk-Thin20; font-size: 30px;"><text y="22">&#8593;</text></svg>'), auto;
+	visibility: visible;
 }
 
 .hide {
@@ -187,7 +200,12 @@ li#logo a:hover {
     padding: 0;
 }
 
-.light {
+.wf-loading .light {
+	visibility: hidden;
+}
+
+.wf-active .light, .wf-inactive .light {
+	visibility: visible;
 	font-family: $SharpLight;
 }
 
@@ -205,10 +223,6 @@ li.work-list {
 	top: 62vh;
 }
 
-.ogg {
-	font-family: $Ogg;
-}
-
 .portfolio-immagine {
 	width: 100%;
 }
@@ -217,8 +231,8 @@ li.work-list {
 	width: 100%;
 }
 
-.regular {
-	font-family: $SharpRegular;
+.relative {
+	position: relative;
 }
 
 .rotating {
@@ -237,14 +251,19 @@ li.work-list {
 	display: block;
 }
 
-.thin {
+.wf-loading .thin {
+	visibility: hidden;
+}
+
+.wf-active .thin, .wf-inactive .thin {
+	visibility: visible;
 	font-family: $SharpThin;
 }
 
 ul#head {
 	display: flex;
 	align-items: center;
-	z-index: 1;
+	z-index: 2;
 }
 
 ul#menu-ul {
@@ -303,6 +322,10 @@ video {
 
 .work {
 	font-size: 1.5em;
+}
+
+.z-3 {
+	z-index: 3;
 }
 
 /* === ANIMATION === */
@@ -398,7 +421,7 @@ video {
     top: 19vh;
     left: 40vw;
     margin-bottom: 8vw;
-    z-index: -1;
+    z-index: 1;
 }
 }
 

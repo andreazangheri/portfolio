@@ -18,9 +18,9 @@ myRequest.onloadend = function() {
 	var data = JSON.parse(myRequest.responseText);
 	renderRandomHTML(data);
 	};
-			
+	
 myRequest.send();
-			
+
 Handlebars.registerHelper('random', function(context, options){
 	var e = Math.floor(Math.random() * (context.length)); //numero progetti
 	var r = options.fn(context[e]);
@@ -54,6 +54,7 @@ meXhttp.addEventListener("click", function() {
 		workList.classList.remove("hide");
 		worksListAjax.classList.remove("show");
 		worksListAjax.classList.remove("fixed");
+		worksListAjax.classList.remove("relative");
 		worksSection.classList.remove("show");
 				
 		divMidHead.classList.add("show");
@@ -113,6 +114,7 @@ worksXhttp.addEventListener("click", function() {
 	bottomMenu.classList.add("hide");
 	workList.classList.add("hide");
 	worksListAjax.classList.add("show");
+	worksListAjax.classList.add("relative");
 	worksSection.classList.add("hide");
 	//menuNext.classList.add("show"); progetti bottone
 	}
@@ -145,6 +147,9 @@ if (window.XMLHttpRequest) {
 				
 	var data = JSON.parse(xhttp.responseText);
 	renderNextHTML(data);
+		
+	worksListAjax.classList.remove("relative");
+	
 	worksListAjax.classList.add("fixed");
 	worksSection.classList.add("show");
 	}

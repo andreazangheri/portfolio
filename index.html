@@ -61,6 +61,15 @@
 		<script language="javascript" type="text/javascript" src="js/trmix.js"></script>
 		<script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.js"></script>
 		<script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/webfont/1/webfont.js"></script>
+		<script>
+			WebFont.load({
+  				custom: {
+    			families: ['SharpThin','SharpLight'],
+    			urls: ['https://www.typerror.altervista.org/scss/base.css']
+  				}
+			});
+		</script>
  		<style type="text/css">
         a[x-apple-data-detectors] {
             color: inherit !important;
@@ -74,7 +83,7 @@
 		<!--<script language="javascript" type="text/javascript" src="sw.js"></script>-->
 	</head>
 	<body id="data-invert" ontouchstart="">
-		<div id="upper" itemscope itemtype="https://www.typerror.altervista.org">
+		<div id="upper" class="relative z-3" itemscope itemtype="https://www.typerror.altervista.org">
 		<ul id="head">
 			<li>
 				<svg id="logo" class="rotating" viewBox="0 0 512 512">
@@ -104,8 +113,8 @@
 			</li>
 		</ul>
 		</div>
-		<div id="div-mid-head">
-		<ul id="mid-head">
+		<div id="div-mid-head" class="relative z-3">
+		<ul id="mid-head" class="z-3">
 			<li>
 				<h1>Andrea Zangheri</h1>
 				<p>
@@ -149,20 +158,20 @@
 		<ul>
 		{{/me}}
 		</script>-->
-		<div id="works-list">
+		<div id="works-list" class="relative z-3">
 			<ul id="works">
 			</ul>
 		</div>
 		<script id="random-template" type="text/x-handlebars-template">
 		{{#random progetti}}
-		 <li class="work-list">
+		 <li class="work-list relative z-3">
 			<p>a work</p>
 				<p><a id="{{id}}" class="{{class}} vibration work light" onclick="lavoriEvento()">{{name}}</a></p>
 			<p class="small">{{year}}<span> · </span>{{firstTopic}} / {{secondTopic}}</p>
 		 </li>
 		{{/random}}
 		</script>
-		<div id="works-list-ajax" class="hide">
+		<div id="works-list-ajax" class="hide relative z-3">
 			<ul id="works-ajax">
 			</ul>
 		</div>
@@ -193,7 +202,7 @@
 			<p class="portfolio-paragrafo">{{{descrizione4}}}</p>
 		{{/custom}}
 		</script>
-		<div id="menu">
+		<div id="menu" class="relative z-3">
 			<ul id="menu-ul">
 				<li>
 					<a id="worksXhttp" class="thin vibration">progetti &#8594;</a>
@@ -233,6 +242,6 @@
 		<script language="javascript" type="text/javascript" src="js/handlebars-v4.0.11.js"></script>
 		<script language="javascript" type="text/javascript" src="js/main.js"></script>
 		<script language="javascript" type="text/javascript" src="js/data.json"></script>
-		<script language="javascript" type="text/javascript" src="js/ajax.js"></script>	
+		<script language="javascript" type="text/javascript" src="js/ajax.js"></script>
 	</body>
 </html>
