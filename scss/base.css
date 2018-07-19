@@ -258,6 +258,9 @@ li.work-list {
   position: fixed;
   top: 62vh; }
 
+noscript {
+  font-family: "SharpLight", sans-serif; }
+
 .portfolio-immagine {
   width: 100%; }
 
@@ -280,15 +283,8 @@ li.work-list {
 .show {
   display: block; }
 
-svg a circle {
-  fill: white; }
-  svg a circle path {
-    fill: black; }
-
-svg a circle:hover, svg a circle:focus {
-  fill: black; }
-  svg a circle:hover path, svg a circle:focus path {
-    fill: white; }
+svg#logo:hover, svg#logo:active {
+  filter: invert(1); }
 
 .wf-loading .thin {
   visibility: hidden; }

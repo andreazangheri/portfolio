@@ -265,20 +265,9 @@ noscript {
 	display: block;
 }
 
-svg a circle {
-	fill: white;
-	path {
-		fill:black;
-	}
+svg#logo:hover, svg#logo:active {
+	filter: invert(1);
 }
-
-svg a circle:hover, svg a circle:focus {
-	fill: black;
-	path {
-		fill:white;
-	}
-}
-
 
 .wf-loading .thin {
 	visibility: hidden;

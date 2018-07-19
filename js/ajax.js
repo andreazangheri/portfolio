@@ -9,28 +9,6 @@ var bottomMenu = document.getElementById("menu");
 var menuNext = document.getElementById("menu-next");
 var meXhttp = document.getElementById("meXhttp");
 var menuXhttp = document.getElementById("menu-ul");
-
-/* === PASSIVE EVENT LISTENER === */
-
-jQuery.event.special.touchstart = {
-  setup: function( _, ns, handle ){
-    if ( ns.includes("noPreventDefault") ) {
-      this.addEventListener("touchstart", handle, { passive: false });
-    } else {
-      this.addEventListener("touchstart", handle, { passive: true });
-    }
-  }
-};
-
-jQuery.event.special.onmousewheel = {
-  setup: function( _, ns, handle ){
-    if ( ns.includes("noPreventDefault") ) {
-      this.addEventListener("onmousewheel", handle, { passive: false });
-    } else {
-      this.addEventListener("onmousewheel", handle, { passive: true });
-    }
-  }
-};
 				
 /* === RANDOM WORK === */
 
@@ -66,6 +44,7 @@ meXhttp.addEventListener("click",  function() {
 	myRequest.open('GET', 'https://www.typerror.altervista.org/js/data.json');
 				
 	myRequest.onloadend = function() {
+		
 					
 		var data = JSON.parse(myRequest.responseText);
 		rendermeHTML(data);
@@ -78,6 +57,7 @@ meXhttp.addEventListener("click",  function() {
 		worksListAjax.classList.remove("fixed");
 		worksListAjax.classList.remove("relative");
 		worksSection.classList.remove("show");
+		
 				
 		divMidHead.classList.add("show");
 		bottomMenu.classList.add("show");
