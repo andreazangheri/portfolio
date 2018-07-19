@@ -67,6 +67,7 @@ body {
     position: absolute;
     top: 0;
     bottom: 0;
+	touch-action: initial;
 }
 
 body > * {
@@ -99,7 +100,6 @@ div#upper {
 	padding: $margin-top-outer 0;
 	position: fixed;
 	width: 100%;
-	z-index: 2;
 }
 
 div#works-list {
@@ -142,7 +142,17 @@ footer #right {
 
 .wf-active *, .wf-inactive * {
 	//cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="60" style="font-family: SharpGrotesk-Thin20; font-size: 30px;"><text y="22">&#8593;</text></svg>'), auto;
+	animation: fade-in 0.6s ease-in-out;
 	visibility: visible;
+}
+
+@keyframes fade-in {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 100%;
+	}
 }
 
 .hide {
@@ -223,6 +233,10 @@ li.work-list {
 	top: 62vh;
 }
 
+noscript {
+	font-family: $SharpLight;
+}
+
 .portfolio-immagine {
 	width: 100%;
 }
@@ -250,6 +264,21 @@ li.work-list {
 .show {
 	display: block;
 }
+
+svg a circle {
+	fill: white;
+	path {
+		fill:black;
+	}
+}
+
+svg a circle:hover, svg a circle:focus {
+	fill: black;
+	path {
+		fill:white;
+	}
+}
+
 
 .wf-loading .thin {
 	visibility: hidden;
@@ -326,6 +355,10 @@ video {
 
 .z-3 {
 	z-index: 3;
+}
+
+.z-4 {
+	z-index: 4;
 }
 
 /* === ANIMATION === */

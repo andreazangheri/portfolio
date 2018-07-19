@@ -115,7 +115,8 @@ body {
   height: 100%;
   position: absolute;
   top: 0;
-  bottom: 0; }
+  bottom: 0;
+  touch-action: initial; }
 
 body > * {
   margin-left: 8vw;
@@ -141,8 +142,7 @@ div#div-mid-head {
 div#upper {
   padding: 3vh 0;
   position: fixed;
-  width: 100%;
-  z-index: 2; }
+  width: 100%; }
 
 div#works-list {
   margin-top: 4vh; }
@@ -175,8 +175,14 @@ footer #right {
   visibility: hidden; }
 
 .wf-active *, .wf-inactive * {
+  animation: fade-in 0.6s ease-in-out;
   visibility: visible; }
 
+@keyframes fade-in {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 100%; } }
 .hide {
   display: none; }
 
@@ -274,6 +280,16 @@ li.work-list {
 .show {
   display: block; }
 
+svg a circle {
+  fill: white; }
+  svg a circle path {
+    fill: black; }
+
+svg a circle:hover, svg a circle:focus {
+  fill: black; }
+  svg a circle:hover path, svg a circle:focus path {
+    fill: white; }
+
 .wf-loading .thin {
   visibility: hidden; }
 
@@ -333,6 +349,9 @@ video {
 
 .z-3 {
   z-index: 3; }
+
+.z-4 {
+  z-index: 4; }
 
 /* === ANIMATION === */
 @keyframes rotating {

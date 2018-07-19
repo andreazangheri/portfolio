@@ -2,7 +2,7 @@
 <html lang="it"><head>
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5"/><!--, user-scalable=no-->
 		<title>Andrea Zangheri  &#8226; Multimedia Designer</title>
 		<!-- ADD THIS --->
 		<meta name="description" content="Andrea Zangheri is a Web & Multimedia Designer · Developer based in Pesaro, Marche">
@@ -56,20 +56,13 @@
 		<link rel="icon" href="data/favicon/favicon-48x48.png" sizes="48x48" type="image/png">
 		<link rel="icon" href="data/favicon/favicon-62x62.png" sizes="62x62" type="image/png">
 		<!-- Src -->
-		<link rel="stylesheet" type="text/css" href="scss/base.css" media="screen">
-		<script language="javascript" type="text/javascript" src="js/prefixfree.js"></script>
-		<script language="javascript" type="text/javascript" src="js/trmix.js"></script>
-		<script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.js"></script>
+		<!--<script language="javascript" type="text/javascript" src="https://www.typerror.altervista.org/sw.js"></script>-->
+		<link rel="stylesheet" type="text/css" href="https://www.typerror.altervista.org/scss/base.css" media="screen">
+		<script async language="javascript" type="text/javascript" src="https://www.typerror.altervista.org/js/data.json"></script>
+		<script async language="javascript" type="text/javascript" src="https://www.typerror.altervista.org/js/prefixfree.min.js"></script>
+		<script async language="javascript" type="text/javascript" src="https://www.typerror.altervista.org/js/trmix.min.js"></script>
+		<script async language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.min.js"></script>
 		<script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-		<script src="//ajax.googleapis.com/ajax/libs/webfont/1/webfont.js"></script>
-		<script>
-			WebFont.load({
-  				custom: {
-    			families: ['SharpThin','SharpLight'],
-    			urls: ['https://www.typerror.altervista.org/scss/base.css']
-  				}
-			});
-		</script>
  		<style type="text/css">
         a[x-apple-data-detectors] {
             color: inherit !important;
@@ -80,16 +73,15 @@
             line-height: inherit !important;
         }
     </style>
-		<!--<script language="javascript" type="text/javascript" src="sw.js"></script>-->
 	</head>
-	<body id="data-invert" ontouchstart="">
-		<div id="upper" class="relative z-3" itemscope itemtype="https://www.typerror.altervista.org">
+	<body id="data-invert">
+		<div id="upper" class="relative z-4" itemscope itemtype="https://www.typerror.altervista.org">
 		<ul id="head">
 			<li>
 				<svg id="logo" class="rotating" viewBox="0 0 512 512">
 					<a id="meXhttp">
-    					<circle id="svg_circle" cx="256" cy="256" r="256" fill="white" fill-opacity="1"/>
-    						<path id="svg_a"  d="M140.46,326c0-34.3,33.28-68.09,128-105L311,204.69c-2.56-64-17.41-83.46-54.79-83.46-44.54,0-55.29,40.45-66,56.84-4.61,6.65-9.22,9.21-23,9.21-12.29,0-20.48-4.1-20.48-11.77,0-6.15,5.12-15.88,17.92-24.07,20-13.31,63.48-34.81,99.84-34.81,50.68,0,86.52,26.11,86.52,93.18,0,34.3-4.09,91.65-4.09,112.12,0,29.19,3.58,43.52,14.33,43.52,8.71,0,22.53-17.4,27.65-28.15,2.56-4.1,8.7,0,6.14,4.09-7.67,11.78-40.44,41.47-60.41,41.47s-29.18-13.31-29.18-36.35c0-13.82.51-31.23,2-42-13.82,23.55-67.58,78.84-103.42,78.84C163,383.37,140.46,357.26,140.46,326Zm89.09,34.82c28.16,0,74.75-51.2,78.85-68.1.51-6.65,3.07-31.23,3.07-73.73V208.27l-42,17.92c-75.27,31.23-93.19,47.11-93.19,85C176.3,338.83,205,360.85,229.55,360.85Z" fill="black"/>
+    					<circle id="svg_circle" cx="256" cy="256" r="256" fill-opacity="1"/>
+    						<path id="svg_a"  d="M140.46,326c0-34.3,33.28-68.09,128-105L311,204.69c-2.56-64-17.41-83.46-54.79-83.46-44.54,0-55.29,40.45-66,56.84-4.61,6.65-9.22,9.21-23,9.21-12.29,0-20.48-4.1-20.48-11.77,0-6.15,5.12-15.88,17.92-24.07,20-13.31,63.48-34.81,99.84-34.81,50.68,0,86.52,26.11,86.52,93.18,0,34.3-4.09,91.65-4.09,112.12,0,29.19,3.58,43.52,14.33,43.52,8.71,0,22.53-17.4,27.65-28.15,2.56-4.1,8.7,0,6.14,4.09-7.67,11.78-40.44,41.47-60.41,41.47s-29.18-13.31-29.18-36.35c0-13.82.51-31.23,2-42-13.82,23.55-67.58,78.84-103.42,78.84C163,383.37,140.46,357.26,140.46,326Zm89.09,34.82c28.16,0,74.75-51.2,78.85-68.1.51-6.65,3.07-31.23,3.07-73.73V208.27l-42,17.92c-75.27,31.23-93.19,47.11-93.19,85C176.3,338.83,205,360.85,229.55,360.85Z"/>
 					</a>	
 				</svg>
 			</li>
@@ -165,8 +157,8 @@
 		<script id="random-template" type="text/x-handlebars-template">
 		{{#random progetti}}
 		 <li class="work-list relative z-3">
-			<p>a work</p>
-				<p><a id="{{id}}" class="{{class}} vibration work light" onclick="lavoriEvento()">{{name}}</a></p>
+			<p style="display: none;">un progetto</p>
+				<p><a id="{{id}}" class="{{class}} vibration work light" onclick="lavoriEvento()" touchstart="lavoriEvento()">{{name}}</a></p>
 			<p class="small">{{year}}<span> · </span>{{firstTopic}} / {{secondTopic}}</p>
 		 </li>
 		{{/random}}
@@ -190,22 +182,22 @@
 		    <img class="portfolio-immagine" src="{{img0}}">
 			<p class="portfolio-paragrafo">
 			{{{descrizione2}}}</p>
-			<img class="portfolio-immagine" src="{{img1}}">
-			<img class="portfolio-immagine" src="{{img2}}">
-			<img class="portfolio-immagine" src="{{img3}}">
+			<p><img class="portfolio-immagine" src="{{img1}}"></p>
+			<p><img class="portfolio-immagine" src="{{img2}}"></p>
+			<p><img class="portfolio-immagine" src="{{img3}}"></p>
 			<p class="portfolio-paragrafo">
 			{{{descrizione3}}}</p>
-			<img class="portfolio-immagine" src="{{img4}}">
-			<img class="portfolio-immagine" src="{{img5}}">
-			<img class="portfolio-immagine" src="{{img6}}">
-			<img class="portfolio-immagine" src="{{img7}}">
+			<p><img class="portfolio-immagine" src="{{img4}}"></p>
+			<p><img class="portfolio-immagine" src="{{img5}}"></p>
+			<p><img class="portfolio-immagine" src="{{img6}}"></p>
+			<p><img class="portfolio-immagine" src="{{img7}}"></p>
 			<p class="portfolio-paragrafo">{{{descrizione4}}}</p>
 		{{/custom}}
 		</script>
 		<div id="menu" class="relative z-3">
 			<ul id="menu-ul">
 				<li>
-					<a id="worksXhttp" class="thin vibration">progetti &#8594;</a>
+					<a id="worksXhttp" class="thin vibration">tutti i progetti &#8594;</a>
 				</li>
 			</ul>
 		</div>
@@ -242,9 +234,27 @@
 			<a class="vibration">cookies</a>	
 			</span>
 		</footer>-->
+		<script src="//ajax.googleapis.com/ajax/libs/webfont/1/webfont.js"></script>
+		<script>
+			WebFont.load({
+  				custom: {
+    			families: ['SharpThin','SharpLight']
+  				}
+			});
+		</script>
 		<script language="javascript" type="text/javascript" src="js/handlebars-v4.0.11.js"></script>
 		<script language="javascript" type="text/javascript" src="js/main.js"></script>
-		<script language="javascript" type="text/javascript" src="js/data.json"></script>
 		<script language="javascript" type="text/javascript" src="js/ajax.js"></script>
+		<!--<script>
+			if('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('sw.js', { scope: 'https://www.typerror.altervista.org/' })
+          .then(function(registration) {
+                console.log('Service Worker Registered');
+          });
+        navigator.serviceWorker.ready.then(function(registration) {
+           console.log('Service Worker Ready');
+        });}
+		</script>-->
+		<noscript>Attiva Javascript sul browser per migliorare l'esperienza. </noscript>
 	</body>
 </html>

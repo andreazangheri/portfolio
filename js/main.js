@@ -158,6 +158,7 @@ function mousePressed() {
 	//fill(colori[r]);
 	var e = new Ente(random(eMin, eMax), mouseX, mouseY);
 	enti.push(e);
+	passive: true;
 }
 
 function mouseDragged() {
@@ -165,4 +166,5 @@ function mouseDragged() {
 	//fill(colori[r]);
 	var e = new Ente(random(eMin, eMax), mouseX, mouseY);
 	enti.push(e);
+	passive: true;
 }

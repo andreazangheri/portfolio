@@ -9,8 +9,30 @@ var bottomMenu = document.getElementById("menu");
 var menuNext = document.getElementById("menu-next");
 var meXhttp = document.getElementById("meXhttp");
 var menuXhttp = document.getElementById("menu-ul");
+
+/* === PASSIVE EVENT LISTENER === */
+
+jQuery.event.special.touchstart = {
+  setup: function( _, ns, handle ){
+    if ( ns.includes("noPreventDefault") ) {
+      this.addEventListener("touchstart", handle, { passive: false });
+    } else {
+      this.addEventListener("touchstart", handle, { passive: true });
+    }
+  }
+};
+
+jQuery.event.special.onmousewheel = {
+  setup: function( _, ns, handle ){
+    if ( ns.includes("noPreventDefault") ) {
+      this.addEventListener("onmousewheel", handle, { passive: false });
+    } else {
+      this.addEventListener("onmousewheel", handle, { passive: true });
+    }
+  }
+};
 				
-/*=== . RANDOM WORK ===*/
+/* === RANDOM WORK === */
 
 var myRequest = new XMLHttpRequest();
 myRequest.open('GET', 'https://www.typerror.altervista.org/js/data.json');
@@ -36,9 +58,9 @@ function renderRandomHTML(data) {
 	randomAjax.innerHTML = ourGeneratedHTML;
 	}
 			
-/*=== ME ===*/
+/* === ME === */
 			
-meXhttp.addEventListener("click", function() {
+meXhttp.addEventListener("click",  function() {
 	myRequest;
 			   
 	myRequest.open('GET', 'https://www.typerror.altervista.org/js/data.json');
@@ -118,7 +140,7 @@ worksXhttp.addEventListener("click", function() {
 	worksSection.classList.add("hide");
 	//menuNext.classList.add("show"); progetti bottone
 	}
-});
+}, {passive: true});
 			
 function renderHTML(data) {
 	var rawTemplate = document.getElementById("progetti-template").innerHTML;
@@ -136,6 +158,8 @@ var xhttp;
 var currentID = event.target.id;
 console.log(currentID);
 	
+	worksSection.classList.add("hide");
+	
 if (window.XMLHttpRequest) {
 	xhttp = new XMLHttpRequest();
 } else {
@@ -148,10 +172,12 @@ if (window.XMLHttpRequest) {
 	var data = JSON.parse(xhttp.responseText);
 	renderNextHTML(data);
 		
+	worksSection.classList.remove("hide");
 	worksListAjax.classList.remove("relative");
 	
 	worksListAjax.classList.add("fixed");
 	worksSection.classList.add("show");
+	window.scrollTo(0,0);
 	}
 				
 	xhttp.send();
