@@ -283,7 +283,14 @@ noscript {
 .show {
   display: block; }
 
-svg#logo:hover, svg#logo:active {
+svg#logo {
+  transition: filter 0.6s;
+  transition-timing-function: ease;
+  filter: invert(0); }
+
+svg#logo:hover, svg#logo:active, svg#logo:focus {
+  transition: filter 0.6s;
+  transition-timing-function: ease;
   filter: invert(1); }
 
 .wf-loading .thin {
