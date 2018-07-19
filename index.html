@@ -62,7 +62,29 @@
 		<script async language="javascript" type="text/javascript" src="https://www.typerror.altervista.org/js/prefixfree.min.js"></script>
 		<script async language="javascript" type="text/javascript" src="https://www.typerror.altervista.org/js/trmix.min.js"></script>
 		<script async language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.min.js"></script>
-		<script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><script>
+			/* === PASSIVE EVENT LISTENER === */
+
+			jQuery.event.special.touchstart = {
+				setup: function( _, ns, handle ){
+    				if ( ns.includes("noPreventDefault") ) {
+      					this.addEventListener("touchstart", handle, { passive: false });
+    				} else {
+      					this.addEventListener("touchstart", handle, { passive: true });
+    				}
+  				}
+			};
+
+			jQuery.event.special.onmousewheel = {
+  				setup: function( _, ns, handle ){
+    				if ( ns.includes("noPreventDefault") ) {
+      					this.addEventListener("onmousewheel", handle, { passive: false });
+    				} else {
+      					this.addEventListener("onmousewheel", handle, { passive: true });
+    				}
+  				}
+			};
+		</script>
  		<style type="text/css">
         a[x-apple-data-detectors] {
             color: inherit !important;
@@ -239,29 +261,6 @@
     			families: ['SharpThin','SharpLight']
   				}
 			});
-		</script>
-		<script>
-			/* === PASSIVE EVENT LISTENER === */
-
-			jQuery.event.special.touchstart = {
-				setup: function( _, ns, handle ){
-    				if ( ns.includes("noPreventDefault") ) {
-      					this.addEventListener("touchstart", handle, { passive: false });
-    				} else {
-      					this.addEventListener("touchstart", handle, { passive: true });
-    				}
-  				}
-			};
-
-			jQuery.event.special.onmousewheel = {
-  				setup: function( _, ns, handle ){
-    				if ( ns.includes("noPreventDefault") ) {
-      					this.addEventListener("onmousewheel", handle, { passive: false });
-    				} else {
-      					this.addEventListener("onmousewheel", handle, { passive: true });
-    				}
-  				}
-			};
 		</script>
 		<script language="javascript" type="text/javascript" src="js/handlebars-v4.0.11.js"></script>
 		<script language="javascript" type="text/javascript" src="js/main.js"></script>
