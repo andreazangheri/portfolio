@@ -62,29 +62,22 @@
 		<script async language="javascript" type="text/javascript" src="https://www.typerror.altervista.org/js/prefixfree.min.js"></script>
 		<script async language="javascript" type="text/javascript" src="https://www.typerror.altervista.org/js/trmix.min.js"></script>
 		<script async language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.min.js"></script>
-		<script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><script>
-			/* === PASSIVE EVENT LISTENER === */
-
-			jQuery.event.special.touchstart = {
-				setup: function( _, ns, handle ){
-    				if ( ns.includes("noPreventDefault") ) {
-      					this.addEventListener("touchstart", handle, { passive: false });
-    				} else {
-      					this.addEventListener("touchstart", handle, { passive: true });
-    				}
-  				}
-			};
-
-			jQuery.event.special.onmousewheel = {
-  				setup: function( _, ns, handle ){
-    				if ( ns.includes("noPreventDefault") ) {
-      					this.addEventListener("onmousewheel", handle, { passive: false });
-    				} else {
-      					this.addEventListener("onmousewheel", handle, { passive: true });
-    				}
-  				}
-			};
+		<script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		</script>
+	<script>
+		var previousScroll = 0;
+$(window).scroll(function(event){
+   var scroll = $(this).scrollTop();
+   if (scroll > previousScroll){
+	   $(menuNext).removeClass("show");
+       $(menuNext).addClass("hide");// downscroll code
+   } else {
+      $(menuNext).removeClass("hide");
+	  $(menuNext).addClass("show");// upscroll code
+   }
+   previousScroll = scroll;
+});
+	</script>
  		<style type="text/css">
         a[x-apple-data-detectors] {
             color: inherit !important;
@@ -100,7 +93,7 @@
 		<div id="upper" class="relative z-4" itemscope itemtype="https://www.typerror.altervista.org">
 		<ul id="head">
 			<li>
-				<svg id="logo" class="rotating" viewBox="0 0 512 512">
+				<svg id="logo" class="rotating no-touch" viewBox="0 0 512 512">
 					<a id="meXhttp">
     					<circle id="svg_circle" cx="256" cy="256" r="256" fill="white" fill-opacity="1"/>
     						<path id="svg_a"  d="M140.46,326c0-34.3,33.28-68.09,128-105L311,204.69c-2.56-64-17.41-83.46-54.79-83.46-44.54,0-55.29,40.45-66,56.84-4.61,6.65-9.22,9.21-23,9.21-12.29,0-20.48-4.1-20.48-11.77,0-6.15,5.12-15.88,17.92-24.07,20-13.31,63.48-34.81,99.84-34.81,50.68,0,86.52,26.11,86.52,93.18,0,34.3-4.09,91.65-4.09,112.12,0,29.19,3.58,43.52,14.33,43.52,8.71,0,22.53-17.4,27.65-28.15,2.56-4.1,8.7,0,6.14,4.09-7.67,11.78-40.44,41.47-60.41,41.47s-29.18-13.31-29.18-36.35c0-13.82.51-31.23,2-42-13.82,23.55-67.58,78.84-103.42,78.84C163,383.37,140.46,357.26,140.46,326Zm89.09,34.82c28.16,0,74.75-51.2,78.85-68.1.51-6.65,3.07-31.23,3.07-73.73V208.27l-42,17.92c-75.27,31.23-93.19,47.11-93.19,85C176.3,338.83,205,360.85,229.55,360.85Z" fill="black"/>
@@ -200,6 +193,11 @@
 		</div>
 		<script id="works-template" type="text/x-handlebars-template">
 		{{#custom progetti}}
+		<ul>
+		<li class='work-list'><a id="{{id}}" class='{{class}} vibration work light' onclick="lavoriEvento()">{{name}}</a>
+		 <p class='small'>{{year}}<span> · </span>{{firstTopic}} / {{secondTopic}}</p>
+			</li>
+			</ul>
 			<p class="portfolio-paragrafo">{{{descrizione1}}}</p>
 		    <img class="portfolio-immagine" src="{{img0}}">
 			<p class="portfolio-paragrafo">
@@ -223,13 +221,10 @@
 				</li>
 			</ul>
 		</div>
-		<div id="menu-2" class="relative z-3">
-			<ul></ul>
-		</div>
 		<div id="menu-next" class="hide">
 			<ul>
 				<li>
-					<a id="menu-next-ajax">&#8592;</a>
+					<a id="menu-next-ajax" class="thin vibration">&#8592; tutti i progetti</a>
 				</li>
 			</ul>
 		</div>

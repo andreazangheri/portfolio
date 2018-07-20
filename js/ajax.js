@@ -9,6 +9,39 @@ var bottomMenu = document.getElementById("menu");
 var menuNext = document.getElementById("menu-next");
 var meXhttp = document.getElementById("meXhttp");
 var menuXhttp = document.getElementById("menu-ul");
+
+/* === PASSIVE EVENT LISTENER === */
+
+			jQuery.event.special.touchstart = {
+				setup: function( _, ns, handle ){
+    				if ( ns.includes("noPreventDefault") ) {
+      					this.addEventListener("touchstart", handle, { passive: false });
+    				} else {
+      					this.addEventListener("touchstart", handle, { passive: true });
+    				}
+  				}
+			};
+
+			jQuery.event.special.onmousewheel = {
+  				setup: function( _, ns, handle ){
+    				if ( ns.includes("noPreventDefault") ) {
+      					this.addEventListener("onmousewheel", handle, { passive: false });
+    				} else {
+      					this.addEventListener("onmousewheel", handle, { passive: true });
+    				}
+  				}
+			};
+
+/* === MOBILE TOUCH - NO-TOUCH === */
+
+		$(document).ready(function() {
+  			if ("ontouchstart" in document.documentElement) {
+    			$('.no-touch').removeClass('no-touch').addClass('touch')
+  			}
+  				$('.touch').on('touchstart touchend', function(e) {
+    			$(this).toggleClass('over');
+  			});
+		})
 				
 /* === RANDOM WORK === */
 
@@ -38,7 +71,7 @@ function renderRandomHTML(data) {
 			
 /* === ME === */
 			
-meXhttp.addEventListener("click",  function() {
+meXhttp.addEventListener("click", function() {
 	myRequest;
 			   
 	myRequest.open('GET', 'https://www.typerror.altervista.org/js/data.json');
@@ -57,6 +90,8 @@ meXhttp.addEventListener("click",  function() {
 		worksListAjax.classList.remove("fixed");
 		worksListAjax.classList.remove("relative");
 		worksSection.classList.remove("show");
+		menuNext.classList.remove("show");
+		menuXhttp.classList.remove("hide");
 		
 				
 		divMidHead.classList.add("show");
@@ -64,11 +99,13 @@ meXhttp.addEventListener("click",  function() {
 		workList.classList.add("show");
 		worksListAjax.classList.add("hide");
 		worksSection.classList.add("hide");
+		menuNext.classList.add("hide");
+		menuXhttp.classList.add("show");
 		}
 				
 	myRequest.send();
 			
-	});
+	}, onclick, {passive: true, capture: true});
 			
 function rendermeHTML(data) {
 	var rawTemplate = document.getElementById("me-template").innerHTML;
@@ -120,7 +157,7 @@ worksXhttp.addEventListener("click", function() {
 	worksSection.classList.add("hide");
 	//menuNext.classList.add("show"); progetti bottone
 	}
-}, {passive: true});
+}, onclick, {passive: true, capture: true});
 			
 function renderHTML(data) {
 	var rawTemplate = document.getElementById("progetti-template").innerHTML;
@@ -130,13 +167,17 @@ function renderHTML(data) {
 	var worksAjax = document.getElementById("works-ajax");
 	worksAjax.innerHTML = ourGeneratedHTML;
 	}	
+
+/* === PROGETTI BACK === */
+
+
 			
 /* === LAVORI === */
 			
 var lavoriEvento = function lavoriEvento(){
 var xhttp;
 var currentID = event.target.id;
-console.log(currentID);
+//console.log(currentID);
 	
 	worksSection.classList.add("hide");
 	
@@ -153,10 +194,20 @@ if (window.XMLHttpRequest) {
 	renderNextHTML(data);
 		
 	worksSection.classList.remove("hide");
-	worksListAjax.classList.remove("relative");
+	menuNext.classList.remove("hide");
+	//worksListAjax.classList.remove("relative");
+	worksListAjax.classList.remove("show");
+	divMidHead.classList.remove("show");
+	workList.classList.remove("show");
+	menuXhttp.classList.remove("show");
 	
-	worksListAjax.classList.add("fixed");
+	//worksListAjax.classList.add("fixed");
+	menuNext.classList.add("show");
 	worksSection.classList.add("show");
+	worksListAjax.classList.add("hide");
+	divMidHead.classList.add("hide");
+	workList.classList.add("hide");
+	menuXhttp.classList.add("hide");
 	window.scrollTo(0,0);
 	}
 				
@@ -165,7 +216,7 @@ if (window.XMLHttpRequest) {
 	Handlebars.registerHelper('custom', function(context, options){
 		var r = options.fn(context[currentID]);
 		return r;
-		console.log(currentID);
+		//console.log(currentID);
 	});
 				
 function renderNextHTML(data) {
