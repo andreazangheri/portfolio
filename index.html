@@ -57,14 +57,14 @@
 		<link rel="icon" href="data/favicon/favicon-62x62.png" sizes="62x62" type="image/png">
 		<!-- Src -->
 		<!--<script language="javascript" type="text/javascript" src="https://www.typerror.altervista.org/sw.js"></script>-->
-		<link rel="stylesheet" type="text/css" href="https://www.typerror.altervista.org/scss/base.css" media="screen">
+		<link rel="stylesheet" type="text/css" href="https://www.typerror.altervista.org/scss/base.css">
+		<link rel="stylesheet" type="text/css" href="https://www.typerror.altervista.org/scss/lightbox.css">
 		<script async language="javascript" type="text/javascript" src="https://www.typerror.altervista.org/js/data.json"></script>
 		<script async language="javascript" type="text/javascript" src="https://www.typerror.altervista.org/js/prefixfree.min.js"></script>
 		<script async language="javascript" type="text/javascript" src="https://www.typerror.altervista.org/js/trmix.min.js"></script>
 		<script async language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.min.js"></script>
-		<script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-		</script>
-	<script>
+		<script language="javascript" type="text/javascript" src="https://www.typerror.altervista.org/js/jquery-3.3.1.min.js"></script>
+	<!--<script> Mostra — Nascondi "<- tutti i progetti"
 		var previousScroll = 0;
 $(window).scroll(function(event){
    var scroll = $(this).scrollTop();
@@ -77,7 +77,7 @@ $(window).scroll(function(event){
    }
    previousScroll = scroll;
 });
-	</script>
+	</script>-->
  		<style type="text/css">
         a[x-apple-data-detectors] {
             color: inherit !important;
@@ -194,23 +194,23 @@ $(window).scroll(function(event){
 		<script id="works-template" type="text/x-handlebars-template">
 		{{#custom progetti}}
 		<ul>
-		<li class='work-list'><a id="{{id}}" class='{{class}} vibration work light' onclick="lavoriEvento()">{{name}}</a>
+		<li class='work-list'><p id="{{id}}" class='{{class}} work light'>{{name}}</p>
 		 <p class='small'>{{year}}<span> · </span>{{firstTopic}} / {{secondTopic}}</p>
 			</li>
 			</ul>
 			<p class="portfolio-paragrafo">{{{descrizione1}}}</p>
-		    <img class="portfolio-immagine" src="{{img0}}">
+		    <p><a href="{{img0}}" class="portfolio-immagine" data-lightbox="image"><img class="portfolio-immagine" src="{{img0}}"></a></p>
 			<p class="portfolio-paragrafo">
 			{{{descrizione2}}}</p>
-			<p> <img class="portfolio-immagine" src="{{img1}}"></p>
-			<p> <img class="portfolio-immagine" src="{{img2}}"></p>
-			<p> <img class="portfolio-immagine" src="{{img3}}"></p>
+			<p><a href="{{img1}}" class="portfolio-immagine" data-lightbox="image"><img class="portfolio-immagine" src="{{img1}}"></a></p>
+			<p><a href="{{img2}}" class="portfolio-immagine" data-lightbox="image"><img class="portfolio-immagine" src="{{img2}}"></a></p>
+			<p><a href="{{img3}}" class="portfolio-immagine" data-lightbox="image"><img class="portfolio-immagine" src="{{img3}}"></a></p>
 			<p class="portfolio-paragrafo">
 			{{{descrizione3}}}</p>
-			<p> <img class="portfolio-immagine" src="{{img4}}"></p>
-			<p> <img class="portfolio-immagine" src="{{img5}}"></p>
-			<p> <img class="portfolio-immagine" src="{{img6}}"></p>
-			<p> <img class="portfolio-immagine" src="{{img7}}"></p>
+			<p><a href="{{img4}}" class="portfolio-immagine" data-lightbox="image"><img class="portfolio-immagine" src="{{img4}}"></a></p>
+			<p><a href="{{img5}}" class="portfolio-immagine" data-lightbox="image"><img class="portfolio-immagine" src="{{img5}}"></a></p>
+			<p><a href="{{img6}}" class="portfolio-immagine" data-lightbox="image"><img class="portfolio-immagine" src="{{img6}}"></a></p>
+			<p><a href="{{img7}}" class="portfolio-immagine" data-lightbox="image"><img class="portfolio-immagine" src="{{img7}}"></a></p>
 			<p class="portfolio-paragrafo">{{{descrizione4}}}</p>
 		{{/custom}}
 		</script>
@@ -236,9 +236,6 @@ $(window).scroll(function(event){
 				</li>
 			</ul>
 		</div>-->
-		<div id="status">
-  		<progress max="7" value="0"></progress>
-		</div>
 		<!--<footer>
 			<span>
 		<!--	<a class="vibration" href="https://www.typerror.altervista.org">all works</a><span> · </span>
@@ -257,9 +254,20 @@ $(window).scroll(function(event){
   				}
 			});
 		</script>
-		<script language="javascript" type="text/javascript" src="js/handlebars-v4.0.11.js"></script>
-		<script language="javascript" type="text/javascript" src="js/main.js"></script>
-		<script language="javascript" type="text/javascript" src="js/ajax.js"></script>
+		<script language="javascript" type="text/javascript" src="https://typerror.altervista.org/js/handlebars-v4.0.11.js"></script>
+		<script language="javascript" type="text/javascript" src="https://typerror.altervista.org/js/main.js"></script>
+		<script language="javascript" type="text/javascript" src="https://typerror.altervista.org/js/ajax.js"></script>
+		<script language="javascript" type="text/javascript" src="https://typerror.altervista.org/js/lightbox.js"></script>
+		<script>
+		lightbox.option({
+			'albumLabel': "%1/%2",
+			'alwaysShowNavOnTouchDevices': true,
+			'disableScrolling': true,
+			'fitImagesInViewport': true,
+			'imageFadeDuration': 300,
+			'resizeDuration': 300
+		})
+		</script>
 		<!--<script>
 			if('serviceWorker' in navigator) {
         navigator.serviceWorker.register('sw.js', { scope: 'https://www.typerror.altervista.org/' })
