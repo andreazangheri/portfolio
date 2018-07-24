@@ -14,7 +14,7 @@ html.lb-disable-scrolling {
   z-index: 9999;
   background-color: black;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
-  opacity: 0.8;
+  opacity: 0.88;
   display: none;
 }
 
@@ -181,7 +181,7 @@ html.lb-disable-scrolling {
 }
 
 .lb-data .lb-number {
-    display: inline-block;
+    display: table;
     clear: left;
     padding: 3px;
     /* padding-bottom: 1em; */
