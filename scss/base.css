@@ -140,7 +140,7 @@ html.lb-disable-scrolling {
 
 .lb-loader {
   position: absolute;
-  top: 43%;
+  top: 38%;
   left: 0;
   height: 25%;
   width: 100%;
@@ -149,10 +149,11 @@ html.lb-disable-scrolling {
 
 .lb-cancel {
   display: block;
-  width: 32px;
-  height: 32px;
+  width: 96px;
+  height: 96px;
   margin: 0 auto;
-  background: url(../data/images/loading.gif) no-repeat; }
+  filter: invert(100%);
+  background: url("../data/favicon/favicon-96x96.gif") no-repeat; }
 
 .lb-nav {
   position: absolute;
