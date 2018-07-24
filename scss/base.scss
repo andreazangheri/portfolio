@@ -48,7 +48,7 @@ $max_font: 20px;
 
 .wf-active a, .wf-inactive a {
 	background-color: $light;
-    border-radius: 10px;
+    border-radius: 12px;
 	color: $dark;
 	font-family: $SharpThin;
 	text-decoration: none;
@@ -174,7 +174,7 @@ img:hover {
 li h1 {
 	display: inline;
 	background-color: $light;
-    border-radius: 10px;
+    border-radius: 12px;
 }
 /*
 li#logo {

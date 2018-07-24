@@ -36,10 +36,10 @@ html.lb-disable-scrolling {
   height: auto;
   max-width: inherit;
   max-height: none;
-  border-radius: 3px;
+  border-radius: 12px;
 
   /* Image border */
-  border: 4px solid white;
+  border: 6px solid white;
 }
 
 .lightbox a img {
@@ -52,7 +52,7 @@ html.lb-disable-scrolling {
   width: 250px;
   height: 250px;
   margin: 0 auto;
-  border-radius: 4px;
+  border-radius: 8px;
 
   /* Background color behind image.
      This is visible during transitions. */
@@ -111,7 +111,7 @@ html.lb-disable-scrolling {
   width: 34%;
   left: 0;
   float: left;
-  background: url(../data/images/prev.png) left 48% no-repeat;
+  background: url(../data/images/prev-white.png) left 48% no-repeat;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
   -webkit-transition: opacity 0.6s;
@@ -129,7 +129,7 @@ html.lb-disable-scrolling {
   width: 64%;
   right: 0;
   float: right;
-  background: url(../data/images/next.png) right 48% no-repeat;
+  background: url(../data/images/next-white.png) right 48% no-repeat;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
   -webkit-transition: opacity 0.6s;
@@ -145,7 +145,7 @@ html.lb-disable-scrolling {
 
 .lb-dataContainer {
   margin: 0 auto;
-  padding-top: 5px;
+  padding-top: 1.2vh;
   *zoom: 1;
   width: 100%;
   border-bottom-left-radius: 4px;
@@ -181,15 +181,18 @@ html.lb-disable-scrolling {
 }
 
 .lb-data .lb-number {
-  display: block;
-  clear: left;
-  padding-bottom: 1em;
-  font-size: 12px;
-  color: #999999;
+    display: inline-block;
+    clear: left;
+    padding: 3px;
+    /* padding-bottom: 1em; */
+    font-size: inherit;
+    color: #000;
+    background-color: white;
+    border-radius: 12px;
 }
 
 .lb-data .lb-close {
-  display: block;
+  display: none;
   float: right;
   width: 30px;
   height: 30px;
