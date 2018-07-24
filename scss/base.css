@@ -1,79 +1,664 @@
-/*
-Error: Undefined variable: "$dark".
-        on line 190 of /Users/andreazangheri/Sites/portfolio/scss/_lightbox.scss
-        from line 7 of /Users/andreazangheri/Sites/portfolio/scss/base.scss
-
-185:     border-width: 10px;
-186: 
-187: }
-188: 
-189: li#logo a {
-190: 	font-family: $Ogg;
-191: 	font-size: 3em;
-192: 	margin-top: 1vh;
-193: }
-194: 
-195: li#logo a:hover {
-
-Backtrace:
-/Users/andreazangheri/Sites/portfolio/scss/_lightbox.scss:190
-/Users/andreazangheri/Sites/portfolio/scss/base.scss:7
-/Applications/Adobe Dreamweaver CC 2018/Adobe Dreamweaver CC 2018.app/Contents/Resources/gems/rubygems/gems/sass-3.5.3/lib/sass/script/tree/variable.rb:49:in `_perform'
-/Applications/Adobe Dreamweaver CC 2018/Adobe Dreamweaver CC 2018.app/Contents/Resources/gems/rubygems/gems/sass-3.5.3/lib/sass/script/tree/node.rb:50:in `perform'
-/Applications/Adobe Dreamweaver CC 2018/Adobe Dreamweaver CC 2018.app/Contents/Resources/gems/rubygems/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:402:in `visit_prop'
-/Applications/Adobe Dreamweaver CC 2018/Adobe Dreamweaver CC 2018.app/Contents/Resources/gems/rubygems/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Applications/Adobe Dreamweaver CC 2018/Adobe Dreamweaver CC 2018.app/Contents/Resources/gems/rubygems/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
-/Applications/Adobe Dreamweaver CC 2018/Adobe Dreamweaver CC 2018.app/Contents/Resources/gems/rubygems/gems/sass-3.5.3/lib/sass/stack.rb:79:in `block in with_base'
-/Applications/Adobe Dreamweaver CC 2018/Adobe Dreamweaver CC 2018.app/Contents/Resources/gems/rubygems/gems/sass-3.5.3/lib/sass/stack.rb:135:in `with_frame'
-/Applications/Adobe Dreamweaver CC 2018/Adobe Dreamweaver CC 2018.app/Contents/Resources/gems/rubygems/gems/sass-3.5.3/lib/sass/stack.rb:79:in `with_base'
-/Applications/Adobe Dreamweaver CC 2018/Adobe Dreamweaver CC 2018.app/Contents/Resources/gems/rubygems/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:162:in `visit'
-/Applications/Adobe Dreamweaver CC 2018/Adobe Dreamweaver CC 2018.app/Contents/Resources/gems/rubygems/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:444:in `block (2 levels) in visit_rule'
-/Applications/Adobe Dreamweaver CC 2018/Adobe Dreamweaver CC 2018.app/Contents/Resources/gems/rubygems/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:444:in `map'
-/Applications/Adobe Dreamweaver CC 2018/Adobe Dreamweaver CC 2018.app/Contents/Resources/gems/rubygems/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:444:in `block in visit_rule'
-/Applications/Adobe Dreamweaver CC 2018/Adobe Dreamweaver CC 2018.app/Contents/Resources/gems/rubygems/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
-/Applications/Adobe Dreamweaver CC 2018/Adobe Dreamweaver CC 2018.app/Contents/Resources/gems/rubygems/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:442:in `visit_rule'
-/Applications/Adobe Dreamweaver CC 2018/Adobe Dreamweaver CC 2018.app/Contents/Resources/gems/rubygems/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Applications/Adobe Dreamweaver CC 2018/Adobe Dreamweaver CC 2018.app/Contents/Resources/gems/rubygems/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
-/Applications/Adobe Dreamweaver CC 2018/Adobe Dreamweaver CC 2018.app/Contents/Resources/gems/rubygems/gems/sass-3.5.3/lib/sass/stack.rb:79:in `block in with_base'
-/Applications/Adobe Dreamweaver CC 2018/Adobe Dreamweaver CC 2018.app/Contents/Resources/gems/rubygems/gems/sass-3.5.3/lib/sass/stack.rb:135:in `with_frame'
-/Applications/Adobe Dreamweaver CC 2018/Adobe Dreamweaver CC 2018.app/Contents/Resources/gems/rubygems/gems/sass-3.5.3/lib/sass/stack.rb:79:in `with_base'
-/Applications/Adobe Dreamweaver CC 2018/Adobe Dreamweaver CC 2018.app/Contents/Resources/gems/rubygems/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:162:in `visit'
-/Applications/Adobe Dreamweaver CC 2018/Adobe Dreamweaver CC 2018.app/Contents/Resources/gems/rubygems/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:329:in `block (2 levels) in visit_import'
-/Applications/Adobe Dreamweaver CC 2018/Adobe Dreamweaver CC 2018.app/Contents/Resources/gems/rubygems/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:329:in `map'
-/Applications/Adobe Dreamweaver CC 2018/Adobe Dreamweaver CC 2018.app/Contents/Resources/gems/rubygems/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:329:in `block in visit_import'
-/Applications/Adobe Dreamweaver CC 2018/Adobe Dreamweaver CC 2018.app/Contents/Resources/gems/rubygems/gems/sass-3.5.3/lib/sass/stack.rb:88:in `block in with_import'
-/Applications/Adobe Dreamweaver CC 2018/Adobe Dreamweaver CC 2018.app/Contents/Resources/gems/rubygems/gems/sass-3.5.3/lib/sass/stack.rb:135:in `with_frame'
-/Applications/Adobe Dreamweaver CC 2018/Adobe Dreamweaver CC 2018.app/Contents/Resources/gems/rubygems/gems/sass-3.5.3/lib/sass/stack.rb:88:in `with_import'
-/Applications/Adobe Dreamweaver CC 2018/Adobe Dreamweaver CC 2018.app/Contents/Resources/gems/rubygems/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:326:in `visit_import'
-/Applications/Adobe Dreamweaver CC 2018/Adobe Dreamweaver CC 2018.app/Contents/Resources/gems/rubygems/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Applications/Adobe Dreamweaver CC 2018/Adobe Dreamweaver CC 2018.app/Contents/Resources/gems/rubygems/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
-/Applications/Adobe Dreamweaver CC 2018/Adobe Dreamweaver CC 2018.app/Contents/Resources/gems/rubygems/gems/sass-3.5.3/lib/sass/stack.rb:79:in `block in with_base'
-/Applications/Adobe Dreamweaver CC 2018/Adobe Dreamweaver CC 2018.app/Contents/Resources/gems/rubygems/gems/sass-3.5.3/lib/sass/stack.rb:135:in `with_frame'
-/Applications/Adobe Dreamweaver CC 2018/Adobe Dreamweaver CC 2018.app/Contents/Resources/gems/rubygems/gems/sass-3.5.3/lib/sass/stack.rb:79:in `with_base'
-/Applications/Adobe Dreamweaver CC 2018/Adobe Dreamweaver CC 2018.app/Contents/Resources/gems/rubygems/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:162:in `visit'
-/Applications/Adobe Dreamweaver CC 2018/Adobe Dreamweaver CC 2018.app/Contents/Resources/gems/rubygems/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-/Applications/Adobe Dreamweaver CC 2018/Adobe Dreamweaver CC 2018.app/Contents/Resources/gems/rubygems/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:52:in `map'
-/Applications/Adobe Dreamweaver CC 2018/Adobe Dreamweaver CC 2018.app/Contents/Resources/gems/rubygems/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-/Applications/Adobe Dreamweaver CC 2018/Adobe Dreamweaver CC 2018.app/Contents/Resources/gems/rubygems/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
-/Applications/Adobe Dreamweaver CC 2018/Adobe Dreamweaver CC 2018.app/Contents/Resources/gems/rubygems/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
-/Applications/Adobe Dreamweaver CC 2018/Adobe Dreamweaver CC 2018.app/Contents/Resources/gems/rubygems/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
-/Applications/Adobe Dreamweaver CC 2018/Adobe Dreamweaver CC 2018.app/Contents/Resources/gems/rubygems/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-/Applications/Adobe Dreamweaver CC 2018/Adobe Dreamweaver CC 2018.app/Contents/Resources/gems/rubygems/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:190:in `visit_root'
-/Applications/Adobe Dreamweaver CC 2018/Adobe Dreamweaver CC 2018.app/Contents/Resources/gems/rubygems/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Applications/Adobe Dreamweaver CC 2018/Adobe Dreamweaver CC 2018.app/Contents/Resources/gems/rubygems/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:161:in `visit'
-/Applications/Adobe Dreamweaver CC 2018/Adobe Dreamweaver CC 2018.app/Contents/Resources/gems/rubygems/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:10:in `visit'
-/Applications/Adobe Dreamweaver CC 2018/Adobe Dreamweaver CC 2018.app/Contents/Resources/gems/rubygems/gems/sass-3.5.3/lib/sass/tree/root_node.rb:36:in `css_tree'
-/Applications/Adobe Dreamweaver CC 2018/Adobe Dreamweaver CC 2018.app/Contents/Resources/gems/rubygems/gems/sass-3.5.3/lib/sass/tree/root_node.rb:20:in `render'
-/Applications/Adobe Dreamweaver CC 2018/Adobe Dreamweaver CC 2018.app/Contents/Resources/gems/rubygems/gems/sass-3.5.3/lib/sass/engine.rb:290:in `render'
-/Applications/Adobe Dreamweaver CC 2018/Adobe Dreamweaver CC 2018.app/Contents/Resources/gems/rubygems/gems/sass-3.5.3/lib/sass/exec/sass_scss.rb:400:in `run'
-/Applications/Adobe Dreamweaver CC 2018/Adobe Dreamweaver CC 2018.app/Contents/Resources/gems/rubygems/gems/sass-3.5.3/lib/sass/exec/sass_scss.rb:63:in `process_result'
-/Applications/Adobe Dreamweaver CC 2018/Adobe Dreamweaver CC 2018.app/Contents/Resources/gems/rubygems/gems/sass-3.5.3/lib/sass/exec/base.rb:52:in `parse'
-/Applications/Adobe Dreamweaver CC 2018/Adobe Dreamweaver CC 2018.app/Contents/Resources/gems/rubygems/gems/sass-3.5.3/lib/sass/exec/base.rb:19:in `parse!'
-/Applications/Adobe Dreamweaver CC 2018/Adobe Dreamweaver CC 2018.app/Contents/Resources/gems/rubygems/gems/sass-3.5.3/bin/sass:13:in `<top (required)>'
-/Applications/Adobe Dreamweaver CC 2018/Adobe Dreamweaver CC 2018.app/Contents/Resources/gems/bin/sass:37:in `load'
-/Applications/Adobe Dreamweaver CC 2018/Adobe Dreamweaver CC 2018.app/Contents/Resources/gems/bin/sass:37:in `<main>'
+/*SCSS Document */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
 */
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Undefined variable: \"$dark\".\A         on line 190 of /Users/andreazangheri/Sites/portfolio/scss/_lightbox.scss\A         from line 7 of /Users/andreazangheri/Sites/portfolio/scss/base.scss\A \A 185:     border-width: 10px;\A 186: \A 187: }\A 188: \A 189: li#logo a {\A 190: 	font-family: $Ogg;\A 191: 	font-size: 3em;\A 192: 	margin-top: 1vh;\A 193: }\A 194: \A 195: li#logo a:hover {"; }
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+body {
+  -webkit-touch-callout: none;
+  /* prevent callout to copy image, etc when tap to hold */
+  -webkit-text-size-adjust: none;
+  /* prevent webkit from resizing text to fit */
+  -webkit-user-select: none; }
+
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table; }
+
+.clearfix:after {
+  clear: both; }
+
+.clearfix {
+  zoom: 1;
+  /* For IE 6/7 (trigger hasLayout) */ }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit; }
+
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  /* make transparent link selection, adjust last value opacity 0 to 1.0 */ }
+
+html.lb-disable-scrolling {
+  overflow: hidden;
+  /* Position fixed required for iOS. Just putting overflow: hidden; on the body is not enough. */
+  position: fixed;
+  height: 100vh;
+  width: 100vw; }
+
+.lightboxOverlay {
+  margin: 0 !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  background-color: black;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  opacity: 0.88;
+  display: none; }
+
+.lightbox {
+  margin: 0 !important;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: 10000;
+  text-align: center;
+  line-height: 0;
+  font-weight: normal; }
+
+.lightbox .lb-image {
+  display: block;
+  height: auto;
+  max-width: inherit;
+  max-height: none;
+  touch-action: pan-y pinch-zoom;
+  filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0'/></filter></svg>#grayscale");
+  -webkit-filter: grayscale(0%);
+  border-radius: 12px;
+  /* Image border */
+  border: 6px solid white; }
+
+.lightbox a img {
+  border: none; }
+
+.lb-outerContainer {
+  position: relative;
+  *zoom: 1;
+  width: 250px;
+  height: 250px;
+  margin: 0 auto;
+  border-radius: 8px;
+  /* Background color behind image.
+     This is visible during transitions. */
+  background-color: white; }
+
+.lb-outerContainer:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.lb-loader {
+  position: absolute;
+  top: 43%;
+  left: 0;
+  height: 25%;
+  width: 100%;
+  text-align: center;
+  line-height: 0; }
+
+.lb-cancel {
+  display: block;
+  width: 32px;
+  height: 32px;
+  margin: 0 auto;
+  background: url(../data/images/loading.gif) no-repeat; }
+
+.lb-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 10; }
+
+.lb-container > .nav {
+  left: 0; }
+
+.lb-nav a {
+  outline: none;
+  background-image: url("data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="); }
+
+.lb-prev, .lb-next {
+  height: 100%;
+  cursor: pointer;
+  display: block; }
+
+.lb-nav a.lb-prev {
+  width: 34%;
+  left: 0;
+  float: left;
+  background: url(../data/images/prev.png) left 48% no-repeat;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -webkit-transition: opacity 0.6s;
+  -moz-transition: opacity 0.6s;
+  -o-transition: opacity 0.6s;
+  transition: opacity 0.6s; }
+
+.lb-nav a.lb-prev:hover {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1; }
+
+.lb-nav a.lb-next {
+  width: 64%;
+  right: 0;
+  float: right;
+  background: url(../data/images/next.png) right 48% no-repeat;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -webkit-transition: opacity 0.6s;
+  -moz-transition: opacity 0.6s;
+  -o-transition: opacity 0.6s;
+  transition: opacity 0.6s; }
+
+.lb-nav a.lb-next:hover {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1; }
+
+.lb-dataContainer {
+  margin: 0 auto;
+  padding-top: 1.2vh;
+  *zoom: 1;
+  width: 100%;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px; }
+
+.lb-dataContainer:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.lb-data {
+  padding: 0 4px;
+  color: #ccc; }
+
+.lb-data .lb-details {
+  width: 85%;
+  float: left;
+  text-align: left;
+  line-height: 1.1em; }
+
+.lb-data .lb-caption {
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 1em; }
+
+.lb-data .lb-caption a {
+  color: #4ae; }
+
+.lb-data .lb-number {
+  display: table;
+  clear: left;
+  padding: 3px;
+  font-size: inherit;
+  color: #000;
+  background-color: #fff;
+  border-radius: 12px; }
+
+.lb-data .lb-close {
+  display: none;
+  float: right;
+  width: 30px;
+  height: 30px;
+  background: url(../data/images/close.png) top right no-repeat;
+  text-align: right;
+  outline: none;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+  opacity: 0.7;
+  -webkit-transition: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
+  transition: opacity 0.2s; }
+
+.lb-data .lb-close:hover {
+  cursor: pointer;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1; }
+
+/*@include font-face(Ogg,  "../font/OggRoman");*/
+@font-face {
+  font-family: "SharpThin";
+  src: url("../font/SharpGrotesk-Thin20.eot?") format("eot"), url("../font/SharpGrotesk-Thin20.woff2") format("woff2"), url("../font/SharpGrotesk-Thin20.woff") format("woff"), url("../font/SharpGrotesk-Thin20.ttf") format("truetype"), url("../font/SharpGrotesk-Thin20.svg#SharpThin") format("svg"); }
+@font-face {
+  font-family: "SharpLight";
+  src: url("../font/SharpGrotesk-Light20.eot?") format("eot"), url("../font/SharpGrotesk-Light20.woff2") format("woff2"), url("../font/SharpGrotesk-Light20.woff") format("woff"), url("../font/SharpGrotesk-Light20.ttf") format("truetype"), url("../font/SharpGrotesk-Light20.svg#SharpLight") format("svg"); }
+/*@include font-face(SharpReg, "../font/SharpGrotesk-Book20");*/
+/* === MAIN ==== */
+/* === Primary Colours === */
+/* === Layout ===*/
+/* === Typography === */
+.wf-loading a {
+  visibility: hidden; }
+
+.wf-active a, .wf-inactive a {
+  background-color: #fff;
+  border-radius: 10px;
+  color: #000;
+  font-family: "SharpThin", sans-serif;
+  text-decoration: none;
+  visibility: visible; }
+
+/*
+div a:hover, footer a:hover {
+	display: inline-block;
+	transition: vibration 0.2s ease-in;
+}*/
+body {
+  font-family: "SharpLight", sans-serif;
+  line-height: 1.5em;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  touch-action: initial; }
+
+body > * {
+  margin-left: 8vw;
+  margin-right: 10vw; }
+
+canvas {
+  margin: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  touch-action: none; }
+
+div#about-mid-head ul li {
+  margin-bottom: 3vh; }
+
+div#menu {
+  margin-top: 4vh; }
+
+div#div-mid-head {
+  margin-top: 20vh;
+  z-index: 3; }
+
+div#upper {
+  padding: 3vh 0;
+  position: fixed;
+  width: 100%; }
+
+div#works-list {
+  margin-top: 4vh; }
+
+div#works-section {
+  position: absolute;
+  top: 19vh;
+  margin-bottom: 8vw;
+  z-index: 1; }
+
+.fixed {
+  position: fixed; }
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-bottom: 3vh; }
+
+footer a, .small {
+  font-family: "SharpThin", sans-serif;
+  font-size: 0.8em; }
+
+footer #right {
+  position: absolute;
+  right: 1vw; }
+
+.wf-loading * {
+  visibility: hidden; }
+
+.wf-active *, .wf-inactive * {
+  animation: fade-in 0.6s ease-in-out;
+  visibility: visible; }
+
+.hide {
+  display: none; }
+
+html {
+  font-size: 14px; }
+  @media screen and (min-width: 320px) {
+    html {
+      font-size: calc(14px + 6 * ((100vw - 320px) / 880)); } }
+  @media screen and (min-width: 1200px) {
+    html {
+      font-size: 20px; } }
+
+img {
+  filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/></filter></svg>#grayscale");
+  /* Firefox 10+, Firefox on Android */
+  filter: gray;
+  /* IE6-9 */
+  -webkit-filter: grayscale(100%);
+  /* Chrome 19+, Safari 6+, Safari 6+ iOS */
+  transition: 0.3s ease-in; }
+
+img:hover {
+  filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0'/></filter></svg>#grayscale");
+  -webkit-filter: grayscale(0%); }
+
+.invert {
+  filter: invert(100%); }
+
+li h1 {
+  display: inline;
+  background-color: #fff;
+  border-radius: 10px; }
+
+/*
+li#logo {
+	background-color: $light;
+    border-radius: 40px;
+    border-style: solid $light;
+    border-width: 10px;
+
+}
+
+li#logo a {
+	font-family: $Ogg;
+	font-size: 3em;
+	margin-top: 1vh;
+}
+
+li#logo a:hover {
+	animation-play-state: paused;
+}
+*/
+#logo {
+  width: 60px;
+  height: auto;
+  padding: 0; }
+
+.wf-loading .light {
+  visibility: hidden; }
+
+.wf-active .light, .wf-inactive .light {
+  visibility: visible;
+  font-family: "SharpLight", sans-serif; }
+
+li.work-list {
+  margin-bottom: 2.4vh; }
+
+#menu-next-ajax {
+  position: fixed;
+  top: 62vh;
+  z-index: 4;
+  animation: fade-in 0.6s ease-in-out; }
+
+#menu-next-next-ajax {
+  position: fixed;
+  top: 62vh; }
+
+noscript {
+  font-family: "SharpLight", sans-serif; }
+
+.portfolio-immagine {
+  width: 100%; }
+
+.portfolio-paragrafo {
+  width: 100%; }
+
+.relative {
+  position: relative; }
+
+.rotating {
+  display: inline-block;
+  animation: rotating 1.6s linear infinite;
+  transform-origin: 50% 50%; }
+
+.rotating-inverse {
+  display: inline-block;
+  animation: rotating-inverse 1.6s linear infinite;
+  transform-origin: 50% 50%; }
+
+.show {
+  display: block; }
+
+.no-touch {
+  transition: filter 0.2s;
+  transition-timing-function: ease;
+  filter: invert(0); }
+
+.no-touch:hover, .no-touch:active, .touch.over {
+  transition: filter 0.2s;
+  transition-timing-function: ease;
+  filter: invert(1); }
+
+.wf-loading .thin {
+  visibility: hidden; }
+
+.wf-active .thin, .wf-inactive .thin {
+  visibility: visible;
+  font-family: "SharpThin", sans-serif; }
+
+ul#head {
+  display: flex;
+  align-items: center;
+  z-index: 2; }
+
+ul#menu-ul {
+  line-height: 1.8em; }
+
+/*
+ul#mid-head {
+	margin-top: 11vh;
+}*/
+ul#head li:nth-child(2), ul#head li:nth-child(3), ul#head li:nth-child(4) {
+  margin-left: 6vw;
+  margin-top: 1vh; }
+
+ul#mid-head li:nth-child(1), ul#mid-head li:nth-child(3) {
+  margin-bottom: 3vh; }
+
+ul#mid-head li:nth-child(2) {
+  margin-bottom: 1vh; }
+
+video {
+  width: 42vw;
+  height: auto; }
+
+.vibration:hover {
+  display: inline-block;
+  transform: scale(1, -1);
+  animation: transform 0.25s linear 1;
+  transform-origin: center;
+  cursor: default; }
+
+.vibration:focus, .vibration:active, .vibration:focus-within {
+  display: inline-block;
+  transform: scale(1, -1);
+  transform-origin: center; }
+
+.work-list {
+  line-height: 1.8em;
+  list-style: none;
+  margin-bottom: 2vh; }
+
+#works-list-ajax {
+  margin-top: 19vh;
+  margin-bottom: 17vh;
+  overflow: auto; }
+
+.work {
+  font-size: 1.5em; }
+
+.z-3 {
+  z-index: 3; }
+
+.z-4 {
+  z-index: 4; }
+
+/* === ANIMATION === */
+@keyframes fade-in {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 100%; } }
+@keyframes slide-in {
+  0% {
+    transform: translate(-500px, 0); }
+  100% {
+    transform: translate(0, 0); } }
+@keyframes rotating {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+@keyframes rotating-inverse {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(-360deg); } }
+@keyframes vibration {
+  0% {
+    transform: translate(0, -5px); }
+  25% {
+    transform: translate(0, 5px); }
+  50% {
+    transform: translate(0, -6px); }
+  75% {
+    transform: translate(0, 4px); }
+  100% {
+    transform: translate(0, -5px); } }
+/* vibration
+@keyframes vibration {
+	0%{
+		transform: rotate(0deg);
+	}
+	10%{
+		transform: rotate(-3deg);
+	}
+	20%{
+		transform: rotate(0deg);
+	}
+	30%{
+		transform: rotate(3deg);
+	}
+	40%{
+		transform: rotate(0deg);
+	}
+	50% {
+		transform: rotate(-3deg);
+	}
+	60% {
+		transform: rotate(0deg);
+	}
+	70% {
+		transform: rotate(3deg);
+	}
+	80% {
+		transform: rotate(0deg);
+	}
+	90% {
+		transform: rotate(-3deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}*/
+/* === MEDIA QUERIES === */
+@media screen and (max-width: 767px) {
+  ul#head li:nth-child(2), ul#head li:nth-child(3), ul#head li:nth-child(4) {
+    display: none; } }
+@media screen and (min-width: 768px) {
+  ul#head li:nth-child(2), ul#head li:nth-child(3), ul#head li:nth-child(4) {
+    display: none; }
+
+  div#works-section {
+    position: absolute;
+    top: 19vh;
+    left: 40vw;
+    margin-bottom: 8vw;
+    z-index: 1; } }
+@media screen and (orientation: landscape) and (max-height: 500px) {
+  #works-list-ajax {
+    margin-top: 38vh;
+    margin-bottom: 18vh;
+    overflow: auto; }
+
+  div#div-mid-head {
+    display: none; }
+
+  ul#head li:nth-child(2), ul#head li:nth-child(3) {
+    display: inline-block; }
+
+  div#works-list {
+    margin-top: 38vh; }
+
+  div#works-section {
+    top: 38vh; } }
+@media screen and (orientation: landscape) and (max-height: 500px) and (min-width: 767px) {
+  #works-list-ajax {
+    margin-top: 38vh;
+    margin-bottom: 18vh;
+    overflow: auto; }
+
+  div#div-mid-head {
+    display: none; }
+
+  ul#head li:nth-child(2), ul#head li:nth-child(3), ul#head li:nth-child(4) {
+    display: inline-block; }
+
+  div#works-list {
+    margin-top: 38vh; } }
+@media screen and (min-width: 1921px) {
+  .portfolio-immagine {
+    width: 50%;
+    float: right; }
+
+  .portfolio-paragrafo {
+    width: 50%;
+    display: inline-flex; } }
