@@ -36,6 +36,7 @@
     // options
     this.options = $.extend({}, this.constructor.defaults);
     this.option(options);
+	this.enableSwipeOnTouchDevices   = true; 
   }
 
   // Descriptions of all options available on the demo site:
@@ -161,6 +162,29 @@
       }
       return false;
     });
+	  
+	 /* Enable swipe on touch devices */
+	  
+	  this.$lightbox.find('.lb-image').on("swiperight",function() {
+    $('.lb-image').effect("slide", { "direction" : "right",  "mode" : "hide"} ,function(){
+        if (self.currentImageIndex === 0) {
+          self.changeImage(self.album.length - 1);
+        } else {
+          self.changeImage(self.currentImageIndex - 1);
+        }
+    })
+});
+
+
+this.$lightbox.find('.lb-image').on("swipeleft",function() {  
+    $('.lb-image').effect("slide", { "direction" : "left",  "mode" : "hide"} ,function(){
+        if (self.currentImageIndex === self.album.length - 1) {
+          self.changeImage(0);
+        } else {
+          self.changeImage(self.currentImageIndex + 1);
+        }
+    })
+});
 
     /*
       Show context menu for image on right-click
@@ -245,14 +269,20 @@
         }
       }
     }
-
+	  
+Lightbox.prototype.updateImg = function() {
     // Position Lightbox
-    var top  = $window.scrollTop() + this.options.positionFromTop;
-    var left = $window.scrollLeft();
     this.$lightbox.css({
-      top: top + 'px',
-      left: left + 'px'
+        position: 'fixed',
+        left: ($(window).innerWidth() - $('#lightbox').outerWidth()) / 2,
+        top: ($(window).innerHeight() - $('#lightbox').outerHeight()) / 2,
     }).fadeIn(this.options.fadeDuration);
+}
+	  
+	$(window).resize(function () {
+    $('#lightbox').css({
+    });
+});
 
     // Disable scrolling of the page while open
     if (this.options.disableScrolling) {
@@ -381,6 +411,7 @@
     this.updateDetails();
     this.preloadNeighboringImages();
     this.enableKeyboardNav();
+	this.updateImg();
   };
 
   // Display previous and next navigation if appropriate.
@@ -389,35 +420,40 @@
     // and assume that mouse hover events are not supported and always show prev/next navigation
     // arrows in image sets.
     var alwaysShowNav = false;
+  var enableSwipe = false;
     try {
       document.createEvent('TouchEvent');
       alwaysShowNav = (this.options.alwaysShowNavOnTouchDevices) ? true : false;
+    enableSwipe =  (this.options.enableSwipeOnTouchDevices)? true: false;
     } catch (e) {}
+	  
+	  //if swiping is enable, hide the two navigation buttons
+    if (! enableSwipe) {
+      this.$lightbox.find('.lb-nav').show();
 
-    this.$lightbox.find('.lb-nav').show();
-
-    if (this.album.length > 1) {
-      if (this.options.wrapAround) {
-        if (alwaysShowNav) {
-          this.$lightbox.find('.lb-prev, .lb-next').css('opacity', '1');
-        }
-        this.$lightbox.find('.lb-prev, .lb-next').show();
-      } else {
-        if (this.currentImageIndex > 0) {
-          this.$lightbox.find('.lb-prev').show();
+      if (this.album.length > 1) {
+        if (this.options.wrapAround) {
           if (alwaysShowNav) {
-            this.$lightbox.find('.lb-prev').css('opacity', '1');
+            this.$lightbox.find('.lb-prev, .lb-next').css('opacity', '1');
           }
-        }
-        if (this.currentImageIndex < this.album.length - 1) {
-          this.$lightbox.find('.lb-next').show();
-          if (alwaysShowNav) {
-            this.$lightbox.find('.lb-next').css('opacity', '1');
+          this.$lightbox.find('.lb-prev, .lb-next').show();
+        } else {
+          if (this.currentImageIndex > 0) {
+            this.$lightbox.find('.lb-prev').show();
+            if (alwaysShowNav) {
+              this.$lightbox.find('.lb-prev').css('opacity', '1');
+            }
+          }
+          if (this.currentImageIndex < this.album.length - 1) {
+            this.$lightbox.find('.lb-next').show();
+            if (alwaysShowNav) {
+              this.$lightbox.find('.lb-next').css('opacity', '1');
+            }
           }
         }
       }
-    }
-  };
+  }
+};
 
   // Display caption, image number, and closing button.
   Lightbox.prototype.updateDetails = function() {
