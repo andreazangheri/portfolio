@@ -511,7 +511,8 @@ video {
   display: inline-block;
   transform: scale(1, -1);
   animation: transform 0.25s linear 1;
-  transform-origin: center; }
+  transform-origin: center;
+  cursor: default; }
 
 .vibration:focus, .vibration:active, .vibration:focus-within {
   display: inline-block;
