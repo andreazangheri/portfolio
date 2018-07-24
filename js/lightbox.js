@@ -269,14 +269,20 @@ this.$lightbox.find('.lb-image').on("swipeleft",function() {
         }
       }
     }
-
+	  
+Lightbox.prototype.updateImg = function() {
     // Position Lightbox
-    var top  = $window.scrollTop() + this.options.positionFromTop;
-    var left = $window.scrollLeft();
     this.$lightbox.css({
-      top: top + 'px',
-      left: left + 'px'
+        position: 'fixed',
+        left: ($(window).innerWidth() - $('#lightbox').outerWidth()) / 2,
+        top: ($(window).innerHeight() - $('#lightbox').outerHeight()) / 2,
     }).fadeIn(this.options.fadeDuration);
+}
+	  
+	$(window).resize(function () {
+    $('#lightbox').css({
+    });
+});
 
     // Disable scrolling of the page while open
     if (this.options.disableScrolling) {
@@ -405,6 +411,7 @@ this.$lightbox.find('.lb-image').on("swipeleft",function() {
     this.updateDetails();
     this.preloadNeighboringImages();
     this.enableKeyboardNav();
+	this.updateImg();
   };
 
   // Display previous and next navigation if appropriate.

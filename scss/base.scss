@@ -64,7 +64,7 @@ body {
 	font-family: $SharpLight;
 	line-height: 1.5em;
 	width: 100%;
-    height: 100%;
+    //height: 100%;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -82,6 +82,7 @@ canvas {
 	top: 0;
 	left: 0;
 	z-index: 0;
+	touch-action: none;
 }
 
 div#about-mid-head ul li {
