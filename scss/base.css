@@ -175,7 +175,7 @@ html.lb-disable-scrolling {
   display: block; }
 
 .lb-nav a.lb-prev {
-  width: 34%;
+  width: 33%;
   left: 0;
   float: left;
   background: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" xml:space="preserve" viewBox="0 0 120 40" enable-background="new 0 0 120 40"  width="120" height="40" style="font-family: SharpGrotesk-Thin20; font-size: 32px;"><rect x="0" y="0" rx="12" ry="12" width="48" height="25" style="fill:white;"/><text x="11" y="24">%26%238592%3B</text></svg>') left 48% no-repeat;
@@ -191,7 +191,7 @@ html.lb-disable-scrolling {
   opacity: 1; }
 
 .lb-nav a.lb-next {
-  width: 64%;
+  width: 33%;
   right: 0;
   float: right;
   background: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" xml:space="preserve" viewBox="0 0 48 40" enable-background="new 0 0 48 40" width="48" height="40" style="font-family: SharpGrotesk-Thin20; font-size: 32px;"><rect x="0" y="0" rx="12" ry="12" width="48" height="25" style="fill:white;"/><text x="9" y="24">%26%238594%3B</text></svg>') right 48% no-repeat;
