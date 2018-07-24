@@ -301,7 +301,7 @@ Lightbox.prototype.updateImg = function() {
 
     this.$overlay.fadeIn(this.options.fadeDuration);
 
-    $('.lb-loader').fadeIn('slow');
+    $('.lb-loader').show();
     this.$lightbox.find('.lb-image, .lb-nav, .lb-prev, .lb-next, .lb-dataContainer, .lb-numbers, .lb-caption').hide();
 
     this.$outerContainer.addClass('animating');
@@ -404,7 +404,7 @@ Lightbox.prototype.updateImg = function() {
 
   // Display the image and its details and begin preload neighboring images.
   Lightbox.prototype.showImage = function() {
-    this.$lightbox.find('.lb-loader').stop(true).hide();
+    this.$lightbox.find('.lb-loader').hide();
     this.$lightbox.find('.lb-image').fadeIn(this.options.imageFadeDuration);
 
     this.updateNav();
