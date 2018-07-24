@@ -58,7 +58,6 @@
 		<!-- Src -->
 		<!--<script language="javascript" type="text/javascript" src="https://www.typerror.altervista.org/sw.js"></script>-->
 		<link rel="stylesheet" type="text/css" href="https://www.typerror.altervista.org/scss/base.css">
-		<link rel="stylesheet" type="text/css" href="https://www.typerror.altervista.org/scss/lightbox.css">
 		<script async language="javascript" type="text/javascript" src="https://www.typerror.altervista.org/js/data.json"></script>
 		<script async language="javascript" type="text/javascript" src="https://www.typerror.altervista.org/js/prefixfree.min.js"></script>
 		<script async language="javascript" type="text/javascript" src="https://www.typerror.altervista.org/js/trmix.min.js"></script>
@@ -265,16 +264,8 @@ $(window).scroll(function(event){
 			'disableScrolling': true,
 			'fitImagesInViewport': true,
 			'imageFadeDuration': 300,
-			'resizeDuration': 300,
-			'positionFromTop': $(window).resize(function res() {
-    $('#lightbox').css({
-        position: 'absolute',
-        left: ($(window).width() - $('#lightbox').outerWidth()) / 2,
-        top: ($(window).height() - $('#lightbox').outerHeight()) / 2,
-    });
-});
+			'resizeDuration': 300
 		})
-			
 		</script>
 		<!--<script>
 			if('serviceWorker' in navigator) {
