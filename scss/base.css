@@ -258,8 +258,8 @@ html.lb-disable-scrolling {
   background-size: 4vw;
   text-align: right;
   outline: none;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
-  opacity: 0.8;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=88);
+  opacity: 0.88;
   -webkit-transition: opacity 0.2s;
   -moz-transition: opacity 0.2s;
   -o-transition: opacity 0.2s;
