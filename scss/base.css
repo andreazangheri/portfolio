@@ -153,7 +153,7 @@ html.lb-disable-scrolling {
   height: 96px;
   margin: 0 auto;
   filter: invert(100%);
-  background: url("../data/favicon/favicon-96x96.gif") no-repeat; }
+  background: url("../data/images/loading.gif") no-repeat; }
 
 .lb-nav {
   position: absolute;
