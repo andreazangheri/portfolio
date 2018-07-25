@@ -92,9 +92,9 @@ html.lb-disable-scrolling {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 9999;
+  z-index: 5;
   background-color: black;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=88);
   opacity: 0.88;
   display: none; }
 
@@ -103,7 +103,7 @@ html.lb-disable-scrolling {
   position: absolute;
   left: 0;
   width: 100%;
-  z-index: 10000;
+  z-index: 6;
   text-align: center;
   line-height: 0;
   font-weight: normal; }
@@ -140,7 +140,7 @@ html.lb-disable-scrolling {
 
 .lb-loader {
   position: absolute;
-  top: 38%;
+  top: 43%;
   left: 0;
   height: 25%;
   width: 100%;
@@ -149,10 +149,9 @@ html.lb-disable-scrolling {
 
 .lb-cancel {
   display: block;
-  width: 96px;
-  height: 96px;
+  width: 32px;
+  height: 32px;
   margin: 0 auto;
-  filter: invert(100%);
   background: url("../data/images/loading.gif") no-repeat; }
 
 .lb-nav {
@@ -161,7 +160,7 @@ html.lb-disable-scrolling {
   left: 0;
   height: 100%;
   width: 100%;
-  z-index: 10; }
+  z-index: 7; }
 
 .lb-container > .nav {
   left: 0; }
@@ -179,7 +178,8 @@ html.lb-disable-scrolling {
   width: 33%;
   left: 0;
   float: left;
-  background: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" xml:space="preserve" viewBox="0 0 120 40" enable-background="new 0 0 120 40"  width="120" height="40" style="font-family: SharpGrotesk-Thin20; font-size: 32px;"><rect x="0" y="0" rx="12" ry="12" width="48" height="25" style="fill:white;"/><text x="11" y="24">%26%238592%3B</text></svg>') left 48% no-repeat;
+  background: url("../data/images/prev-arrow.svg") left 48% no-repeat;
+  background-size: 8vw;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
   -webkit-transition: opacity 0.6s;
@@ -195,8 +195,9 @@ html.lb-disable-scrolling {
   width: 33%;
   right: 0;
   float: right;
-  background: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" xml:space="preserve" viewBox="0 0 48 40" enable-background="new 0 0 48 40" width="48" height="40" style="font-family: SharpGrotesk-Thin20; font-size: 32px;"><rect x="0" y="0" rx="12" ry="12" width="48" height="25" style="fill:white;"/><text x="9" y="24">%26%238594%3B</text></svg>') right 48% no-repeat;
+  background: url("../data/images/next-arrow.svg") right 48% no-repeat;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  background-size: 8vw;
   opacity: 0;
   -webkit-transition: opacity 0.6s;
   -moz-transition: opacity 0.6s;
@@ -249,15 +250,16 @@ html.lb-disable-scrolling {
   border-radius: 12px; }
 
 .lb-data .lb-close {
-  display: none;
+  display: block;
   float: right;
-  width: 30px;
-  height: 30px;
-  background: url(../data/images/close.png) top right no-repeat;
+  width: 4vw;
+  height: 4vw;
+  background: url(../data/images/close-x.svg) top right no-repeat;
+  background-size: 4vw;
   text-align: right;
   outline: none;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
-  opacity: 0.7;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  opacity: 0.8;
   -webkit-transition: opacity 0.2s;
   -moz-transition: opacity 0.2s;
   -o-transition: opacity 0.2s;
@@ -283,7 +285,7 @@ html.lb-disable-scrolling {
 .wf-loading a {
   visibility: hidden; }
 
-.wf-active a, .wf-inactive a {
+a {
   background-color: #fff;
   border-radius: 12px;
   color: #000;
@@ -359,10 +361,10 @@ footer #right {
   position: absolute;
   right: 1vw; }
 
-.wf-loading * {
+.wf-loading {
   visibility: hidden; }
 
-.wf-active *, .wf-inactive * {
+.wf-active, .wf-inactive {
   animation: fade-in 0.6s ease-in-out;
   visibility: visible; }
 

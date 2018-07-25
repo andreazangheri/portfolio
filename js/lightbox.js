@@ -277,13 +277,7 @@ Lightbox.prototype.updateImg = function() {
         left: ($(window).innerWidth() - $('#lightbox').outerWidth()) / 2,
         top: ($(window).innerHeight() - $('#lightbox').outerHeight()) / 2,
     }).fadeIn(this.options.fadeDuration);
-}
-	  
-	$(window).resize(function () {
-    $('#lightbox').css({
-    });
-});
-
+};
     // Disable scrolling of the page while open
     if (this.options.disableScrolling) {
       $('html').addClass('lb-disable-scrolling');
@@ -372,6 +366,10 @@ Lightbox.prototype.updateImg = function() {
     this.$overlay
       .width($(document).width())
       .height($(document).height());
+	  $(window).on('resize', function(){
+      $('#lightboxOverlay').width($(document).width());
+      $('#lightboxOverlay').height($(document).height());
+	  });
   };
 
   // Animate the size of the lightbox to fit the image we are showing
