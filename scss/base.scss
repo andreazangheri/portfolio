@@ -137,12 +137,12 @@ footer #right {
 	right: 1vw;
 }
 
-.wf-loading {
+.wf-loading *{
 	//cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="60" style="font-family: SharpGrotesk-Thin20; font-size: 30px;"><text y="22">&#8593;</text></svg>'), auto;
 	visibility: hidden;
 }
 
-.wf-active, .wf-inactive {
+.wf-active *, .wf-inactive * {
 	//cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="60" style="font-family: SharpGrotesk-Thin20; font-size: 30px;"><text y="22">&#8593;</text></svg>'), auto;
 	animation: fade-in 0.6s ease-in-out;
 	visibility: visible;
@@ -361,12 +361,21 @@ video {
 		opacity: 0;
 	}
 	100% {
-		opacity: 100%;
+		opacity: 1;
 	}
 }
 @keyframes slide-in {
 	0% {
-		transform: translate(-500px,0);
+		transform: translate(-100vw,0);
+	}
+	100% {
+		transform: translate(0,0);	
+	}
+}
+
+@keyframes slide-out {
+	0% {
+		transform: translate(100vw,0);
 	}
 	100% {
 		transform: translate(0,0);

@@ -139,6 +139,18 @@
 			
 		});
 	  
+	  $('.lb-dataContainer').hover(
+		function () {
+			$('.lb-close').css('opacity', '1');
+			$('.lb-close').css('filter', 'progid:DXImageTransform.Microsoft.Alpha(Opacity=80)');
+			$('.lb-close').addClass('rotating');
+		},
+		function () {
+			$('.lb-close').css('opacity', '0.8');
+			$('.lb-close').css('filter', 'progid:DXImageTransform.Microsoft.Alpha(Opacity=80)');
+			$('.lb-close').removeClass('rotating');
+		});
+	  
 	  $('.lb-close').hover(
 		function () {
 			$(this).css('opacity', '1');
@@ -156,6 +168,11 @@
       self.end();
       return false;
     });
+	  
+	$('.lb-dataContainer').hide().on('click', function() {
+		self.end();
+      	return false;
+	});
 
     this.$lightbox.hide().on('click', function(event) {
       if ($(event.target).attr('id') === 'lightbox') {
@@ -173,8 +190,10 @@
 
     this.$lightbox.find('.lb-prev').on('click', function() {
       if (self.currentImageIndex === 0) {
+		$('.lb-image').css('animation', 'slide-in 0.6s ease-out');
         self.changeImage(self.album.length - 1);
       } else {
+		$('.lb-image').css('animation', 'slide-in 0.6s ease-out');
         self.changeImage(self.currentImageIndex - 1);
       }
       return false;
@@ -182,8 +201,10 @@
 
     this.$lightbox.find('.lb-next').on('click', function() {
       if (self.currentImageIndex === self.album.length - 1) {
+		$('.lb-image').css('animation', 'slide-out 0.6s ease-out');
         self.changeImage(0);
       } else {
+		$('.lb-image').css('animation', 'slide-out 0.6s ease-out');
         self.changeImage(self.currentImageIndex + 1);
       }
       return false;
@@ -195,10 +216,12 @@
     $('.lb-image').effect("slide", { "direction" : "right",  "mode" : "hide"} ,function(){
         if (self.currentImageIndex === 0) {
           self.changeImage(self.album.length - 1);
+		$('.lb-image').css('animation', 'slide-out 0.6s ease-in');
         } else {
           self.changeImage(self.currentImageIndex - 1);
+		$('.lb-image').css('animation', 'slide-in 0.6s ease-in');
         }
-    })
+    });
 });
 
 
@@ -206,10 +229,12 @@ this.$lightbox.find('.lb-image').on("swipeleft",function() {
     $('.lb-image').effect("slide", { "direction" : "left",  "mode" : "hide"} ,function(){
         if (self.currentImageIndex === self.album.length - 1) {
           self.changeImage(0);
+		$('.lb-image').css('animation', 'slide-in 0.6s ease-in');
         } else {
           self.changeImage(self.currentImageIndex + 1);
+		$('.lb-image').css('animation', 'slide-out 0.6s ease-in');
         }
-    })
+    });
 });
 
     /*

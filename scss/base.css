@@ -360,10 +360,10 @@ footer #right {
   position: absolute;
   right: 1vw; }
 
-.wf-loading {
+.wf-loading * {
   visibility: hidden; }
 
-.wf-active, .wf-inactive {
+.wf-active *, .wf-inactive * {
   animation: fade-in 0.6s ease-in-out;
   visibility: visible; }
 
@@ -548,10 +548,15 @@ video {
   0% {
     opacity: 0; }
   100% {
-    opacity: 100%; } }
+    opacity: 1; } }
 @keyframes slide-in {
   0% {
-    transform: translate(-500px, 0); }
+    transform: translate(-100vw, 0); }
+  100% {
+    transform: translate(0, 0); } }
+@keyframes slide-out {
+  0% {
+    transform: translate(100vw, 0); }
   100% {
     transform: translate(0, 0); } }
 @keyframes rotating {

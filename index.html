@@ -59,10 +59,9 @@
 		<!--<script language="javascript" type="text/javascript" src="https://www.typerror.altervista.org/sw.js"></script>-->
 		<link rel="stylesheet" type="text/css" href="https://www.typerror.altervista.org/scss/base.css">
 		<script async language="javascript" type="text/javascript" src="https://www.typerror.altervista.org/js/data.json"></script>
+		<script language="javascript" type="text/javascript" src="https://www.typerror.altervista.org/js/jquery-3.3.1.min.js"></script>
 		<script async language="javascript" type="text/javascript" src="https://www.typerror.altervista.org/js/prefixfree.min.js"></script>
 		<script async language="javascript" type="text/javascript" src="https://www.typerror.altervista.org/js/trmix.min.js"></script>
-		<script async language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.min.js"></script>
-		<script language="javascript" type="text/javascript" src="https://www.typerror.altervista.org/js/jquery-3.3.1.min.js"></script>
  		<style type="text/css">
         a[x-apple-data-detectors] {
             color: inherit !important;
@@ -87,9 +86,7 @@
 			</li>
 			<li id="è">
 				<h1>Andrea Zangheri</h1>
-				<p>
-					<a class="vibration">Multimedia Designer</a>
-				</p>
+				<p class="thin">Multimedia Designer</p>
 			</li>
 			<li id="chiama">
 				<p>chiamami</p>
@@ -109,9 +106,7 @@
 		<ul id="mid-head" class="z-3">
 			<li>
 				<h1>Andrea Zangheri</h1>
-				<p>
-					<a id="aboutMe" class="vibration">Multimedia Designer</a>
-				</p>
+				<p class="thin">Multimedia Designer</p>
 			</li>
 			<li>
 				<p>chiamami per un incontro</p>
@@ -132,7 +127,7 @@
 		<script id="me-template" type="text/x-handlebars-template">
 		{{#me}}
 		 <li><h1>{{name}}</h1>
-	     <p><a id="aboutMe" class="vibration">{{pro}}</a></p>
+	     <p class="thin">{{pro}}</p>
 		 </li>
 		 <li><p>{{chiama}}</p>
 		 <p><a class="vibration" href="tel:+393313107894">{{tel}}</a></p>
@@ -224,6 +219,7 @@
   				}
 			});
 		</script>
+		<script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.min.js"></script>
 		<script language="javascript" type="text/javascript" src="https://typerror.altervista.org/js/handlebars-v4.0.11.js"></script>
 		<script language="javascript" type="text/javascript" src="https://typerror.altervista.org/js/main.js"></script>
 		<script language="javascript" type="text/javascript" src="https://typerror.altervista.org/js/ajax.js"></script>
@@ -237,7 +233,7 @@
 			'disableScrolling': true,
 			'fadeDuration': 600,
 			'fitImagesInViewport': true,
-			'imageFadeDuration': 300,
+			'imageFadeDuration': 0,
 			'resizeDuration': 600,
 			'enableSwipeOnTouchDevices': true,
 			'wrapAround': false

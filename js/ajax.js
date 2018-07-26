@@ -11,41 +11,49 @@ var menuXhttp = document.getElementById("menu-ul");
 
 /* === PASSIVE EVENT LISTENER === */
 
-			jQuery.event.special.touchstart = {
-				setup: function( _, ns, handle ){
-    				if ( ns.includes("noPreventDefault") ) {
-      					this.addEventListener("touchstart", handle, { passive: false });
-    				} else {
-      					this.addEventListener("touchstart", handle, { passive: true });
-    				}
-  				}
-			};
+jQuery.event.special.touchstart = {
+	setup: function( _, ns, handle ){
+		if ( ns.includes("noPreventDefault") ) {
+			this.addEventListener("touchstart", handle, { passive: false });
+		} else {
+			this.addEventListener("touchstart", handle, { passive: true });
+		}
+	}
+};
 
-			jQuery.event.special.onmousewheel = {
-  				setup: function( _, ns, handle ){
-    				if ( ns.includes("noPreventDefault") ) {
-      					this.addEventListener("onmousewheel", handle, { passive: false });
-    				} else {
-      					this.addEventListener("onmousewheel", handle, { passive: true });
-    				}
-  				}
-			};
+jQuery.event.special.onmousewheel = {
+	setup: function( _, ns, handle ){
+		if ( ns.includes("noPreventDefault") ) {
+			this.addEventListener("onmousewheel", handle, { passive: false });
+		} else {
+			this.addEventListener("onmousewheel", handle, { passive: true });
+		}
+	}
+};
 
 /* === MOBILE TOUCH - NO-TOUCH === */
 
-		$(document).ready(function() {
-  			if ("ontouchstart" in document.documentElement) {
-    			$('.no-touch').removeClass('no-touch').addClass('touch')
-  			}
-  				$('.touch').on('touchstart touchend', function(e) {
-    			$(this).toggleClass('over');
-  			});
-		})
-				
+$(document).ready(function() {
+	if ("ontouchstart" in document.documentElement) {
+		$('.no-touch').removeClass('no-touch').addClass('touch')
+	}
+	$('.touch').on('touchstart touchend', function(e) {
+		$(this).toggleClass('over');
+	});
+})
+
 /* === RANDOM WORK === */
 
 var myRequest = new XMLHttpRequest();
+
+if (window.XMLHttpRequest) {
+		myRequest = new XMLHttpRequest();
+	} else {
+		myRequest = new ActiveXObject("Microsoft.XMLHTTP");
+	}
+
 myRequest.open('GET', 'https://www.typerror.altervista.org/js/data.json');
+
 myRequest.onloadend = function() {
 	var data = JSON.parse(myRequest.responseText);
 	renderRandomHTML(data);
@@ -72,9 +80,15 @@ function renderRandomHTML(data) {
 			
 meXhttp.addEventListener("click", function() {
 	myRequest;
+	
+	if (window.XMLHttpRequest) {
+		myRequest = new XMLHttpRequest();
+	} else {
+		myRequest = new ActiveXObject("Microsoft.XMLHTTP");
+	}
 			   
 	myRequest.open('GET', 'https://www.typerror.altervista.org/js/data.json');
-				
+			
 	myRequest.onloadend = function() {
 		
 					
@@ -98,9 +112,16 @@ meXhttp.addEventListener("click", function() {
 		worksListAjax.classList.add("hide");
 		worksSection.classList.add("hide");
 		menuXhttp.classList.add("show");
+		
 		}
 				
 	myRequest.send();
+	
+	Handlebars.registerHelper('random', function(context, options){
+	var e = Math.floor(Math.random() * (context.length)); //numero progetti
+	var r = options.fn(context[e]);
+	return r;
+	});
 			
 	}, onclick, {passive: true, capture: true});
 			
@@ -111,6 +132,15 @@ function rendermeHTML(data) {
 				
 	var meAjax = document.getElementById("mid-head");
 	meAjax.innerHTML = ourGeneratedHTML;
+	}
+
+function renderRandomHTML(data) {
+	var rawTemplate = document.getElementById("random-template").innerHTML;
+	var compiledTemplate= Handlebars.compile(rawTemplate);
+	var ourGeneratedHTML = compiledTemplate(data);
+				
+	var randomAjax = document.getElementById("works");
+	randomAjax.innerHTML = ourGeneratedHTML;
 	}
 			
 /* === PROGETTI === */
@@ -182,7 +212,7 @@ if (window.XMLHttpRequest) {
 	xhttp = new ActiveXObject("Microsoft.XMLHTTP");
 }
 	xhttp.open("GET", "https://www.typerror.altervista.org/js/data.json");
-				
+			
 	xhttp.onloadend = function(){
 				
 	var data = JSON.parse(xhttp.responseText);
