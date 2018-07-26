@@ -216,10 +216,14 @@
     $('.lb-image').effect("slide", { "direction" : "right",  "mode" : "hide"} ,function(){
         if (self.currentImageIndex === 0) {
           self.changeImage(self.album.length - 1);
-		$('.lb-image').css('animation', 'slide-out 0.6s ease-in');
+		//$('.lb-image').css('animation', 'slide-out 0.6s ease-in');
+		$('.lb-image').addClass('ui-widget-content');
+		$('.lb-image').draggable({ axis: "x" });
         } else {
           self.changeImage(self.currentImageIndex - 1);
-		$('.lb-image').css('animation', 'slide-in 0.6s ease-in');
+		//$('.lb-image').css('animation', 'slide-in 0.6s ease-in');
+		$('.lb-image').addClass('ui-widget-content');
+		$('.lb-image').draggable({ axis: "x" });
         }
     });
 });
@@ -229,10 +233,14 @@ this.$lightbox.find('.lb-image').on("swipeleft",function() {
     $('.lb-image').effect("slide", { "direction" : "left",  "mode" : "hide"} ,function(){
         if (self.currentImageIndex === self.album.length - 1) {
           self.changeImage(0);
-		$('.lb-image').css('animation', 'slide-in 0.6s ease-in');
+		//$('.lb-image').css('animation', 'slide-in 0.6s ease-in');
+		$('.lb-image').addClass('ui-widget-content');
+		$('.lb-image').draggable({ axis: "x" });
         } else {
           self.changeImage(self.currentImageIndex + 1);
-		$('.lb-image').css('animation', 'slide-out 0.6s ease-in');
+		//$('.lb-image').css('animation', 'slide-out 0.6s ease-in');
+		$('.lb-image').addClass('ui-widget-content');
+		$('.lb-image').draggable({ axis: "x" });
         }
     });
 });
@@ -347,7 +355,8 @@ Lightbox.prototype.updateImg = function() {
     this.$overlay.fadeIn(this.options.fadeDuration);
 
     $('.lb-loader').show();
-    this.$lightbox.find('.lb-image, .lb-nav, .lb-prev, .lb-next, .lb-dataContainer, .lb-numbers, .lb-caption').hide();
+    //this.$lightbox.find('.lb-image, .lb-nav, .lb-prev, .lb-next, .lb-dataContainer, .lb-numbers, .lb-caption').hide();
+    this.$lightbox.find('.lb-image, .lb-nav, .lb-prev, .lb-next, .lb-numbers, .lb-caption').hide();
 
     this.$outerContainer.addClass('animating');
 

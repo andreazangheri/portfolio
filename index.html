@@ -174,7 +174,7 @@
 		<script id="works-template" type="text/x-handlebars-template">
 		{{#custom progetti}}
 		<ul class="titolo-progetto">
-		<li class='work-list'><p id="{{id}}" class='{{class}} work light'>{{name}}</p>
+		<li class='work-list'><p><span id="{{id}}" class='{{class}} work light' style='background-color:#fff; border-radius:12px;'>{{name}}</span></p>
 		 <p class='small'>{{year}}<span> · </span>{{firstTopic}} / {{secondTopic}}</p>
 			</li>
 			<!--<li>
@@ -236,7 +236,7 @@
 			'disableScrolling': true,
 			'fadeDuration': 600,
 			'fitImagesInViewport': true,
-			'imageFadeDuration': 0,
+			'imageFadeDuration': 600,
 			'resizeDuration': 600,
 			'enableSwipeOnTouchDevices': true,
 			'wrapAround': false
