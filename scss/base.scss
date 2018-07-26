@@ -452,6 +452,14 @@ video {
 	ul#head li:nth-child(2), ul#head li:nth-child(3), ul#head li:nth-child(4) {
 		display: none;
 	}
+	.lb-nav a.lb-prev, .lb-nav a.lb-next {
+		background-size: 58px;
+	}
+	.lb-data .lb-close {
+		background-size: 26px;
+		width: 26px;
+		height: 26px;
+	}
 }
 
 @media screen and (min-width: 768px) {
@@ -466,6 +474,14 @@ video {
     margin-bottom: 8vw;
     z-index: 1;
 }
+	.lb-nav a.lb-prev, .lb-nav a.lb-next {
+		background-size: 58px;
+	}
+	.lb-data .lb-close {
+		background-size: 30px;
+		width: 30px;
+		height: 30px;
+	}
 }
 
 @media screen and (orientation: landscape) and (max-height: 500px) {

@@ -13,8 +13,8 @@ html.lb-disable-scrolling {
   left: 0;
   z-index: 5;
   background-color: black;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=88);
-  opacity: 0.88;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  opacity: 0.8;
   display: none;
 }
 
@@ -29,7 +29,14 @@ html.lb-disable-scrolling {
   font-weight: normal;
 }
 
+.lightboxOverlay:hover {
+	.lb-data .lb-close {
+		opacity: 1;
+	}
+}
+
 .lightbox .lb-image {
+	touch-action: pan-y pinch-zoom;
 	filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0\'/></filter></svg>#grayscale");
     -webkit-filter: grayscale(0%);
   display: block;
@@ -112,7 +119,6 @@ html.lb-disable-scrolling {
   left: 0;
   float: left;
   background: url('../data/images/prev-arrow.svg') left 48% no-repeat;
-  background-size: 8vw;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
   -webkit-transition: opacity 0.6s;
@@ -132,7 +138,6 @@ html.lb-disable-scrolling {
   float: right;
   background: url('../data/images/next-arrow.svg') right 48% no-repeat;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
-  background-size: 8vw;
   opacity: 0;
   -webkit-transition: opacity 0.6s;
   -moz-transition: opacity 0.6s;
@@ -196,14 +201,11 @@ html.lb-disable-scrolling {
 .lb-data .lb-close {
   display: block;
   float: right;
-  width: 4vw;
-  height: 4vw;
   background: url(../data/images/close-x.svg) top right no-repeat;
-  background-size: 4vw;
   text-align: right;
   outline: none;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=88);
-  opacity: 0.88;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  opacity: 0.8;
   -webkit-transition: opacity 0.2s;
   -moz-transition: opacity 0.2s;
   -o-transition: opacity 0.2s;

@@ -124,8 +124,34 @@
       bottom: parseInt(this.$image.css('border-bottom-width'), 10),
       left: parseInt(this.$image.css('border-left-width'), 10)
     };
+	  
+	  // Change opacity and addClass rotating to close button (X) when mouse leaves the images area
+	  this.$overlay.hover(
+		function () {
+			$('.lb-close').css('opacity', '1');
+			$('.lb-close').css('filter', 'progid:DXImageTransform.Microsoft.Alpha(Opacity=80)');
+			$('.lb-close').addClass('rotating');
+		},
+		function () {
+			$('.lb-close').css('opacity', '0.8');
+			$('.lb-close').css('filter', 'progid:DXImageTransform.Microsoft.Alpha(Opacity=80)');
+			$('.lb-close').removeClass('rotating');
+			
+		});
+	  
+	  $('.lb-close').hover(
+		function () {
+			$(this).css('opacity', '1');
+			$(this).css('filter', 'progid:DXImageTransform.Microsoft.Alpha(Opacity=80)');
+			$(this).addClass('rotating');
+		},
+		function () {
+			$(this).css('opacity', '0.8');
+			$(this).css('filter', 'progid:DXImageTransform.Microsoft.Alpha(Opacity=80)');
+			$(this).removeClass('rotating');
+		});
 
-    // Attach event handlers to the newly minted DOM elements
+    // Attach event handlers to the newly minted DOM elements  
     this.$overlay.hide().on('click', function() {
       self.end();
       return false;
@@ -422,7 +448,7 @@ Lightbox.prototype.updateImg = function() {
     try {
       document.createEvent('TouchEvent');
       alwaysShowNav = (this.options.alwaysShowNavOnTouchDevices) ? true : false;
-    enableSwipe =  (this.options.enableSwipeOnTouchDevices)? true: false;
+    enableSwipe =  (this.options.enableSwipeOnTouchDevices)? true : false;
     } catch (e) {}
 	  
 	  //if swiping is enable, hide the two navigation buttons

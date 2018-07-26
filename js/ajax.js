@@ -6,7 +6,6 @@ var workList = document.getElementById("works-list");
 var worksListAjax = document.getElementById("works-list-ajax");
 var worksSection = document.getElementById("works-section");
 var bottomMenu = document.getElementById("menu");
-var menuNext = document.getElementById("menu-next");
 var meXhttp = document.getElementById("meXhttp");
 var menuXhttp = document.getElementById("menu-ul");
 
@@ -90,7 +89,6 @@ meXhttp.addEventListener("click", function() {
 		worksListAjax.classList.remove("fixed");
 		worksListAjax.classList.remove("relative");
 		worksSection.classList.remove("show");
-		menuNext.classList.remove("show");
 		menuXhttp.classList.remove("hide");
 		
 				
@@ -99,7 +97,6 @@ meXhttp.addEventListener("click", function() {
 		workList.classList.add("show");
 		worksListAjax.classList.add("hide");
 		worksSection.classList.add("hide");
-		menuNext.classList.add("hide");
 		menuXhttp.classList.add("show");
 		}
 				
@@ -147,7 +144,6 @@ worksXhttp.addEventListener("click", function() {
 	worksListAjax.classList.remove("hide");
 	worksListAjax.classList.remove("fixed");
 	worksSection.classList.remove("show");
-	//menuNext.classList.remove("hide"); progetti bottone
 				
 	divMidHead.classList.add("hide");
 	bottomMenu.classList.add("hide");
@@ -155,7 +151,6 @@ worksXhttp.addEventListener("click", function() {
 	worksListAjax.classList.add("show");
 	worksListAjax.classList.add("relative");
 	worksSection.classList.add("hide");
-	//menuNext.classList.add("show"); progetti bottone
 	}
 }, onclick, {passive: true, capture: true});
 			
@@ -194,7 +189,6 @@ if (window.XMLHttpRequest) {
 	renderNextHTML(data);
 		
 	worksSection.classList.remove("hide");
-	menuNext.classList.remove("hide");
 	//worksListAjax.classList.remove("relative");
 	worksListAjax.classList.remove("show");
 	divMidHead.classList.remove("show");
@@ -202,7 +196,6 @@ if (window.XMLHttpRequest) {
 	menuXhttp.classList.remove("show");
 	
 	//worksListAjax.classList.add("fixed");
-	menuNext.classList.add("show");
 	worksSection.classList.add("show");
 	worksListAjax.classList.add("hide");
 	divMidHead.classList.add("hide");
