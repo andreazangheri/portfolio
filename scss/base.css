@@ -645,7 +645,11 @@ video {
   .lb-data .lb-close {
     background-size: 30px;
     width: 30px;
-    height: 30px; } }
+    height: 30px; }
+
+  .titolo-progetto {
+    position: fixed;
+    left: 8vw; } }
 @media screen and (orientation: landscape) and (max-height: 500px) {
   #works-list-ajax {
     margin-top: 38vh;
@@ -677,11 +681,16 @@ video {
 
   div#works-list {
     margin-top: 38vh; } }
+/*
 @media screen and (min-width: 1921px) {
-  .portfolio-immagine {
-    width: 50%;
-    float: right; }
+	.portfolio-immagine {
+		width: 50%;
+		float: right;
+	}
 
-  .portfolio-paragrafo {
-    width: 50%;
-    display: inline-flex; } }
+	.portfolio-paragrafo {
+		width: 50%;
+		display: inline-flex;
+	}
+
+}*/

@@ -78,7 +78,7 @@
 		<ul id="head">
 			<li>
 				<svg id="logo" class="rotating no-touch" viewBox="0 0 512 512">
-					<a id="meXhttp">
+					<a id="meXhttp" href="javascript:void(0)">
     					<circle id="svg_circle" cx="256" cy="256" r="256" fill="white" fill-opacity="1"/>
     						<path id="svg_a"  d="M140.46,326c0-34.3,33.28-68.09,128-105L311,204.69c-2.56-64-17.41-83.46-54.79-83.46-44.54,0-55.29,40.45-66,56.84-4.61,6.65-9.22,9.21-23,9.21-12.29,0-20.48-4.1-20.48-11.77,0-6.15,5.12-15.88,17.92-24.07,20-13.31,63.48-34.81,99.84-34.81,50.68,0,86.52,26.11,86.52,93.18,0,34.3-4.09,91.65-4.09,112.12,0,29.19,3.58,43.52,14.33,43.52,8.71,0,22.53-17.4,27.65-28.15,2.56-4.1,8.7,0,6.14,4.09-7.67,11.78-40.44,41.47-60.41,41.47s-29.18-13.31-29.18-36.35c0-13.82.51-31.23,2-42-13.82,23.55-67.58,78.84-103.42,78.84C163,383.37,140.46,357.26,140.46,326Zm89.09,34.82c28.16,0,74.75-51.2,78.85-68.1.51-6.65,3.07-31.23,3.07-73.73V208.27l-42,17.92c-75.27,31.23-93.19,47.11-93.19,85C176.3,338.83,205,360.85,229.55,360.85Z" fill="black"/>
 					</a>	
@@ -153,7 +153,7 @@
 		{{#random progetti}}
 		 <li class="work-list relative z-3">
 			<p style="display: none;">un progetto</p>
-				<p><a id="{{id}}" class="{{class}} vibration work light" onclick="lavoriEvento()" touchstart="lavoriEvento()">{{name}}</a></p>
+				<p><a id="{{id}}" class="{{class}} vibration work light" onclick="lavoriEvento()" touchstart="lavoriEvento()" href="javascript:void(0)">{{name}}</a></p>
 			<p class="small">{{year}}<span> · </span>{{firstTopic}} / {{secondTopic}}</p>
 		 </li>
 		{{/random}}
@@ -164,7 +164,7 @@
 		</div>
 		<script id="progetti-template" type="text/x-handlebars-template">
 		{{#each progetti}}
-		 <li class='work-list'><a id="{{id}}" class='{{class}} vibration work light' onclick="lavoriEvento()">{{name}}</a>
+		 <li class='work-list'><a id="{{id}}" class='{{class}} vibration work light' onclick="lavoriEvento()" href="javascript:void(0)">{{name}}</a>
 		 <p class='small'>{{year}}<span> · </span>{{firstTopic}} / {{secondTopic}}</p>
 			</li>
 		{{/each}}
@@ -173,31 +173,34 @@
 		</div>
 		<script id="works-template" type="text/x-handlebars-template">
 		{{#custom progetti}}
-		<ul>
+		<ul class="titolo-progetto">
 		<li class='work-list'><p id="{{id}}" class='{{class}} work light'>{{name}}</p>
 		 <p class='small'>{{year}}<span> · </span>{{firstTopic}} / {{secondTopic}}</p>
 			</li>
+			<!--<li>
+			<a id="worksXhttp" class="thin vibration" href="javascript:void(0)">&#8592; tutti i progetti</a>
+			</li>-->
 			</ul>
 			<p class="portfolio-paragrafo">{{{descrizione1}}}</p>
-		    <p><a href="{{img0}}" class="portfolio-immagine" data-lightbox="image"><img class="portfolio-immagine" src="{{img0}}" alt></a></p>
+		    <p><a href="{{img0}}" class="portfolio-immagine" data-lightbox="image" href="javascript:void(0)"><img class="portfolio-immagine" src="{{img0}}" alt></a></p>
 			<p class="portfolio-paragrafo">
 			{{{descrizione2}}}</p>
-			<p><a href="{{img1}}" class="portfolio-immagine" data-lightbox="image"><img class="portfolio-immagine" src="{{img1}}" alt></a></p>
-			<p><a href="{{img2}}" class="portfolio-immagine" data-lightbox="image"><img class="portfolio-immagine" src="{{img2}}" alt></a></p>
-			<p><a href="{{img3}}" class="portfolio-immagine" data-lightbox="image"><img class="portfolio-immagine" src="{{img3}}" alt></a></p>
+			<p><a href="{{img1}}" class="portfolio-immagine" data-lightbox="image" href="javascript:void(0)"><img class="portfolio-immagine" src="{{img1}}" alt></a></p>
+			<p><a href="{{img2}}" class="portfolio-immagine" data-lightbox="image" href="javascript:void(0)"><img class="portfolio-immagine" src="{{img2}}" alt></a></p>
+			<p><a href="{{img3}}" class="portfolio-immagine" data-lightbox="image" href="javascript:void(0)"><img class="portfolio-immagine" src="{{img3}}" alt></a></p>
 			<p class="portfolio-paragrafo">
 			{{{descrizione3}}}</p>
-			<p><a href="{{img4}}" class="portfolio-immagine" data-lightbox="image"><img class="portfolio-immagine" src="{{img4}}" alt></a></p>
-			<p><a href="{{img5}}" class="portfolio-immagine" data-lightbox="image"><img class="portfolio-immagine" src="{{img5}}" alt></a></p>
-			<p><a href="{{img6}}" class="portfolio-immagine" data-lightbox="image"><img class="portfolio-immagine" src="{{img6}}" alt></a></p>
-			<p><a href="{{img7}}" class="portfolio-immagine" data-lightbox="image"><img class="portfolio-immagine" src="{{img7}}" alt></a></p>
+			<p><a href="{{img4}}" class="portfolio-immagine" data-lightbox="image" href="javascript:void(0)"><img class="portfolio-immagine" src="{{img4}}" alt></a></p>
+			<p><a href="{{img5}}" class="portfolio-immagine" data-lightbox="image" href="javascript:void(0)"><img class="portfolio-immagine" src="{{img5}}" alt></a></p>
+			<p><a href="{{img6}}" class="portfolio-immagine" data-lightbox="image" href="javascript:void(0)"><img class="portfolio-immagine" src="{{img6}}" alt></a></p>
+			<p><a href="{{img7}}" class="portfolio-immagine" data-lightbox="image" href="javascript:void(0)"><img class="portfolio-immagine" src="{{img7}}" alt></a></p>
 			<p class="portfolio-paragrafo">{{{descrizione4}}}</p>
 		{{/custom}}
 		</script>
 		<div id="menu" class="relative z-3">
 			<ul id="menu-ul">
 				<li>
-					<a id="worksXhttp" class="thin vibration">tutti i progetti &#8594;</a>
+					<a id="worksXhttp" class="thin vibration" href="javascript:void(0)">tutti i progetti &#8594;</a>
 				</li>
 			</ul>
 		</div>
