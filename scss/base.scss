@@ -234,12 +234,10 @@ noscript {
 
 .portfolio-immagine {
 	width: 100%;
-	padding-bottom: 2.4vh;
 }
 
 .portfolio-paragrafo {
 	width: 100%;
-	padding-bottom: 2.4vh;
 }
 
 .relative {
@@ -368,7 +366,7 @@ video {
 }
 @keyframes slide-in {
 	0% {
-		transform: translate(-100vw,0);
+		transform: translate(-90vw,0);
 	}
 	100% {
 		transform: translate(0,0);	
@@ -377,7 +375,7 @@ video {
 
 @keyframes slide-out {
 	0% {
-		transform: translate(100vw,0);
+		transform: translate(90vw,0);
 	}
 	100% {
 		transform: translate(0,0);
@@ -420,43 +418,6 @@ video {
 	}
 }
 
-/* vibration
-@keyframes vibration {
-	0%{
-		transform: rotate(0deg);
-	}
-	10%{
-		transform: rotate(-3deg);
-	}
-	20%{
-		transform: rotate(0deg);
-	}
-	30%{
-		transform: rotate(3deg);
-	}
-	40%{
-		transform: rotate(0deg);
-	}
-	50% {
-		transform: rotate(-3deg);
-	}
-	60% {
-		transform: rotate(0deg);
-	}
-	70% {
-		transform: rotate(3deg);
-	}
-	80% {
-		transform: rotate(0deg);
-	}
-	90% {
-		transform: rotate(-3deg);
-	}
-	100% {
-		transform: rotate(0deg);
-	}
-}*/
-
 /* === MEDIA QUERIES === */
 
 @media screen and (max-width: 767px) {
@@ -493,10 +454,6 @@ video {
 		width: 30px;
 		height: 30px;
 	}
-	.titolo-progetto {
-	position: fixed;
-    left: $margin-left-outer;
-}
 }
 
 @media screen and (orientation: landscape) and (max-height: 500px) {
@@ -536,7 +493,7 @@ video {
     margin-top: 38vh;
 	}
 }
-/*
+
 @media screen and (min-width: 1921px) {
 	.portfolio-immagine {
 		width: 50%;
@@ -548,4 +505,4 @@ video {
 		display: inline-flex;
 	}
 
-}*/
+}
