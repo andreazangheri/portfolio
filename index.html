@@ -62,6 +62,7 @@
 		<script language="javascript" type="text/javascript" src="https://www.typerror.altervista.org/js/jquery-3.3.1.min.js"></script>
 		<script async language="javascript" type="text/javascript" src="https://www.typerror.altervista.org/js/prefixfree.min.js"></script>
 		<script async language="javascript" type="text/javascript" src="https://www.typerror.altervista.org/js/trmix.min.js"></script>
+		<script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.min.js"></script>
  		<style type="text/css">
         a[x-apple-data-detectors] {
             color: inherit !important;
@@ -201,6 +202,58 @@
 				</li>
 			</ul>
 		</div>
+		<style>
+			/*#lb-loader {
+				position: absolute;
+				top: 40%;
+				left: 0;
+				height: 25%;
+				width: 100%;
+				text-align: center;
+				line-height: 0;
+			}
+			#lb-loader-img {
+				display: block;
+				width: 70px;
+				height: 45px;
+				margin: 0 auto;
+				background: url(https://www.typerror.altervista.org/scss/../data/images/loader_full_2.gif) no-repeat;
+			}*/
+			.loader {
+				margin: 	0!important;
+    			display: 	none;
+    			position: 	fixed;
+    			z-index: 	1000;
+    			top:        0;
+    			left:       0;
+    			height:     100%;
+    			width:      100%;
+    			background: rgba( 255, 255, 255, 0.6 ) 
+                			url('https://www.typerror.altervista.org/scss/../data/images/loader_full_2.gif') 
+                			50% 50% 
+                			no-repeat;
+}
+			body.loading {
+				overflow: 	hidden;
+			}
+			body.loading .loader {
+				display: 	block;
+			}
+		</style>
+		<div class="loader"></div>
+		<script>
+			$body = $("body");
+
+$(document).on({
+    ajaxStart: function() { $body.addClass("loading");    },
+     ajaxStop: function() { $body.removeClass("loading"); }    
+});
+
+// Initiates an AJAX request on click
+$(document).on("click", function(){
+    $.get('https://www.typerror.altervista.org/js/data.json');        
+});
+		</script>
 		<!--<footer>
 			<span>
 		<!--	<a class="vibration" href="https://www.typerror.altervista.org">all works</a><span> · </span>
@@ -219,7 +272,6 @@
   				}
 			});
 		</script>
-		<script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.min.js"></script>
 		<script language="javascript" type="text/javascript" src="https://typerror.altervista.org/js/handlebars-v4.0.11.js"></script>
 		<script language="javascript" type="text/javascript" src="https://typerror.altervista.org/js/main.js"></script>
 		<script language="javascript" type="text/javascript" src="https://typerror.altervista.org/js/ajax.js"></script>
