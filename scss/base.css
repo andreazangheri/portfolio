@@ -93,7 +93,7 @@ html.lb-disable-scrolling {
   top: 0;
   left: 0;
   z-index: 5;
-  background-color: black;
+  background-color: white;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
   opacity: 0.8;
   display: none; }
