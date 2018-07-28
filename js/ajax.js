@@ -224,12 +224,12 @@ if (window.XMLHttpRequest) {
 		
 		for ( i = 0; i < container.length; i++){
 		container[i].classList.add('is-loading');
-		console.log(container);
+		//console.log(container);
 		}
 		for ( i = 0; i < container.length; i++){
 		var img = container[i].querySelectorAll('img');
 		img[0].classList.add('hide');
-		console.log(img);
+		//console.log(img);
 		}
 		
 		new imagesLoaded(imgContainer, function(instance) {
