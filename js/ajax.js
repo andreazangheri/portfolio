@@ -216,9 +216,9 @@ if (window.XMLHttpRequest) {
 	xhttp.onloadend = function(){
 				
 	var data = JSON.parse(xhttp.responseText);
-	renderNextHTML(data);
-		
-	worksSection.classList.remove("hide");
+		renderNextHTML(data);
+		new imagesLoaded(document.querySelector('#image-container'), function(instance) {
+			worksSection.classList.remove("hide");
 	//worksListAjax.classList.remove("relative");
 	worksListAjax.classList.remove("show");
 	divMidHead.classList.remove("show");
@@ -232,7 +232,25 @@ if (window.XMLHttpRequest) {
 	workList.classList.add("hide");
 	menuXhttp.classList.add("hide");
 	window.scrollTo(0,0);
-	}
+		});
+		
+	
+		
+/*	$('#image-container').imagesLoaded()
+  .always( function( instance ) {
+    console.log('all images loaded');
+  })
+  .done( function( instance ) {
+    console.log('all images successfully loaded');
+  })
+  .fail( function() {
+    console.log('all images loaded, at least one is broken');
+  })
+  .progress( function( instance, image ) {
+    var result = image.isLoaded ? 'loaded' : 'broken';
+    console.log( 'image is ' + result + ' for ' + image.img.src );
+  });*/
+};
 				
 	xhttp.send();
 				

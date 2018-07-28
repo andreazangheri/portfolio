@@ -448,10 +448,12 @@ noscript {
   font-family: "SharpLight", sans-serif; }
 
 .portfolio-immagine {
-  width: 100%; }
+  width: 100%;
+  padding-bottom: 3vw; }
 
 .portfolio-paragrafo {
-  width: 100%; }
+  width: 100%;
+  padding-bottom: 3vw; }
 
 .relative {
   position: relative; }

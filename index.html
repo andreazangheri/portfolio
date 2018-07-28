@@ -63,6 +63,7 @@
 		<script async language="javascript" type="text/javascript" src="https://www.typerror.altervista.org/js/prefixfree.min.js"></script>
 		<script async language="javascript" type="text/javascript" src="https://www.typerror.altervista.org/js/trmix.min.js"></script>
 		<script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.min.js"></script>
+		<script async src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
  		<style type="text/css">
         a[x-apple-data-detectors] {
             color: inherit !important;
@@ -175,24 +176,26 @@
 		<script id="works-template" type="text/x-handlebars-template">
 		{{#custom progetti}}
 		<ul>
-		<li class='work-list'><p id="{{id}}" class='{{class}} work light'>{{name}}</p>
+		<li class='work-list'><p><span id="{{id}}" class='{{class}} work light' style="background-color:white; border-radius: 12px;">{{name}}</span></p>
 		 <p class='small'>{{year}}<span> · </span>{{firstTopic}} / {{secondTopic}}</p>
 			</li>
 			</ul>
+			<div id="image-container">
 			<p class="portfolio-paragrafo">{{{descrizione1}}}</p>
-		    <p><a href="{{img0}}" class="portfolio-immagine" data-lightbox="image" draggable="true"><img class="portfolio-immagine" src="{{img0}}" alt></a></p>
+		    <p><a href="{{img0}}" class="portfolio-immagine" data-lightbox="image" style="background:none;"><img class="portfolio-immagine" src="{{img0}}" alt></a></p>
 			<p class="portfolio-paragrafo">
 			{{{descrizione2}}}</p>
-			<p><a href="{{img1}}" class="portfolio-immagine" data-lightbox="image" draggable="true"><img class="portfolio-immagine" src="{{img1}}" alt></a></p>
-			<p><a href="{{img2}}" class="portfolio-immagine" data-lightbox="image" draggable="true"><img class="portfolio-immagine" src="{{img2}}" alt></a></p>
-			<p><a href="{{img3}}" class="portfolio-immagine" data-lightbox="image" draggable="true"><img class="portfolio-immagine" src="{{img3}}" alt></a></p>
+			<p><a href="{{img1}}" class="portfolio-immagine" data-lightbox="image" style="background:none;"><img class="portfolio-immagine" src="{{img1}}" alt></a></p>
+			<p><a href="{{img2}}" class="portfolio-immagine" data-lightbox="image" style="background:none;"><img class="portfolio-immagine" src="{{img2}}" alt></a></p>
+			<p><a href="{{img3}}" class="portfolio-immagine" data-lightbox="image" style="background:none;"><img class="portfolio-immagine" src="{{img3}}" alt></a></p>
 			<p class="portfolio-paragrafo">
 			{{{descrizione3}}}</p>
-			<p><a href="{{img4}}" class="portfolio-immagine" data-lightbox="image" draggable="true"><img class="portfolio-immagine" src="{{img4}}" alt></a></p>
-			<p><a href="{{img5}}" class="portfolio-immagine" data-lightbox="image" draggable="true"><img class="portfolio-immagine" src="{{img5}}" alt></a></p>
-			<p><a href="{{img6}}" class="portfolio-immagine" data-lightbox="image" draggable="true"><img class="portfolio-immagine" src="{{img6}}" alt></a></p>
-			<p><a href="{{img7}}" class="portfolio-immagine" data-lightbox="image" draggable="true"><img class="portfolio-immagine" src="{{img7}}" alt></a></p>
+			<p><a href="{{img4}}" class="portfolio-immagine" data-lightbox="image" style="background:none;"><img class="portfolio-immagine" src="{{img4}}" alt></a></p>
+			<p><a href="{{img5}}" class="portfolio-immagine" data-lightbox="image" style="background:none;"><img class="portfolio-immagine" src="{{img5}}" alt></a></p>
+			<p><a href="{{img6}}" class="portfolio-immagine" data-lightbox="image" style="background:none;"><img class="portfolio-immagine" src="{{img6}}" alt></a></p>
+			<p><a href="{{img7}}" class="portfolio-immagine" data-lightbox="image" style="background:none;"><img class="portfolio-immagine" src="{{img7}}" alt></a></p>
 			<p class="portfolio-paragrafo">{{{descrizione4}}}</p>
+			</div>
 		{{/custom}}
 		</script>
 		<div id="menu" class="relative z-3">
@@ -223,14 +226,14 @@
 				margin: 	0!important;
     			display: 	none;
     			position: 	fixed;
-    			z-index: 	1000;
+    			z-index: 	5;
     			top:        0;
     			left:       0;
     			height:     100%;
     			width:      100%;
-    			background: rgba( 255, 255, 255, 0.6 ) 
+    			background: rgba( 255, 255, 255, 0.8 ) 
                 			url('https://www.typerror.altervista.org/scss/../data/images/loader_full_2.gif') 
-                			50% 50% 
+                			48% 50% 
                 			no-repeat;
 }
 			body.loading {
@@ -246,12 +249,16 @@
 
 $(document).on({
     ajaxStart: function() { $body.addClass("loading");    },
-     ajaxStop: function() { $body.removeClass("loading"); }    
+     ajaxStop: function() {  
+	$('#image-container').imagesLoaded()
+  .always( function( instance ) {
+    $body.removeClass("loading");
+  });}
 });
 
 // Initiates an AJAX request on click
-$(document).on("click", function(){
-    $.get('https://www.typerror.altervista.org/js/data.json');        
+$(this).on("click", function(){
+    $.get('https://www.typerror.altervista.org/js/data.json');
 });
 		</script>
 		<!--<footer>
