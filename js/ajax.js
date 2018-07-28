@@ -231,14 +231,15 @@ if (window.XMLHttpRequest) {
 		img[0].classList.add('hide');
 		console.log(img);
 		}
-		/*
+		
 		new imagesLoaded(imgContainer, function(instance) {
-			for (i = 0; i < 9; i++ ) {
+			for (i = 0; i < container.length; i++ ) {
 			container[i].classList.remove('is-loading');
-			img[i].classList.remove('hide');
-			img[i].classList.add('show');
+			var img = container[i].querySelectorAll('img');
+			img[0].classList.remove('hide');
+			img[0].classList.add('show');
 			}
-		});*/
+		});
 		
 		/*$('.container').addClass("is-loading");
 		$('.container').imagesLoaded()
