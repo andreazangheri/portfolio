@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5"/><!--, user-scalable=no-->
 		<title>Andrea Zangheri &#8226; Multimedia Designer</title>
 		<!-- ADD THIS --->
-		<meta name="description" content="Andrea Zangheri (@typerror) is a Web & Multimodal Designer · Developer based in Pesaro, Italy">
+		<meta name="description" content="Andrea Zangheri (@typerror) — Web & Multimodal Designer · Developer based in Pesaro, Italy">
 		<meta name="format-detection" content="telephone=no">
 		<meta name="format-detection" content="date=no">
 		<meta name="format-detection" content="address=no">
@@ -182,18 +182,18 @@
 			</ul>
 			<div id="image-container">
 			<p class="portfolio-paragrafo">{{{descrizione1}}}</p>
-		    <p><a href="{{img0}}" class="portfolio-immagine" data-lightbox="image" style="background:none;"><img class="portfolio-immagine" src="{{img0}}" alt></a></p>
+		    <p class="container"><a href="{{img0}}" class="portfolio-immagine" data-lightbox="image" style="background:none;"><img class="portfolio-immagine" src="{{img0}}" alt></a></p>
 			<p class="portfolio-paragrafo">
 			{{{descrizione2}}}</p>
-			<p><a href="{{img1}}" class="portfolio-immagine" data-lightbox="image" style="background:none;"><img class="portfolio-immagine" src="{{img1}}" alt></a></p>
-			<p><a href="{{img2}}" class="portfolio-immagine" data-lightbox="image" style="background:none;"><img class="portfolio-immagine" src="{{img2}}" alt></a></p>
-			<p><a href="{{img3}}" class="portfolio-immagine" data-lightbox="image" style="background:none;"><img class="portfolio-immagine" src="{{img3}}" alt></a></p>
+			<p class="container"><a href="{{img1}}" class="portfolio-immagine" data-lightbox="image" style="background:none;"><img class="portfolio-immagine" src="{{img1}}" alt></a></p>
+			<p class="container"><a href="{{img2}}" class="portfolio-immagine" data-lightbox="image" style="background:none;"><img class="portfolio-immagine" src="{{img2}}" alt></a></p>
+			<p class="container"><a href="{{img3}}" class="portfolio-immagine" data-lightbox="image" style="background:none;"><img class="portfolio-immagine" src="{{img3}}" alt></a></p>
 			<p class="portfolio-paragrafo">
 			{{{descrizione3}}}</p>
-			<p><a href="{{img4}}" class="portfolio-immagine" data-lightbox="image" style="background:none;"><img class="portfolio-immagine" src="{{img4}}" alt></a></p>
-			<p><a href="{{img5}}" class="portfolio-immagine" data-lightbox="image" style="background:none;"><img class="portfolio-immagine" src="{{img5}}" alt></a></p>
-			<p><a href="{{img6}}" class="portfolio-immagine" data-lightbox="image" style="background:none;"><img class="portfolio-immagine" src="{{img6}}" alt></a></p>
-			<p><a href="{{img7}}" class="portfolio-immagine" data-lightbox="image" style="background:none;"><img class="portfolio-immagine" src="{{img7}}" alt></a></p>
+			<p class="container"><a href="{{img4}}" class="portfolio-immagine" data-lightbox="image" style="background:none;"><img class="portfolio-immagine" src="{{img4}}" alt></a></p>
+			<p class="container"><a href="{{img5}}" class="portfolio-immagine" data-lightbox="image" style="background:none;"><img class="portfolio-immagine" src="{{img5}}" alt></a></p>
+			<p class="container"><a href="{{img6}}" class="portfolio-immagine" data-lightbox="image" style="background:none;"><img class="portfolio-immagine" src="{{img6}}" alt></a></p>
+			<p class="container"><a href="{{img7}}" class="portfolio-immagine" data-lightbox="image" style="background:none;"><img class="portfolio-immagine" src="{{img7}}" alt></a></p>
 			<p class="portfolio-paragrafo">{{{descrizione4}}}</p>
 			</div>
 		{{/custom}}
@@ -206,22 +206,6 @@
 			</ul>
 		</div>
 		<style>
-			/*#lb-loader {
-				position: absolute;
-				top: 40%;
-				left: 0;
-				height: 25%;
-				width: 100%;
-				text-align: center;
-				line-height: 0;
-			}
-			#lb-loader-img {
-				display: block;
-				width: 70px;
-				height: 45px;
-				margin: 0 auto;
-				background: url(https://www.typerror.altervista.org/scss/../data/images/loader_full_2.gif) no-repeat;
-			}*/
 			.loader {
 				margin: 	0!important;
     			display: 	none;
@@ -246,20 +230,10 @@
 		<div class="loader"></div>
 		<script>
 			$body = $("body");
-
-$(document).on({
-    ajaxStart: function() { $body.addClass("loading");    },
-     ajaxStop: function() {  
-	$('#image-container').imagesLoaded()
-  .always( function( instance ) {
-    $body.removeClass("loading");
-  });}
-});
-
-// Initiates an AJAX request on click
-$(this).on("click", function(){
-    $.get('https://www.typerror.altervista.org/js/data.json');
-});
+			$(document).on({
+				ajaxStart: function() { $body.addClass("loading");    },
+				ajaxStop: function() { $body.removeClass("loading"); }
+			});
 		</script>
 		<!--<footer>
 			<span>

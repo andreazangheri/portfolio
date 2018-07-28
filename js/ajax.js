@@ -79,6 +79,7 @@ function renderRandomHTML(data) {
 /* === ME === */
 			
 meXhttp.addEventListener("click", function() {
+    $.get('https://www.typerror.altervista.org/js/data.json');
 	myRequest;
 	
 	if (window.XMLHttpRequest) {
@@ -90,8 +91,6 @@ meXhttp.addEventListener("click", function() {
 	myRequest.open('GET', 'https://www.typerror.altervista.org/js/data.json');
 			
 	myRequest.onloadend = function() {
-		
-					
 		var data = JSON.parse(myRequest.responseText);
 		rendermeHTML(data);
 		renderRandomHTML(data);
@@ -146,6 +145,7 @@ function renderRandomHTML(data) {
 /* === PROGETTI === */
 			
 worksXhttp.addEventListener("click", function() {
+    $.get('https://www.typerror.altervista.org/js/data.json');
 	var xhttp;
 	
 	if (window.XMLHttpRequest) {
@@ -200,6 +200,7 @@ function renderHTML(data) {
 /* === LAVORI === */
 			
 var lavoriEvento = function lavoriEvento(){
+$.get('https://www.typerror.altervista.org/js/data.json');	
 var xhttp;
 var currentID = event.target.id;
 //console.log(currentID);
@@ -214,44 +215,59 @@ if (window.XMLHttpRequest) {
 	xhttp.open("GET", "https://www.typerror.altervista.org/js/data.json");
 			
 	xhttp.onloadend = function(){
-				
+		
 	var data = JSON.parse(xhttp.responseText);
 		renderNextHTML(data);
-		new imagesLoaded(document.querySelector('#image-container'), function(instance) {
-			worksSection.classList.remove("hide");
-	//worksListAjax.classList.remove("relative");
-	worksListAjax.classList.remove("show");
-	divMidHead.classList.remove("show");
-	workList.classList.remove("show");
-	menuXhttp.classList.remove("show");
-	
-	//worksListAjax.classList.add("fixed");
-	worksSection.classList.add("show");
-	worksListAjax.classList.add("hide");
-	divMidHead.classList.add("hide");
-	workList.classList.add("hide");
-	menuXhttp.classList.add("hide");
-	window.scrollTo(0,0);
-		});
+		var i;
+		var imgContainer = document.querySelector('#image-container');
+		var container = imgContainer.querySelectorAll('.container');
 		
-	
+		for ( i = 0; i < container.length; i++){
+		container[i].classList.add('is-loading');
+		console.log(container);
+		}
+		for ( i = 0; i < container.length; i++){
+		var img = container[i].querySelectorAll('img');
+		img[0].classList.add('hide');
+		console.log(img);
+		}
+		/*
+		new imagesLoaded(imgContainer, function(instance) {
+			for (i = 0; i < 9; i++ ) {
+			container[i].classList.remove('is-loading');
+			img[i].classList.remove('hide');
+			img[i].classList.add('show');
+			}
+		});*/
 		
-/*	$('#image-container').imagesLoaded()
-  .always( function( instance ) {
-    console.log('all images loaded');
-  })
-  .done( function( instance ) {
-    console.log('all images successfully loaded');
-  })
-  .fail( function() {
-    console.log('all images loaded, at least one is broken');
-  })
-  .progress( function( instance, image ) {
-    var result = image.isLoaded ? 'loaded' : 'broken';
-    console.log( 'image is ' + result + ' for ' + image.img.src );
-  });*/
+		/*$('.container').addClass("is-loading");
+		$('.container').imagesLoaded()
+  				.done( function( instance ) {
+    				$(".container").removeClass("is-loading");
+  		});*/
+	
+		worksSection.classList.remove("hide");
+		//worksListAjax.classList.remove("relative");
+		worksListAjax.classList.remove("show");
+		divMidHead.classList.remove("show");
+		workList.classList.remove("show");
+		menuXhttp.classList.remove("show");
+	
+		//worksListAjax.classList.add("fixed");
+		worksSection.classList.add("show");
+		worksListAjax.classList.add("hide");
+		divMidHead.classList.add("hide");
+		workList.classList.add("hide");
+		menuXhttp.classList.add("hide");
+		window.scrollTo(0,0);
+		
 };
-				
+/*	
+	$('#image-container').imagesLoaded()
+  		.always( function( instance ) {
+		
+	}
+		*/		
 	xhttp.send();
 				
 	Handlebars.registerHelper('custom', function(context, options){
