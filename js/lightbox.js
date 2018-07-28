@@ -36,7 +36,7 @@
     // options
     this.options = $.extend({}, this.constructor.defaults);
     this.option(options);
-	this.enableSwipeOnTouchDevices   = true; 
+	//this.enableSwipeOnTouchDevices   = true; 
   }
 
   // Descriptions of all options available on the demo site:
@@ -474,11 +474,11 @@ Lightbox.prototype.updateImg = function() {
     try {
       document.createEvent('TouchEvent');
       alwaysShowNav = (this.options.alwaysShowNavOnTouchDevices) ? true : false;
-    enableSwipe =  (this.options.enableSwipeOnTouchDevices)? true : false;
+    //enableSwipe =  (this.options.enableSwipeOnTouchDevices)? true : false;
     } catch (e) {}
 	  
 	  //if swiping is enable, hide the two navigation buttons
-    if (! enableSwipe) {
+    //if (! enableSwipe) {
       this.$lightbox.find('.lb-nav').show();
 
       if (this.album.length > 1) {
@@ -502,7 +502,7 @@ Lightbox.prototype.updateImg = function() {
           }
         }
       }
-  }
+  //}
 };
 
   // Display caption, image number, and closing button.

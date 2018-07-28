@@ -175,7 +175,7 @@
 		</div>
 		<script id="works-template" type="text/x-handlebars-template">
 		{{#custom progetti}}
-		<ul>
+		<ul class="titolo-progetto">
 		<li class='work-list'><p><span id="{{id}}" class='{{class}} work light' style="background-color:white; border-radius: 12px;">{{name}}</span></p>
 		 <p class='small'>{{year}}<span> · </span>{{firstTopic}} / {{secondTopic}}</p>
 			</li>
@@ -294,7 +294,7 @@ $(this).on("click", function(){
 			'fitImagesInViewport': true,
 			'imageFadeDuration': 0,
 			'resizeDuration': 600,
-			'enableSwipeOnTouchDevices': true,
+			//'enableSwipeOnTouchDevices': true,
 			'wrapAround': false
 		})
 		</script>
