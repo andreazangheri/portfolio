@@ -157,6 +157,10 @@ Handlebars.registerHelper('encode', function(context){
 	$('#meXhttp').removeAttr("onclick");
 	$('#meXhttp').prop("onclick",' meEvento()');
 	$('#meXhttp').attr("onclick",' meEvento()');
+	$('#back').prop("onclick", null);
+	$('#back').removeAttr("onclick");
+	$('#back').prop("onclick",' meEvento()');
+	$('#back').attr("onclick",' meEvento()');
 		
 	var xhttp;
 	
@@ -217,6 +221,10 @@ $('#meXhttp').prop("onclick", null);
 $('#meXhttp').removeAttr("onclick");
 $('#meXhttp').prop("onclick", 'progettiEvento()');
 $('#meXhttp').attr("onclick", 'progettiEvento()');
+$('#back').prop("onclick", null);
+$('#back').removeAttr("onclick");
+$('#back').prop("onclick", 'progettiEvento()');
+$('#back').attr("onclick", 'progettiEvento()');
 var xhttp;
 var currentID = event.target.id;
 //console.log(currentID);
