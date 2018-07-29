@@ -240,12 +240,6 @@ if (window.XMLHttpRequest) {
 			img[0].classList.add('show');
 			}
 		});
-		
-		/*$('.container').addClass("is-loading");
-		$('.container').imagesLoaded()
-  				.done( function( instance ) {
-    				$(".container").removeClass("is-loading");
-  		});*/
 	
 		worksSection.classList.remove("hide");
 		//worksListAjax.classList.remove("relative");
