@@ -5,6 +5,7 @@ var worksSection = document.getElementById("works-section");
 var bottomMenu = document.getElementById("menu");
 var menuXhttp = document.getElementById("menu-ul");
 var back = document.getElementById("back");
+var me = document.getElementById("meXhttp");
 
 /* === PASSIVE EVENT LISTENER === */
 
@@ -152,6 +153,11 @@ Handlebars.registerHelper('encode', function(context){
 	$("#works").empty();
 	$("#works-ajax").empty();
 	$("#menu-ul").empty();
+	$('#meXhttp').prop("onclick", null);
+	$('#meXhttp').removeAttr("onclick");
+	$('#meXhttp').prop("onclick",' meEvento()');
+	$('#meXhttp').attr("onclick",' meEvento()');
+		
 	var xhttp;
 	
 	if (window.XMLHttpRequest) {
@@ -203,13 +209,20 @@ Handlebars.registerHelper('encode', function(context){
 /* === LAVORI === */
 			
 var lavoriEvento = function lavoriEvento(){
+back.classList.remove("show");
+back.classList.add("hide");
 $.get('https://www.typerror.altervista.org/js/data.json');		
 $("#works-ajax").empty();
+$('#meXhttp').prop("onclick", null);
+$('#meXhttp').removeAttr("onclick");
+$('#meXhttp').prop("onclick", 'progettiEvento()');
+$('#meXhttp').attr("onclick", 'progettiEvento()');
 var xhttp;
 var currentID = event.target.id;
 //console.log(currentID);
 	
 	worksSection.classList.add("hide");
+	back.classList.remove("hide");
 	
 if (window.XMLHttpRequest) {
 	xhttp = new XMLHttpRequest();
