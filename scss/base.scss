@@ -92,10 +92,6 @@ canvas {
 	touch-action: none;
 }
 
-div#about-mid-head ul li {
-	margin-bottom: 3vh;
-}
-
 div#menu {
 	margin-top: 4vh;
 }
@@ -105,14 +101,29 @@ div#div-mid-head {
 	z-index: 3;
 }
 
+div#nojs-div-mid-head {
+	left: 8vw;
+	z-index: 3;
+}
+
 div#upper {
 	padding: $margin-top-outer 0;
 	position: fixed;
 	width: 100%;
 }
 
+div#nojs-menu {
+	margin-top: 4vh;
+	margin-left: 8vw;	
+}
+
 div#works-list {
 	margin-top: 4vh;
+}
+
+div#nojs-works-list {
+	margin-top: 4vh;
+	margin-left: 8vw;
 }
 
 div#works-section {
@@ -212,6 +223,10 @@ li h1 {
     border-radius: 12px;
 }
 
+.light {
+	font-family: 'SharpLight', sans-serif;
+}
+
 #logo {
 	width: 60px; //calcolo logo media queries
     height: auto;
@@ -244,7 +259,7 @@ li.work-list {
 }
 
 noscript {
-	font-family: $SharpLight;
+	font-family: 'SharpLight', sans-serif;
 }
 
 .portfolio-immagine {
@@ -289,6 +304,10 @@ noscript {
 	filter: invert(1);
 }
 
+.thin {
+	font-family: 'SharpThin', sans-serif;
+}
+
 .wf-loading .thin {
 	visibility: hidden;
 }
@@ -325,6 +344,16 @@ ul#mid-head li:nth-child(2){
 	margin-bottom: 1vh;
 }
 
+ul#nojs-mid-head li:nth-child(1), ul#nojs-mid-head li:nth-child(3) {
+	margin-bottom: 3vh;
+	margin-left: 8vw;
+}
+
+ul#nojs-mid-head li:nth-child(2){
+	margin-bottom: 1vh;
+	margin-left: 8vw;
+}
+
 video {
 	width: 42vw;
 	height: auto;
@@ -355,7 +384,14 @@ video {
 
 #works-list-ajax {
 	margin-top: 19vh;
-    margin-bottom: 17vh;
+    margin-bottom: 18vh;
+    overflow: auto;
+}
+
+#nojs-works-list-ajax {
+	margin-top: 19vh;
+	margin-left: 8vw;
+    margin-bottom: 18vh;
     overflow: auto;
 }
 

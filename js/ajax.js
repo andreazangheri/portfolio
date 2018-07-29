@@ -50,11 +50,6 @@ $(document).on({
 
 var myfirsRequest = new XMLHttpRequest();
 
-	$("#mid-head").empty();
-	$("#works").empty();
-	$("#works-ajax").empty();
-	$("#menu-ul").empty();
-
 if (window.XMLHttpRequest) {
 		myfirstRequest = new XMLHttpRequest();
 	} else {
@@ -83,7 +78,7 @@ Handlebars.registerHelper('random', function(context, options){
 	var e = Math.floor(Math.random() * (context.length)); //numero progetti
 	var r = options.fn(context[e]);
 	return r;
-	});
+});
 			
 /* === ME === */
 			
