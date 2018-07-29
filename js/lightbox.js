@@ -129,11 +129,13 @@
 	  this.$overlay.hover(
 		function () {
 			$('.lb-close').css('opacity', '1');
-			$('.lb-close').css('filter', 'progid:DXImageTransform.Microsoft.Alpha(Opacity=80)');
+			$('.lb-close').css('filter', 'progid:DXImageTransform.Microsoft.Alpha(Opacity=100)');
+			//$('.lb-close').css('filter', 'invert(1)');
 			$('.lb-close').addClass('rotating');
 		},
 		function () {
 			$('.lb-close').css('opacity', '0.8');
+			//$('.lb-close').css('filter', 'invert(0)');
 			$('.lb-close').css('filter', 'progid:DXImageTransform.Microsoft.Alpha(Opacity=80)');
 			$('.lb-close').removeClass('rotating');
 			
@@ -142,7 +144,7 @@
 	  $('.lb-dataContainer').hover(
 		function () {
 			$('.lb-close').css('opacity', '1');
-			$('.lb-close').css('filter', 'progid:DXImageTransform.Microsoft.Alpha(Opacity=80)');
+			$('.lb-close').css('filter', 'progid:DXImageTransform.Microsoft.Alpha(Opacity=100)');
 			$('.lb-close').addClass('rotating');
 		},
 		function () {
@@ -154,7 +156,7 @@
 	  $('.lb-close').hover(
 		function () {
 			$(this).css('opacity', '1');
-			$(this).css('filter', 'progid:DXImageTransform.Microsoft.Alpha(Opacity=80)');
+			$(this).css('filter', 'progid:DXImageTransform.Microsoft.Alpha(Opacity=100)');
 			$(this).addClass('rotating');
 		},
 		function () {

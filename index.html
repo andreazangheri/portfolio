@@ -80,7 +80,7 @@
 		<ul id="head">
 			<li>
 				<svg id="logo" class="rotating no-touch" viewBox="0 0 512 512">
-					<a id="meXhttp">
+					<a id="meXhttp" onClick="meEvento()" href="javascript:void(0)">
     					<circle id="svg_circle" cx="256" cy="256" r="256" fill="white" fill-opacity="1"/>
     						<path id="svg_a"  d="M140.46,326c0-34.3,33.28-68.09,128-105L311,204.69c-2.56-64-17.41-83.46-54.79-83.46-44.54,0-55.29,40.45-66,56.84-4.61,6.65-9.22,9.21-23,9.21-12.29,0-20.48-4.1-20.48-11.77,0-6.15,5.12-15.88,17.92-24.07,20-13.31,63.48-34.81,99.84-34.81,50.68,0,86.52,26.11,86.52,93.18,0,34.3-4.09,91.65-4.09,112.12,0,29.19,3.58,43.52,14.33,43.52,8.71,0,22.53-17.4,27.65-28.15,2.56-4.1,8.7,0,6.14,4.09-7.67,11.78-40.44,41.47-60.41,41.47s-29.18-13.31-29.18-36.35c0-13.82.51-31.23,2-42-13.82,23.55-67.58,78.84-103.42,78.84C163,383.37,140.46,357.26,140.46,326Zm89.09,34.82c28.16,0,74.75-51.2,78.85-68.1.51-6.65,3.07-31.23,3.07-73.73V208.27l-42,17.92c-75.27,31.23-93.19,47.11-93.19,85C176.3,338.83,205,360.85,229.55,360.85Z" fill="black"/>
 					</a>	
@@ -106,25 +106,7 @@
 		</div>
 		<div id="div-mid-head" class="relative z-3">
 		<ul id="mid-head" class="z-3">
-			<li>
-				<h1>Andrea Zangheri</h1>
-				<p class="thin">Multimedia Designer</p>
-			</li>
-			<li>
-				<p>chiamami per un incontro</p>
-				<p>
-					<a class="vibration" href="tel:+393313107894">+39 3313107894</a>
-				</p>
-			</li>
-			<li>
-				<p>o scrivimi un messaggio</p>
-				<p>
-					<a class="vibration" href="mailto:arkznh@gmail.com?subject=Info&body=Hi Andrea">arkznh@gmail.com</a>
-				</p>
-			</li>
 		</ul>
-		</div>
-		<div id="about-mid-head" class="hide">
 		</div>
 		<script id="me-template" type="text/x-handlebars-template">
 		{{#me}}
@@ -139,14 +121,6 @@
 		 </li>
 		{{/me}}
 		</script>
-		<!--<script id="about-template" type="text/x-handlebars-template">
-		{{#me}}
-		<ul>
-		<li><p>Ciao!</p></li>
-		<li><p>{{desc}}</p></li>
-		<ul>
-		{{/me}}
-		</script>-->
 		<div id="works-list" class="relative z-3">
 			<ul id="works">
 			</ul>
@@ -200,41 +174,16 @@
 		</script>
 		<div id="menu" class="relative z-3">
 			<ul id="menu-ul">
-				<li>
-					<a id="worksXhttp" class="thin vibration">tutti i progetti &#8594;</a>
-				</li>
 			</ul>
 		</div>
-		<style>
-			.loader {
-				margin: 	0!important;
-    			display: 	none;
-    			position: 	fixed;
-    			z-index: 	5;
-    			top:        0;
-    			left:       0;
-    			height:     100%;
-    			width:      100%;
-    			background: rgba( 255, 255, 255, 0.8 ) 
-                			url('https://www.typerror.altervista.org/scss/../data/images/loader_full_2.gif') 
-                			48% 50% 
-                			no-repeat;
-}
-			body.loading {
-				overflow: 	hidden;
-			}
-			body.loading .loader {
-				display: 	block;
-			}
-		</style>
-		<div class="loader"></div>
-		<script>
-			$body = $("body");
-			$(document).on({
-				ajaxStart: function() { $body.addClass("loading");    },
-				ajaxStop: function() { $body.removeClass("loading"); }
-			});
+		<script id="menu-template" type="text/x-handlebars-template">
+		{{#me}}
+			<li>
+				<a id="worksXhttp" class="thin vibration" onClick="progettiEvento()">{{encode menu1}}</a>
+			</li>
+		{{/me}}
 		</script>
+		<div class="loader"></div>
 		<!--<footer>
 			<span>
 		<!--	<a class="vibration" href="https://www.typerror.altervista.org">all works</a><span> · </span>

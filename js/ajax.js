@@ -1,12 +1,8 @@
-var worksContainer = document.getElementById("works-ajax");
-var worksXhttp = document.getElementById("worksXhttp");
 var divMidHead = document.getElementById("div-mid-head");
-var worksRandom = document.getElementById("works");
 var workList = document.getElementById("works-list");
 var worksListAjax = document.getElementById("works-list-ajax");
 var worksSection = document.getElementById("works-section");
 var bottomMenu = document.getElementById("menu");
-var meXhttp = document.getElementById("meXhttp");
 var menuXhttp = document.getElementById("menu-ul");
 
 /* === PASSIVE EVENT LISTENER === */
@@ -42,24 +38,46 @@ $(document).ready(function() {
 	});
 })
 
+/* === LOADER === */
+
+$body = $("body");
+$(document).on({
+	ajaxStart: function() { $body.addClass("loading");},
+	ajaxStop: function() { $body.removeClass("loading");}
+});
+
 /* === RANDOM WORK === */
 
-var myRequest = new XMLHttpRequest();
+var myfirsRequest = new XMLHttpRequest();
+
+	$("#mid-head").empty();
+	$("#works").empty();
+	$("#works-ajax").empty();
+	$("#menu-ul").empty();
 
 if (window.XMLHttpRequest) {
-		myRequest = new XMLHttpRequest();
+		myfirstRequest = new XMLHttpRequest();
 	} else {
-		myRequest = new ActiveXObject("Microsoft.XMLHTTP");
+		myfirstRequest = new ActiveXObject("Microsoft.XMLHTTP");
 	}
 
-myRequest.open('GET', 'https://www.typerror.altervista.org/js/data.json');
+myfirstRequest.open('GET', 'https://www.typerror.altervista.org/js/data.json');
 
-myRequest.onloadend = function() {
-	var data = JSON.parse(myRequest.responseText);
-	renderRandomHTML(data);
+myfirstRequest.onloadend = function() {
+	var data = JSON.parse(myfirstRequest.responseText);
+	
+		/* === Render Data === */
+		
+		rendermeHTML(data);
+		rendermenuHTML(data);
+		renderRandomHTML(data);
 	};
 	
-myRequest.send();
+myfirstRequest.send();
+
+Handlebars.registerHelper('encode', function(context){
+		return new Handlebars.SafeString(context);
+});
 
 Handlebars.registerHelper('random', function(context, options){
 	var e = Math.floor(Math.random() * (context.length)); //numero progetti
@@ -67,20 +85,15 @@ Handlebars.registerHelper('random', function(context, options){
 	return r;
 	});
 			
-function renderRandomHTML(data) {
-	var rawTemplate = document.getElementById("random-template").innerHTML;
-	var compiledTemplate= Handlebars.compile(rawTemplate);
-	var ourGeneratedHTML = compiledTemplate(data);
-				
-	var randomAjax = document.getElementById("works");
-	randomAjax.innerHTML = ourGeneratedHTML;
-	}
-			
 /* === ME === */
 			
-meXhttp.addEventListener("click", function() {
+var meEvento = function meEvento(){
     $.get('https://www.typerror.altervista.org/js/data.json');
-	myRequest;
+	$("#mid-head").empty();
+	$("#works").empty();
+	$("#works-ajax").empty();
+	$("#menu-ul").empty();
+	var myRequest = new XMLHttpRequest();
 	
 	if (window.XMLHttpRequest) {
 		myRequest = new XMLHttpRequest();
@@ -92,8 +105,14 @@ meXhttp.addEventListener("click", function() {
 			
 	myRequest.onloadend = function() {
 		var data = JSON.parse(myRequest.responseText);
+		
+		/* === Render Data === */
+		
 		rendermeHTML(data);
+		rendermenuHTML(data);
 		renderRandomHTML(data);
+		
+		/* === Show Content === */
 				
 		divMidHead.classList.remove("hide");
 		bottomMenu.classList.remove("hide");
@@ -116,36 +135,27 @@ meXhttp.addEventListener("click", function() {
 				
 	myRequest.send();
 	
+	
+Handlebars.registerHelper('encode', function(context){
+		return new Handlebars.SafeString(context);
+});
+	
 	Handlebars.registerHelper('random', function(context, options){
 	var e = Math.floor(Math.random() * (context.length)); //numero progetti
 	var r = options.fn(context[e]);
 	return r;
 	});
 			
-	}, onclick, {passive: true, capture: true});
-			
-function rendermeHTML(data) {
-	var rawTemplate = document.getElementById("me-template").innerHTML;
-	var compiledTemplate= Handlebars.compile(rawTemplate);
-	var ourGeneratedHTML = compiledTemplate(data);
-				
-	var meAjax = document.getElementById("mid-head");
-	meAjax.innerHTML = ourGeneratedHTML;
-	}
-
-function renderRandomHTML(data) {
-	var rawTemplate = document.getElementById("random-template").innerHTML;
-	var compiledTemplate= Handlebars.compile(rawTemplate);
-	var ourGeneratedHTML = compiledTemplate(data);
-				
-	var randomAjax = document.getElementById("works");
-	randomAjax.innerHTML = ourGeneratedHTML;
-	}
+	};
 			
 /* === PROGETTI === */
 			
-worksXhttp.addEventListener("click", function() {
+	var progettiEvento = function progettiEvento(){
     $.get('https://www.typerror.altervista.org/js/data.json');
+	$("#mid-head").empty();
+	$("#works").empty();
+	$("#works-ajax").empty();
+	$("#menu-ul").empty();
 	var xhttp;
 	
 	if (window.XMLHttpRequest) {
@@ -166,7 +176,11 @@ worksXhttp.addEventListener("click", function() {
 					
 	var data = JSON.parse(xhttp.responseText);
 					
+		/* === Render Data === */
+		
 	renderHTML(data);
+		
+		/* === Show Content === */
 				
 	divMidHead.classList.remove("show");
 	bottomMenu.classList.remove("show");
@@ -182,16 +196,7 @@ worksXhttp.addEventListener("click", function() {
 	worksListAjax.classList.add("relative");
 	worksSection.classList.add("hide");
 	}
-}, onclick, {passive: true, capture: true});
-			
-function renderHTML(data) {
-	var rawTemplate = document.getElementById("progetti-template").innerHTML;
-	var compiledTemplate= Handlebars.compile(rawTemplate);
-	var ourGeneratedHTML = compiledTemplate(data);
-				
-	var worksAjax = document.getElementById("works-ajax");
-	worksAjax.innerHTML = ourGeneratedHTML;
-	}	
+};
 
 /* === PROGETTI BACK === */
 
@@ -200,7 +205,8 @@ function renderHTML(data) {
 /* === LAVORI === */
 			
 var lavoriEvento = function lavoriEvento(){
-$.get('https://www.typerror.altervista.org/js/data.json');	
+$.get('https://www.typerror.altervista.org/js/data.json');		
+$("#works-ajax").empty();
 var xhttp;
 var currentID = event.target.id;
 //console.log(currentID);
@@ -215,6 +221,8 @@ if (window.XMLHttpRequest) {
 	xhttp.open("GET", "https://www.typerror.altervista.org/js/data.json");
 			
 	xhttp.onloadend = function(){
+		
+		/* === Parse Data === */
 		
 	var data = JSON.parse(xhttp.responseText);
 		renderNextHTML(data);
@@ -241,28 +249,23 @@ if (window.XMLHttpRequest) {
 			}
 		});
 	
-		worksSection.classList.remove("hide");
+		worksSection.classList.remove('hide');
 		//worksListAjax.classList.remove("relative");
-		worksListAjax.classList.remove("show");
-		divMidHead.classList.remove("show");
-		workList.classList.remove("show");
-		menuXhttp.classList.remove("show");
+		worksListAjax.classList.remove('show');
+		divMidHead.classList.remove('show');
+		workList.classList.remove('show');
+		menuXhttp.classList.remove('show');
 	
 		//worksListAjax.classList.add("fixed");
-		worksSection.classList.add("show");
-		worksListAjax.classList.add("hide");
-		divMidHead.classList.add("hide");
-		workList.classList.add("hide");
-		menuXhttp.classList.add("hide");
+		worksSection.classList.add('show');
+		worksListAjax.classList.add('hide');
+		divMidHead.classList.add('hide');
+		workList.classList.add('hide');
+		menuXhttp.classList.add('hide');
 		window.scrollTo(0,0);
 		
 };
-/*	
-	$('#image-container').imagesLoaded()
-  		.always( function( instance ) {
-		
-	}
-		*/		
+	
 	xhttp.send();
 				
 	Handlebars.registerHelper('custom', function(context, options){
@@ -270,13 +273,49 @@ if (window.XMLHttpRequest) {
 		return r;
 		//console.log(currentID);
 	});
-				
-function renderNextHTML(data) {
-	var rawTemplate = document.getElementById("works-template").innerHTML;
+}
+			
+function renderHTML(data) {
+	var rawTemplate = document.getElementById('progetti-template').innerHTML;
 	var compiledTemplate= Handlebars.compile(rawTemplate);
 	var ourGeneratedHTML = compiledTemplate(data);
 				
-	var workSection = document.getElementById("works-section");
+	var worksAjax = document.getElementById('works-ajax');
+	worksAjax.innerHTML = ourGeneratedHTML;
+}	
+
+function rendermeHTML(data) {
+	var rawTemplate = document.getElementById('me-template').innerHTML;
+	var compiledTemplate= Handlebars.compile(rawTemplate);
+	var ourGeneratedHTML = compiledTemplate(data);
+				
+	var meAjax = document.getElementById('mid-head');
+	meAjax.innerHTML = ourGeneratedHTML;
+}
+	
+function renderRandomHTML(data) {
+	var rawTemplate = document.getElementById('random-template').innerHTML;
+	var compiledTemplate= Handlebars.compile(rawTemplate);
+	var ourGeneratedHTML = compiledTemplate(data);
+				
+	var randomAjax = document.getElementById('works');
+	randomAjax.innerHTML = ourGeneratedHTML;
+}
+			
+function rendermenuHTML(data) {
+	var rawTemplate = document.getElementById('menu-template').innerHTML;
+	var compiledTemplate= Handlebars.compile(rawTemplate);
+	var ourGeneratedHTML = compiledTemplate(data);
+				
+	var menuAjax = document.getElementById('menu-ul');
+	menuAjax.innerHTML = ourGeneratedHTML;
+}
+				
+function renderNextHTML(data) {
+	var rawTemplate = document.getElementById('works-template').innerHTML;
+	var compiledTemplate= Handlebars.compile(rawTemplate);
+	var ourGeneratedHTML = compiledTemplate(data);
+				
+	var workSection = document.getElementById('works-section');
 	workSection.innerHTML = ourGeneratedHTML;
-	}
 }

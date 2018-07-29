@@ -76,6 +76,13 @@ body > * {
 	margin-right: $margin-right-outer;
 }
 
+body.loading {
+	overflow: 	hidden;
+}
+body.loading .loader {
+	display: 	block;
+}
+
 canvas {
 	margin: 0;
 	position: fixed;
@@ -185,6 +192,18 @@ p.is-loading[src*="/data/img/"] {
 
 .invert {
 	filter: invert(100%);
+}
+
+.loader {
+	margin: 	0!important;
+    display: 	none;
+    position: 	fixed;
+    z-index: 	5;
+    top:        0;
+    left:       0;
+    height:     100%;
+    width:      100%;
+    background: rgba( 255, 255, 255, 0.8 ) url('https://www.typerror.altervista.org/scss/../data/images/loader_full_2.gif') 48% 50% no-repeat;
 }
 
 li h1 {
