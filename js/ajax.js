@@ -4,6 +4,7 @@ var worksListAjax = document.getElementById("works-list-ajax");
 var worksSection = document.getElementById("works-section");
 var bottomMenu = document.getElementById("menu");
 var menuXhttp = document.getElementById("menu-ul");
+var back = document.getElementById("back");
 
 /* === PASSIVE EVENT LISTENER === */
 
@@ -109,6 +110,7 @@ var meEvento = function meEvento(){
 		
 		/* === Show Content === */
 				
+		back.classList.remove("show");
 		divMidHead.classList.remove("hide");
 		bottomMenu.classList.remove("hide");
 		workList.classList.remove("hide");
@@ -118,14 +120,13 @@ var meEvento = function meEvento(){
 		worksSection.classList.remove("show");
 		menuXhttp.classList.remove("hide");
 		
-				
+		back.classList.add("hide");
 		divMidHead.classList.add("show");
 		bottomMenu.classList.add("show");
 		workList.classList.add("show");
 		worksListAjax.classList.add("hide");
 		worksSection.classList.add("hide");
 		menuXhttp.classList.add("show");
-		
 		}
 				
 	myRequest.send();
@@ -177,6 +178,7 @@ Handlebars.registerHelper('encode', function(context){
 		
 		/* === Show Content === */
 				
+	back.classList.remove("hide");
 	divMidHead.classList.remove("show");
 	bottomMenu.classList.remove("show");
 	workList.classList.remove("show");
@@ -184,6 +186,7 @@ Handlebars.registerHelper('encode', function(context){
 	worksListAjax.classList.remove("fixed");
 	worksSection.classList.remove("show");
 				
+	back.classList.add("show");
 	divMidHead.classList.add("hide");
 	bottomMenu.classList.add("hide");
 	workList.classList.add("hide");
