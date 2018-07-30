@@ -384,7 +384,7 @@ footer #right {
   visibility: visible; }
 
 .hide {
-  display: none; }
+  display: none !important; }
 
 html {
   font-size: 14px; }
