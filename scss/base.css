@@ -333,6 +333,7 @@ div#div-mid-head {
   z-index: 3; }
 
 div#nojs-div-mid-head {
+  margin-top: 20vh;
   left: 8vw;
   z-index: 3; }
 
