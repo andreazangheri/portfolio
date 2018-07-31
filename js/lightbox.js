@@ -472,7 +472,7 @@ Lightbox.prototype.updateImg = function() {
     // and assume that mouse hover events are not supported and always show prev/next navigation
     // arrows in image sets.
     var alwaysShowNav = false;
-  var enableSwipe = false;
+  //var enableSwipe = false;
     try {
       document.createEvent('TouchEvent');
       alwaysShowNav = (this.options.alwaysShowNavOnTouchDevices) ? true : false;

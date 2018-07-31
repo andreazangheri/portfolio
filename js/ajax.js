@@ -7,6 +7,7 @@ var menuXhttp = document.getElementById("menu-ul");
 var back = document.getElementById("back");
 var me = document.getElementById("meXhttp");
 var es = document.getElementById("es");
+var contatti = document.getElementById("contatti");
 var chiama = document.getElementById("chiama");
 var scrivi = document.getElementById("scrivi");
 
@@ -113,6 +114,7 @@ var meEvento = function meEvento(){
 	myRequest.onloadend = function() {
 		es.classList.remove('hide');
 		chiama.classList.remove('hide');
+		contatti.classList.remove('hide');
 		scrivi.classList.remove('hide');
 		var data = JSON.parse(myRequest.responseText);
 		
@@ -164,6 +166,7 @@ Handlebars.registerHelper('encode', function(context){
 	es.classList.add('hide');
 	chiama.classList.add('hide');
 	scrivi.classList.add('hide');
+	contatti.classList.add('hide');
     $.get('https://www.typerror.altervista.org/js/data.json');
 	$("#mid-head").empty();
 	$("#works").empty();

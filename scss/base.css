@@ -282,6 +282,7 @@ html.lb-disable-scrolling {
 /* === Primary Colours === */
 /* === Layout ===*/
 /* === Typography === */
+/* === Logo === */
 .wf-loading a {
   visibility: hidden; }
 
@@ -326,31 +327,31 @@ canvas {
   touch-action: none; }
 
 div#menu {
-  margin-top: 4vh; }
+  margin-top: 6vh; }
 
 div#div-mid-head {
-  margin-top: 20vh;
+  margin-top: 22vh;
   z-index: 3; }
 
 div#nojs-div-mid-head {
-  margin-top: 20vh;
+  margin-top: 22vh;
   left: 8vw;
   z-index: 3; }
 
 div#upper {
-  padding: 3vh 0;
+  padding: 4vh 0;
   position: fixed;
   width: 100%; }
 
 div#nojs-menu {
-  margin-top: 4vh;
+  margin-top: 6vh;
   margin-left: 8vw; }
 
 div#works-list {
-  margin-top: 4vh; }
+  margin-top: 8vh; }
 
 div#nojs-works-list {
-  margin-top: 4vh;
+  margin-top: 8vh;
   margin-left: 8vw; }
 
 div#works-section {
@@ -389,12 +390,24 @@ footer #right {
 
 html {
   font-size: 14px; }
-  @media screen and (min-width: 320px) {
+  @media screen and (min-width: 180px) {
     html {
-      font-size: calc(14px + 6 * ((100vw - 320px) / 880)); } }
+      font-size: calc(14px + 4 * ((100vw - 180px) / 1020)); } }
   @media screen and (min-width: 1200px) {
     html {
-      font-size: 20px; } }
+      font-size: 18px; } }
+html svg#logo {
+  width: 40px; }
+  @media screen and (min-width: 180px) {
+    html svg#logo {
+      width: calc(40px + 20 * ((100vw - 180px) / 1020));
+      height: auto;
+      padding: 0; } }
+  @media screen and (min-width: 1200px) {
+    html svg#logo {
+      width: 60px;
+      height: auto;
+      padding: 0; } }
 
 img {
   filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/></filter></svg>#grayscale");
@@ -545,7 +558,7 @@ ul#menu-ul {
 ul#mid-head {
 	margin-top: 11vh;
 }*/
-ul#head li:nth-child(3), ul#head li:nth-child(4), ul#head li:nth-child(5) {
+ul#head li:nth-child(3), ul#head li:nth-child(4), ul#head li:nth-child(5), ul#head li:nth-child(6) {
   margin-left: 6vw;
   margin-top: 1vh; }
 
@@ -585,12 +598,12 @@ video {
   margin-bottom: 2vh; }
 
 #works-list-ajax {
-  margin-top: 19vh;
+  margin-top: 22vh;
   margin-bottom: 18vh;
   overflow: auto; }
 
 #nojs-works-list-ajax {
-  margin-top: 19vh;
+  margin-top: 22vh;
   margin-left: 8vw;
   margin-bottom: 18vh;
   overflow: auto; }
@@ -648,7 +661,7 @@ video {
     transform: translate(0, -5px); } }
 /* === MEDIA QUERIES === */
 @media screen and (max-width: 767px) {
-  ul#head li:nth-child(3), ul#head li:nth-child(4), ul#head li:nth-child(5) {
+  ul#head li:nth-child(3), ul#head li:nth-child(4), ul#head li:nth-child(5), ul#head li:nth-child(6) {
     display: none; }
 
   .lb-nav a.lb-prev, .lb-nav a.lb-next {
@@ -662,7 +675,7 @@ video {
   p.is-loading {
     height: 50vw; } }
 @media screen and (min-width: 768px) {
-  ul#head li:nth-child(3), ul#head li:nth-child(4), ul#head li:nth-child(5) {
+  ul#head li:nth-child(3), ul#head li:nth-child(4), ul#head li:nth-child(5), ul#head li:nth-child(6) {
     display: none; }
 
   div#works-section {
@@ -688,7 +701,7 @@ video {
     left: 8vw; } }
 @media screen and (orientation: landscape) and (max-height: 500px) {
   #works-list-ajax {
-    margin-top: 38vh;
+    margin-top: 42vh;
     margin-bottom: 18vh;
     overflow: auto; }
 
@@ -699,24 +712,27 @@ video {
     display: inline-block; }
 
   div#works-list {
-    margin-top: 38vh; }
+    margin-top: 42vh; }
 
   div#works-section {
     top: 38vh; } }
 @media screen and (orientation: landscape) and (max-height: 500px) and (min-width: 767px) {
   #works-list-ajax {
-    margin-top: 38vh;
+    margin-top: 42vh;
     margin-bottom: 18vh;
     overflow: auto; }
 
   div#div-mid-head {
     display: none; }
 
-  ul#head li:nth-child(3), ul#head li:nth-child(4), ul#head li:nth-child(5) {
+  ul#head li:nth-child(4) {
+    display: none; }
+
+  ul#head li:nth-child(3), ul#head li:nth-child(5), ul#head li:nth-child(6) {
     display: inline-block; }
 
   div#works-list {
-    margin-top: 38vh; }
+    margin-top: 42vh; }
 
   p.is-loading {
     height: 26vw; }
