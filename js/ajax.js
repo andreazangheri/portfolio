@@ -6,6 +6,9 @@ var bottomMenu = document.getElementById("menu");
 var menuXhttp = document.getElementById("menu-ul");
 var back = document.getElementById("back");
 var me = document.getElementById("meXhttp");
+var es = document.getElementById("es");
+var chiama = document.getElementById("chiama");
+var scrivi = document.getElementById("scrivi");
 
 /* === PASSIVE EVENT LISTENER === */
 
@@ -65,6 +68,9 @@ workList.classList.remove('hide');
 bottomMenu.classList.remove('hide');
 */
 myfirstRequest.onloadend = function() {
+	divMidHead.classList.remove('hide');
+	bottomMenu.classList.remove('hide');
+	workList.classList.remove('hide');
 	var data = JSON.parse(myfirstRequest.responseText);
 	
 		/* === Render Data === */
@@ -105,6 +111,9 @@ var meEvento = function meEvento(){
 	myRequest.open('GET', 'https://www.typerror.altervista.org/js/data.json');
 			
 	myRequest.onloadend = function() {
+		es.classList.remove('hide');
+		chiama.classList.remove('hide');
+		scrivi.classList.remove('hide');
 		var data = JSON.parse(myRequest.responseText);
 		
 		/* === Render Data === */
@@ -152,6 +161,9 @@ Handlebars.registerHelper('encode', function(context){
 /* === PROGETTI === */
 			
 	var progettiEvento = function progettiEvento(){
+	es.classList.add('hide');
+	chiama.classList.add('hide');
+	scrivi.classList.add('hide');
     $.get('https://www.typerror.altervista.org/js/data.json');
 	$("#mid-head").empty();
 	$("#works").empty();
