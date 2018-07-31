@@ -333,6 +333,7 @@ div#div-mid-head {
   z-index: 3; }
 
 div#nojs-div-mid-head {
+  margin-top: 20vh;
   left: 8vw;
   z-index: 3; }
 
@@ -448,6 +449,9 @@ li#back {
 	font-family: 'SharpLight', sans-serif;
 	//font-size: 1.2em;
 }*/
+li#back:hover {
+  cursor: default; }
+
 li#back span {
   padding: 0 6px;
   margin-right: 6px;

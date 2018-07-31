@@ -59,7 +59,11 @@ if (window.XMLHttpRequest) {
 	}
 
 myfirstRequest.open('GET', 'https://www.typerror.altervista.org/js/data.json');
-
+/*
+divMidHead.classList.remove('hide');
+workList.classList.remove('hide');
+bottomMenu.classList.remove('hide');
+*/
 myfirstRequest.onloadend = function() {
 	var data = JSON.parse(myfirstRequest.responseText);
 	
