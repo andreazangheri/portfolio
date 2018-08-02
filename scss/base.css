@@ -441,6 +441,9 @@ p.is-loading[src*="/data/img/"] {
 .invert {
   filter: invert(100%); }
 
+.inline {
+  display: inline !important; }
+
 .loader {
   margin: 0 !important;
   display: none;
@@ -509,6 +512,11 @@ noscript {
 .portfolio-paragrafo {
   width: 100%;
   margin-bottom: 2.4vh; }
+
+.portfolio-tags {
+  bottom: 30vh;
+  position: absolute;
+  width: 10vw; }
 
 .relative {
   position: relative; }

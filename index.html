@@ -90,7 +90,7 @@
 			</li>
 			<li id="es">
 				<h1>Andrea Zangheri</h1>
-				<p class="thin">Multimedia Designer</p>
+				<h2 class="thin">Multimedia Designer</h2>
 			</li>
 			<li id="contatti">
 				<p>contatti</p>
@@ -119,7 +119,7 @@
 		<script id="me-template" type="text/x-handlebars-template">
 		{{#me}}
 		 <li><h1>{{name}}</h1>
-	     <p class="thin">{{pro}}</p>
+	     <h2 class="thin">{{pro}}</h2>
 		 </li>
 		 <li><p>{{chiama}}</p>
 		 <p><a class="vibration" href="tel:+393313107894">{{tel}}</a></p>
@@ -137,8 +137,13 @@
 		{{#random progetti}}
 		 <li class="work-list relative z-3">
 			<p style="display: none;">un progetto</p>
-				<p><a id="{{id}}" class="{{class}} vibration work light" onclick="lavoriEvento()" touchstart="lavoriEvento()">{{name}}</a></p>
-			<p class="small">{{year}}<span> · </span>{{firstTopic}} / {{secondTopic}}</p>
+		 	<h3 class='small inline'>{{firstTopic}}</h3>
+				<span class="small">&</span>
+			<h3 class='small inline'>{{secondTopic}}</h3>
+			<h4>
+				<a id="{{id}}" class='{{class}} vibration work light' onclick="lavoriEvento()">{{name}}</a>
+			</h4>
+		 	<p class="small">{{year}}</p>
 		 </li>
 		{{/random}}
 		</script>
@@ -148,9 +153,15 @@
 		</div>
 		<script id="progetti-template" type="text/x-handlebars-template">
 		{{#each progetti}}
-		 <li class='work-list'><a id="{{id}}" class='{{class}} vibration work light' onclick="lavoriEvento()">{{name}}</a>
-		 <p class='small'>{{year}}<span> · </span>{{firstTopic}} / {{secondTopic}}</p>
-			</li>
+		 <li class='work-list'>
+		 	<h3 class='small inline'>{{firstTopic}}</h3>
+				<span class="small">&</span>
+			<h3 class='small inline'>{{secondTopic}}</h3>
+			<h4>
+				<a id="{{id}}" class='{{class}} vibration work light' onclick="lavoriEvento()">{{name}}</a>
+			</h4>
+		 	<p class="small">{{year}}</p>
+		</li>
 		{{/each}}
 		</script>
 		<div id="works-section" class="hide">
@@ -158,8 +169,22 @@
 		<script id="works-template" type="text/x-handlebars-template">
 		{{#custom progetti}}
 		<ul class="titolo-progetto">
-		<li class='work-list'><p><span id="{{id}}" class='{{class}} work light' style="background-color:white; border-radius: 12px;">{{name}}</span></p>
-		 <p class='small'>{{year}}<span> · </span>{{firstTopic}} / {{secondTopic}}</p>
+		<li class='work-list'>
+		 	<h3 class='small inline'>{{firstTopic}}</h3>
+				<span class="small">&</span>
+			<h3 class='small inline'>{{secondTopic}}</h3>
+			<h4>
+				<a id="{{id}}" class='{{class}} vibration work light' onclick="lavoriEvento()">{{name}}</a>
+			</h4>
+		 	<p class="small">{{year}}</p>
+			<div>
+				<h4 class="small">{{tag0}}</h4>
+				<h4 class="small">{{tag1}}</h4>
+				<h4 class="small">{{tag2}}</h4>
+				<h4 class="small">{{tag3}}</h4>
+				<h4 class="small">{{tag4}}</h4>
+				<h4 class="small">{{tag5}}</h4>
+			</div>
 			</li>
 			</ul>
 			<div id="image-container">

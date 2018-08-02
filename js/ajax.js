@@ -143,6 +143,7 @@ var meEvento = function meEvento(){
 		worksListAjax.classList.add("hide");
 		worksSection.classList.add("hide");
 		menuXhttp.classList.add("show");
+		window.scrollTo(0,0);
 		}
 				
 	myRequest.send();
@@ -222,12 +223,9 @@ Handlebars.registerHelper('encode', function(context){
 	worksListAjax.classList.add("show");
 	worksListAjax.classList.add("relative");
 	worksSection.classList.add("hide");
+	window.scrollTo(0,0);
 	}
 };
-
-/* === PROGETTI BACK === */
-
-
 			
 /* === LAVORI === */
 			
@@ -301,7 +299,6 @@ if (window.XMLHttpRequest) {
 		workList.classList.add('hide');
 		menuXhttp.classList.add('hide');
 		window.scrollTo(0,0);
-		
 };
 	
 	xhttp.send();
