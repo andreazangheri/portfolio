@@ -112,8 +112,24 @@
 			</li>
 		</ul>
 		</div>
-		<div id="div-mid-head" class="hide relative z-3">
+		<div id="div-mid-head" class="relative z-3">
 		<ul id="mid-head" class="z-3">
+			<li>
+ 				<h1>Andrea Zangheri</h1>
+ 				<h2 class="thin">Multimedia Designer</h2>
+ 			</li>
+ 			<li>
+ 				<p>chiamami per un incontro</p>
+ 				<p>
+ 					<a class="vibration" href="tel:+393313107894">+39 3313107894</a>
+ 				</p>
+ 			</li>
+ 			<li>
+ 				<p>o scrivimi un messaggio</p>
+ 				<p>
+ 					<a class="vibration" href="mailto:arkznh@gmail.com?subject=Info&body=Ciao Andrea">arkznh@gmail.com</a>
+ 				</p>
+ 			</li>
 		</ul>
 		</div>
 		<script id="me-template" type="text/x-handlebars-template">
@@ -129,21 +145,30 @@
 		 </li>
 		{{/me}}
 		</script>
-		<div id="works-list" class="hide relative z-3">
+		<div id="works-list" class="relative z-3">
 			<ul id="works">
+			<li class="work-list relative z-3">
+			<h4>
+				<a id="0" class="borders-web-app vibration work light" onclick="lavoriEvento()">Borders Web App</a>
+			</h4>
+		 	<span class="small">2018 &#8226;</span>
+		 	<h3 class="small inline">Grafica</h3>
+				<span class="small">&amp;</span>
+			<h3 class="small inline">Sviluppo Web</h3>
+		 </li>
 			</ul>
 		</div>
 		<script id="random-template" type="text/x-handlebars-template">
 		{{#random progetti}}
 		 <li class="work-list relative z-3">
 			<p style="display: none;">un progetto</p>
-		 	<h3 class='small inline'>{{firstTopic}}</h3>
-				<span class="small">&</span>
-			<h3 class='small inline'>{{secondTopic}}</h3>
 			<h4>
-				<a id="{{id}}" class='{{class}} vibration work light' onclick="lavoriEvento()">{{name}}</a>
+				<a id="{{id}}" class="{{class}} vibration work light" onclick="lavoriEvento()">{{name}}</a>
 			</h4>
-		 	<p class="small">{{year}}</p>
+		 	<span class="small">{{year}} &#8226;</span>
+		 	<h3 class="small inline">{{firstTopic}}</h3>
+				<span class="small">&</span>
+			<h3 class="small inline">{{secondTopic}}</h3>
 		 </li>
 		{{/random}}
 		</script>
@@ -154,13 +179,13 @@
 		<script id="progetti-template" type="text/x-handlebars-template">
 		{{#each progetti}}
 		 <li class='work-list'>
-		 	<h3 class='small inline'>{{firstTopic}}</h3>
-				<span class="small">&</span>
-			<h3 class='small inline'>{{secondTopic}}</h3>
 			<h4>
 				<a id="{{id}}" class='{{class}} vibration work light' onclick="lavoriEvento()">{{name}}</a>
 			</h4>
-		 	<p class="small">{{year}}</p>
+		 	<span class="small">{{year}} &#8226;</span>
+		 	<h3 class='small inline'>{{firstTopic}}</h3>
+				<span class="small">&</span>
+			<h3 class='small inline'>{{secondTopic}}</h3>
 		</li>
 		{{/each}}
 		</script>
@@ -170,20 +195,30 @@
 		{{#custom progetti}}
 		<ul class="titolo-progetto">
 		<li class='work-list'>
-		 	<h3 class='small inline'>{{firstTopic}}</h3>
-				<span class="small">&</span>
-			<h3 class='small inline'>{{secondTopic}}</h3>
 			<h4>
 				<a id="{{id}}" class='{{class}} vibration work light' onclick="lavoriEvento()">{{name}}</a>
 			</h4>
-		 	<p class="small">{{year}}</p>
-			<div>
-				<h4 class="small">{{tag0}}</h4>
-				<h4 class="small">{{tag1}}</h4>
-				<h4 class="small">{{tag2}}</h4>
-				<h4 class="small">{{tag3}}</h4>
-				<h4 class="small">{{tag4}}</h4>
-				<h4 class="small">{{tag5}}</h4>
+		 	<span class="small">{{year}} &#8226;</span>
+		 	<h3 class='small inline'>{{firstTopic}}</h3>
+				<span class="small">&</span>
+			<h3 class='small inline'>{{secondTopic}}</h3>
+			<div id="tags">
+				<p class="small light">{{tags}}</p>
+				<h4 class="inline small thin bg-white">{{tag0}}</h4>
+				<h4 class="inline small thin bg-white">{{tag1}}</h4>
+				<h4 class="inline small thin bg-white">{{tag2}}</h4>
+				<h4 class="inline small thin bg-white">{{tag3}}</h4>
+				<h4 class="inline small thin bg-white">{{tag4}}</h4>
+				<h4 class="inline small thin bg-white">{{tag5}}</h4>
+			</div>
+			<div id="tools">
+				<p class="small light">{{tools}}</p>
+				<h4 class="inline small thin bg-white">{{tag0}}</h4>
+				<h4 class="inline small thin bg-white">{{tag1}}</h4>
+				<h4 class="inline small thin bg-white">{{tag2}}</h4>
+				<h4 class="inline small thin bg-white">{{tag3}}</h4>
+				<h4 class="inline small thin bg-white">{{tag4}}</h4>
+				<h4 class="inline small thin bg-white">{{tag5}}</h4>
 			</div>
 			</li>
 			</ul>
@@ -202,11 +237,32 @@
 			<p class="container"><a href="{{img6}}" class="portfolio-immagine" data-lightbox="image" style="background:none;"><img class="portfolio-immagine" src="{{img6}}" alt></a></p>
 			<p class="container"><a href="{{img7}}" class="portfolio-immagine" data-lightbox="image" style="background:none;"><img class="portfolio-immagine" src="{{img7}}" alt></a></p>
 			<p class="portfolio-paragrafo">{{{descrizione4}}}</p>
+			<div id="tags2">
+				<p class="small light">{{tags}}</p>
+				<h4 class="inline small thin bg-white">{{tag0}}</h4>
+				<h4 class="inline small thin bg-white">{{tag1}}</h4>
+				<h4 class="inline small thin bg-white">{{tag2}}</h4>
+				<h4 class="inline small thin bg-white">{{tag3}}</h4>
+				<h4 class="inline small thin bg-white">{{tag4}}</h4>
+				<h4 class="inline small thin bg-white">{{tag5}}</h4>
+			</div>
+			<div id="tools2">
+				<p class="small light">{{tools}}</p>
+				<h4 class="inline small thin bg-white">{{tag0}}</h4>
+				<h4 class="inline small thin bg-white">{{tag1}}</h4>
+				<h4 class="inline small thin bg-white">{{tag2}}</h4>
+				<h4 class="inline small thin bg-white">{{tag3}}</h4>
+				<h4 class="inline small thin bg-white">{{tag4}}</h4>
+				<h4 class="inline small thin bg-white">{{tag5}}</h4>
+			</div>
 			</div>
 		{{/custom}}
 		</script>
-		<div id="menu" class="hide relative z-3">
+		<div id="menu" class="relative z-3">
 			<ul id="menu-ul">
+				<li>
+					<a id="worksXhttp" class="thin vibration" onClick="progettiEvento()">tutti i progetti &#8594;</a>
+				</li>
 			</ul>
 		</div>
 		<script id="menu-template" type="text/x-handlebars-template">

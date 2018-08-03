@@ -90,6 +90,11 @@ body.loading .loader {
 	display: 	block;
 }
 
+.bg-white {	
+	background-color: $light;
+	border-radius: 12px;
+}
+
 canvas {
 	margin: 0;
 	position: fixed;
@@ -139,6 +144,18 @@ div#works-section {
     top: 19vh;
 	margin-bottom: 8vw;
     z-index: 1;
+}
+div#tags {
+	width: 66%;
+}
+div#tools {
+	width: 66%;
+}
+div#tags2 {
+	width: 100%;
+}
+div#tools2 {
+	width: 100%;
 }
 
 .fixed {
@@ -521,6 +538,18 @@ video {
 	ul#head li:nth-child(3), ul#head li:nth-child(4), ul#head li:nth-child(5), ul#head li:nth-child(6) {
 		display: none;
 	}
+	div#tags {
+		display: none;
+	}
+	div#tools {
+		display: none;
+	}
+	div#tags2 {
+		display: block;
+	}
+	div#tools2 {
+		display: block;
+	}
 	.lb-nav a.lb-prev, .lb-nav a.lb-next {
 		background-size: 58px;
 	}
@@ -538,12 +567,27 @@ video {
 	ul#head li:nth-child(3), ul#head li:nth-child(4), ul#head li:nth-child(5), ul#head li:nth-child(6)  {
 		display: none;
 	}
-	
+	div#tags {
+		display: block;
+	}
+	div#tools {
+		display: block;
+	}
+	div#tags2 {
+		display: none;
+	}
+	div#tools2 {
+		display: none;
+	}
+	div#image-container {
+		float: right;
+		width: 46vw;
+	}
 	div#works-section {
-    position: absolute;
+    position: relative;
     top: 19vh;
-    left: 40vw;
-    margin-bottom: 8vw;
+    //left: 40vw;
+    //margin-bottom: 8vw;
     z-index: 1;
 }
 	.lb-nav a.lb-prev, .lb-nav a.lb-next {
@@ -558,12 +602,27 @@ video {
 		height: 30vw;
 	}
 	.titolo-progetto {
- 	position: fixed;
-     left: $margin-left-outer;
- }
+		display: inline-block;
+    	width: 40vw;
+    	height: 100vw;
+ 		position: fixed;
+     	left: $margin-left-outer;
+ 	}
 }
 
 @media screen and (orientation: landscape) and (max-height: 500px) {
+	div#tags {
+		display: none;
+	}
+	div#tools {
+		display: none;
+	}
+	div#tags2 {
+		display: block;
+	}
+	div#tools2 {
+		display: block;
+	}
 	#works-list-ajax {
     	margin-top: 42vh;
     	margin-bottom: 18vh;
@@ -584,7 +643,7 @@ video {
 	
 }
 
-@media screen and (orientation: landscape) and (max-height: 500px) and (min-width: 767px) {
+@media screen and (orientation: landscape) and (max-height: 500px) and (min-width: 768px) {
 	#works-list-ajax {
     	margin-top: 42vh;
     	margin-bottom: 18vh;

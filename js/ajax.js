@@ -52,7 +52,7 @@ $(document).on({
 	ajaxStop: function() { $body.removeClass("loading");}
 });
 
-/* === RANDOM WORK === */
+/* === RANDOM WORK === 
 
 var myfirsRequest = new XMLHttpRequest();
 
@@ -67,14 +67,14 @@ myfirstRequest.open('GET', 'https://www.typerror.altervista.org/js/data.json');
 divMidHead.classList.remove('hide');
 workList.classList.remove('hide');
 bottomMenu.classList.remove('hide');
-*/
+
 myfirstRequest.onloadend = function() {
 	divMidHead.classList.remove('hide');
 	bottomMenu.classList.remove('hide');
 	workList.classList.remove('hide');
 	var data = JSON.parse(myfirstRequest.responseText);
 	
-		/* === Render Data === */
+		/* === Render Data === 
 		
 		rendermeHTML(data);
 		rendermenuHTML(data);
