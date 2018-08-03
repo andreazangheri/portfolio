@@ -152,10 +152,10 @@ div#tools {
 	width: 66%;
 }
 div#tags2 {
-	width: 100%;
+	width: 66%;
 }
 div#tools2 {
-	width: 100%;
+	width: 66%;
 }
 
 .fixed {
@@ -549,6 +549,7 @@ video {
 	}
 	div#tools2 {
 		display: block;
+		margin-top: 2vh;
 	}
 	.lb-nav a.lb-prev, .lb-nav a.lb-next {
 		background-size: 58px;
@@ -569,9 +570,11 @@ video {
 	}
 	div#tags {
 		display: block;
+		margin-top: 6vh;
 	}
 	div#tools {
 		display: block;
+		margin-top: 3vh;
 	}
 	div#tags2 {
 		display: none;
