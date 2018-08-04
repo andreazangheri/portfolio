@@ -3,6 +3,7 @@
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5"/><!--, user-scalable=no-->
+		<!--<meta http-equiv="Cache-Control" content="max-age=86400"/>-->
 		<title tabindex="1">Andrea Zangheri &#8226; Multimedia Designer </title>
 		<!-- ADD THIS --->
 		<meta name="description" content="Web & Multimodal Designer · Developer [...]">
@@ -61,7 +62,7 @@
 		<script language="javascript" type="text/javascript" src="https://www.typerror.altervista.org/js/jquery-3.3.1.min.js"></script>
 		<script async language="javascript" type="text/javascript" src="https://www.typerror.altervista.org/js/prefixfree.min.js"></script>
 		<script async language="javascript" type="text/javascript" src="https://www.typerror.altervista.org/js/trmix.min.js"></script>
-		<script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.min.js"></script>
+		<!--<script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.min.js"></script>-->
 		<script async language="javascript" type="text/javascript" src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
  		<style type="text/css">
         a[x-apple-data-detectors] {
@@ -161,7 +162,6 @@
 		<script id="random-template" type="text/x-handlebars-template">
 		{{#random progetti}}
 		 <li class="work-list relative z-3">
-			<p style="display: none;">un progetto</p>
 			<h4>
 				<a id="{{id}}" class="{{class}} vibration work light" onclick="lavoriEvento()">{{name}}</a>
 			</h4>
@@ -203,22 +203,22 @@
 				<span class="small">&</span>
 			<h3 class='small inline'>{{secondTopic}}</h3>
 			<div id="tags">
-				<p class="small light">{{tags}}</p>
-				<h4 class="inline small thin bg-white">{{tag0}}</h4>
-				<h4 class="inline small thin bg-white">{{tag1}}</h4>
-				<h4 class="inline small thin bg-white">{{tag2}}</h4>
-				<h4 class="inline small thin bg-white">{{tag3}}</h4>
-				<h4 class="inline small thin bg-white">{{tag4}}</h4>
-				<h4 class="inline small thin bg-white">{{tag5}}</h4>
+				<p class="small light bg-white inline">{{tags}}</p></br>
+				<h4 class="bg-white inline small thin">{{tag0}}</h4><span class="small thin">, </span>
+				<h4 class="bg-white inline small thin">{{tag1}}</h4><span class="small thin">, </span>
+				<h4 class="bg-white inline small thin">{{tag2}}</h4><span class="small thin">, </span></br>
+				<h4 class="bg-white inline small thin">{{tag3}}</h4><span class="small thin">, </span>
+				<h4 class="bg-white inline small thin">{{tag4}}</h4><span class="small thin">, </span>
+				<h4 class="bg-white inline small thin">{{tag5}}</h4>
 			</div>
 			<div id="tools">
-				<p class="small light">{{tools}}</p>
-				<h4 class="inline small thin bg-white">{{tag0}}</h4>
-				<h4 class="inline small thin bg-white">{{tag1}}</h4>
-				<h4 class="inline small thin bg-white">{{tag2}}</h4>
-				<h4 class="inline small thin bg-white">{{tag3}}</h4>
-				<h4 class="inline small thin bg-white">{{tag4}}</h4>
-				<h4 class="inline small thin bg-white">{{tag5}}</h4>
+				<p class="small light bg-white inline">{{tools}}</p></br>
+				<h4 class="bg-white inline small thin">{{tag0}}</h4><span class="small thin">, </span>
+				<h4 class="bg-white inline small thin">{{tag1}}</h4><span class="small thin">, </span>
+				<h4 class="bg-white inline small thin">{{tag2}}</h4><span class="small thin">, </span></br>
+				<h4 class="bg-white inline small thin">{{tag3}}</h4><span class="small thin">, </span>
+				<h4 class="bg-white inline small thin">{{tag4}}</h4><span class="small thin">, </span>
+				<h4 class="bg-white inline small thin">{{tag5}}</h4>
 			</div>
 			</li>
 			</ul>
@@ -238,22 +238,22 @@
 			<p class="container"><a href="{{img7}}" class="portfolio-immagine" data-lightbox="image" style="background:none;"><img class="portfolio-immagine" src="{{img7}}" alt></a></p>
 			<p class="portfolio-paragrafo">{{{descrizione4}}}</p>
 			<div id="tags2">
-				<p class="small light">{{tags}}</p>
-				<h4 class="inline small thin bg-white">{{tag0}}</h4>
-				<h4 class="inline small thin bg-white">{{tag1}}</h4>
-				<h4 class="inline small thin bg-white">{{tag2}}</h4>
-				<h4 class="inline small thin bg-white">{{tag3}}</h4>
-				<h4 class="inline small thin bg-white">{{tag4}}</h4>
-				<h4 class="inline small thin bg-white">{{tag5}}</h4>
+				<p class="small light bg-white inline">{{tags}}</p></br>
+				<h4 class="bg-white inline small thin">{{tag0}}</h4><span class="small thin">, </span>
+				<h4 class="bg-white inline small thin">{{tag1}}</h4><span class="small thin">, </span>
+				<h4 class="bg-white inline small thin">{{tag2}}</h4><span class="small thin">, </span>
+				<h4 class="bg-white inline small thin">{{tag3}}</h4><span class="small thin">, </span>
+				<h4 class="bg-white inline small thin">{{tag4}}</h4><span class="small thin">, </span>
+				<h4 class="bg-white inline small thin">{{tag5}}</h4>
 			</div>
 			<div id="tools2">
-				<p class="small light">{{tools}}</p>
-				<h4 class="inline small thin bg-white">{{tag0}}</h4>
-				<h4 class="inline small thin bg-white">{{tag1}}</h4>
-				<h4 class="inline small thin bg-white">{{tag2}}</h4>
-				<h4 class="inline small thin bg-white">{{tag3}}</h4>
-				<h4 class="inline small thin bg-white">{{tag4}}</h4>
-				<h4 class="inline small thin bg-white">{{tag5}}</h4>
+				<p class="small light bg-white inline">{{tools}}</p></br>
+				<h4 class="bg-white inline small thin">{{tag0}}</h4><span class="small thin">, </span>
+				<h4 class="bg-white inline small thin">{{tag1}}</h4><span class="small thin">, </span>
+				<h4 class="bg-white inline small thin">{{tag2}}</h4><span class="small thin">, </span>
+				<h4 class="bg-white inline small thin">{{tag3}}</h4><span class="small thin">, </span>
+				<h4 class="bg-white inline small thin">{{tag4}}</h4><span class="small thin">, </span>
+				<h4 class="bg-white inline small thin">{{tag5}}</h4>
 			</div>
 			</div>
 		{{/custom}}
@@ -291,8 +291,8 @@
   				}
 			});
 		</script>
-		<script language="javascript" type="text/javascript" src="https://typerror.altervista.org/js/handlebars-v4.0.11.js"></script>
-		<script language="javascript" type="text/javascript" src="https://typerror.altervista.org/js/main.js"></script>
+		<script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+		<!--<script language="javascript" type="text/javascript" src="https://typerror.altervista.org/js/main.js"></script>-->
 		<script language="javascript" type="text/javascript" src="https://typerror.altervista.org/js/ajax.js"></script>
 		<script language="javascript" type="text/javascript" src="https://typerror.altervista.org/js/lightbox.js"></script>
 		<!--<script language="javascript" type="text/javascript" src="https://typerror.altervista.org/js/jquery-ui.min.js"></script>
