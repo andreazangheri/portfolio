@@ -79,7 +79,7 @@
 		<div id="upper" class="relative z-4" itemscope itemtype="https://www.typerror.altervista.org">
 		<ul id="head">
 			<li id="back" class="hide" onClick="meEvento()">
-				<span>←</span>
+				<span>&#8592;</span>
 			</li>
 			<li>
 				<svg id="logo" class="rotating no-touch" viewBox="0 0 512 512">
@@ -120,13 +120,13 @@
  				<h2 class="thin">Multimedia Designer</h2>
  			</li>
  			<li>
- 				<p>chiamami per un incontro</p>
+ 				<p>chiamami</p>
  				<p>
  					<a class="vibration" href="tel:+393313107894">+39 3313107894</a>
  				</p>
  			</li>
  			<li>
- 				<p>o scrivimi un messaggio</p>
+ 				<p>o scrivimi</p>
  				<p>
  					<a class="vibration" href="mailto:arkznh@gmail.com?subject=Info&body=Ciao Andrea">arkznh@gmail.com</a>
  				</p>
@@ -149,26 +149,30 @@
 		<div id="works-list" class="relative z-3">
 			<ul id="works">
 			<li class="work-list relative z-3">
-			<h4>
+			<h4 class="progetto">
 				<a id="0" class="borders-web-app vibration work light" onclick="lavoriEvento()">Borders Web App</a>
 			</h4>
+			<p class="inline">
 		 	<span class="small">2018 &#8226;</span>
 		 	<h3 class="small inline">Grafica</h3>
 				<span class="small">&amp;</span>
 			<h3 class="small inline">Sviluppo Web</h3>
+			</p>
 		 </li>
 			</ul>
 		</div>
 		<script id="random-template" type="text/x-handlebars-template">
 		{{#random progetti}}
 		 <li class="work-list relative z-3">
-			<h4>
+			<h4 class="progetto">
 				<a id="{{id}}" class="{{class}} vibration work light" onclick="lavoriEvento()">{{name}}</a>
 			</h4>
+			<p class="inline">
 		 	<span class="small">{{year}} &#8226;</span>
 		 	<h3 class="small inline">{{firstTopic}}</h3>
 				<span class="small">&</span>
 			<h3 class="small inline">{{secondTopic}}</h3>
+			</p>
 		 </li>
 		{{/random}}
 		</script>
@@ -179,13 +183,15 @@
 		<script id="progetti-template" type="text/x-handlebars-template">
 		{{#each progetti}}
 		 <li class='work-list'>
-			<h4>
+			<h4 class="progetto">
 				<a id="{{id}}" class='{{class}} vibration work light' onclick="lavoriEvento()">{{name}}</a>
 			</h4>
+			<p class="inline">
 		 	<span class="small">{{year}} &#8226;</span>
 		 	<h3 class='small inline'>{{firstTopic}}</h3>
 				<span class="small">&</span>
 			<h3 class='small inline'>{{secondTopic}}</h3>
+			</p>
 		</li>
 		{{/each}}
 		</script>
@@ -195,13 +201,15 @@
 		{{#custom progetti}}
 		<ul class="titolo-progetto">
 		<li class='work-list'>
-			<h4>
+			<h4 class="progetto">
 				<span id="{{id}}" class='{{class}} bg-white work light'>{{name}}</span>
 			</h4>
+			<p class="inline">
 		 	<span class="small">{{year}} &#8226;</span>
 		 	<h3 class='small inline'>{{firstTopic}}</h3>
 				<span class="small">&</span>
 			<h3 class='small inline'>{{secondTopic}}</h3>
+			</p>
 			<div id="tags">
 				<p class="small light bg-white inline">{{tags}}</p></br>
 				<h4 class="bg-white inline small thin">{{tag0}}</h4><span class="small thin">, </span>
@@ -273,6 +281,10 @@
 		{{/me}}
 		</script>
 		<div class="loader"></div>
+		<div id="error" class="hide">
+			<p>Qualcosa non ha funzionato.</p>
+			<p class="small">Prova a ricaricare la pagina</p>
+		</div>
 		<!--<footer>
 			<span>
 		<!--	<a class="vibration" href="https://www.typerror.altervista.org">all works</a><span> · </span>
@@ -287,7 +299,7 @@
 		<script>
 			WebFont.load({
   				custom: {
-    			families: ['SharpThin','SharpLight']
+    			families: ['SharpLight','SharpMed']
   				}
 			});
 		</script>
@@ -342,7 +354,7 @@
 			<ul id="nojs-works">
 		 <li class="work-list relative z-3">
 				<p><a class="borders-web-app vibration work light" href="/no-js/borders-web-app.html">Borders Web App</a></p>
-			<p class="small">2018<span> · </span>Grafica / Web</p>
+			<p class="small">2018<span> · </span>Grafica &amp; Sviluppo Web</p>
 		 </li>
 		</ul>
 		</div>

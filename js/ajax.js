@@ -47,8 +47,10 @@ $(document).ready(function() {
 /* === LOADER === */
 
 $body = $("body");
+$error = $("#error");
 $(document).on({
 	ajaxStart: function() { $body.addClass("loading");},
+	ajaxError: function() { $error.removeClass("hide");},
 	ajaxStop: function() { $body.removeClass("loading");}
 });
 
@@ -109,7 +111,11 @@ var meEvento = function meEvento(){
 		myRequest = new ActiveXObject("Microsoft.XMLHTTP");
 	}
 			   
-	myRequest.open('GET', 'https://www.typerror.altervista.org/js/data.json');
+	myRequest.open('GET', 'https://www.typerror.altervista.org/js/data.json');		
+	
+	myRequest.onerror = function(){
+	console.log("Connection error");
+	};
 			
 	myRequest.onloadend = function() {
 		es.classList.remove('hide');
@@ -254,7 +260,11 @@ if (window.XMLHttpRequest) {
 } else {
 	xhttp = new ActiveXObject("Microsoft.XMLHTTP");
 }
-	xhttp.open("GET", "https://www.typerror.altervista.org/js/data.json");
+	xhttp.open("GET", "https://www.typerror.altervista.org/js/data.json");		
+	
+	xhttp.onerror = function(){
+	console.log("Connection error");
+	};
 			
 	xhttp.onloadend = function(){
 		

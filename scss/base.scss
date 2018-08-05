@@ -9,14 +9,15 @@
 /*@include font-face(Ogg,  "../font/OggRoman");*/
 @include font-face(SharpThin, "../font/SharpGrotesk-Thin20");
 @include font-face(SharpLight, "../font/SharpGrotesk-Light20");
-/*@include font-face(SharpReg, "../font/SharpGrotesk-Book20");*/
+@include font-face(SharpReg, "../font/SharpGrotesk-Book20");
+@include font-face(SharpMed, "../font/SharpGrotesk-Medium20");
 
 /* === MAIN ==== */
 
-$Ogg: 'Ogg', serif;
 $SharpThin: 'SharpThin', sans-serif;
 $SharpLight: 'SharpLight', sans-serif;
 $SharpRegular: 'SharpReg', sans-serif;
+$SharpMedium: 'SharpMed', sans-serif;
 
 /* === Primary Colours === */
 
@@ -57,7 +58,7 @@ a {
 	background-color: $light;
     border-radius: 12px;
 	color: $dark;
-	font-family: $SharpThin;
+	font-family: $SharpLight;
 	text-decoration: none;
 	visibility: visible;
 }
@@ -68,7 +69,7 @@ div a:hover, footer a:hover {
 }*/
 
 body {
-	font-family: $SharpLight;
+	font-family: $SharpMedium;
 	line-height: 1.5em;
 	width: 100%;
     //height: 100%;
@@ -81,6 +82,7 @@ body {
 body > * {
 	margin-left: $margin-left-outer;
 	margin-right: $margin-right-outer;
+	background: white;
 }
 
 body.loading {
@@ -105,7 +107,7 @@ canvas {
 }
 
 div#menu {
-	margin-top: 6vh;
+	margin-top: 0;
 }
 
 div#div-mid-head {
@@ -162,6 +164,12 @@ div#tools2 {
 	width: 100%;
 }
 
+#error {
+	display: block;
+	position: absolute;
+	top: 22vh;
+}
+
 .fixed {
 	position: fixed;
 }
@@ -175,7 +183,7 @@ footer {
 }
 
 footer a, .small {
-	font-family: $SharpThin;
+	font-family: $SharpLight;
 	font-size: 0.8em;
 }
 
@@ -197,6 +205,10 @@ footer #right {
 
 .hide {
 	display: none!important;
+}
+
+h4.progetto {
+	margin-bottom: -0.6vh;
 }
 
 html {
@@ -266,6 +278,7 @@ li#back:hover {
 }
 
 li#back span {
+	font-family: $SharpLight;
 	padding: 0 6px;
 	margin-right: 6px;
 	background: #fff;
@@ -288,11 +301,11 @@ li#back span {
 
 .wf-active .light, .wf-inactive .light {
 	visibility: visible;
-	font-family: $SharpLight;
+	font-family: $SharpMedium;
 }
 
 li.work-list {
-	margin-bottom: 2.4vh;
+	margin-bottom: 4vh;
 }
 
 #menu-next-ajax {
@@ -369,7 +382,7 @@ noscript {
 
 .wf-active .thin, .wf-inactive .thin {
 	visibility: visible;
-	font-family: $SharpThin;
+	font-family: $SharpLight;
 }
 
 ul#head {
@@ -392,11 +405,11 @@ ul#head li:nth-child(3), ul#head li:nth-child(4), ul#head li:nth-child(5), ul#he
 }
 
 ul#mid-head li:nth-child(1), ul#mid-head li:nth-child(3) {
-	margin-bottom: $margin-bottom-inner;
+	margin-bottom: 4vh;
 }
 
 ul#mid-head li:nth-child(2){
-	margin-bottom: 1vh;
+	margin-bottom: 2vh;
 }
 
 ul#nojs-mid-head li:nth-child(1), ul#nojs-mid-head li:nth-child(3) {
@@ -574,11 +587,11 @@ video {
 	}
 	div#tags {
 		display: block;
-		margin-top: 6vh;
+		margin-top: 4vh;
 	}
 	div#tools {
 		display: block;
-		margin-top: 3vh;
+		margin-top: 2vh;
 	}
 	div#tags2 {
 		display: none;
@@ -587,6 +600,7 @@ video {
 		display: none;
 	}
 	div#image-container {
+		font-family: $SharpLight;
 		float: right;
 		width: 46vw;
 	}
