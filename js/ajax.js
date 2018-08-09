@@ -64,7 +64,7 @@ if (window.XMLHttpRequest) {
 		myfirstRequest = new ActiveXObject("Microsoft.XMLHTTP");
 	}
 
-myfirstRequest.open('GET', 'https://www.typerror.altervista.org/js/data.json');
+myfirstRequest.open('GET', 'https://www.andreazangheri.it/js/data.json');
 /*
 divMidHead.classList.remove('hide');
 workList.classList.remove('hide');
@@ -98,7 +98,7 @@ Handlebars.registerHelper('random', function(context, options){
 /* === ME === */
 			
 var meEvento = function meEvento(){
-    $.get('https://www.typerror.altervista.org/js/data.json');
+    $.get('https://www.andreazangheri.it/js/data.json');
 	$("#mid-head").empty();
 	$("#works").empty();
 	$("#works-ajax").empty();
@@ -111,7 +111,7 @@ var meEvento = function meEvento(){
 		myRequest = new ActiveXObject("Microsoft.XMLHTTP");
 	}
 			   
-	myRequest.open('GET', 'https://www.typerror.altervista.org/js/data.json');		
+	myRequest.open('GET', 'https://www.andreazangheri.it/js/data.json');		
 	
 	myRequest.onerror = function(){
 	console.log("Connection error");
@@ -174,7 +174,7 @@ Handlebars.registerHelper('encode', function(context){
 	chiama.classList.add('hide');
 	scrivi.classList.add('hide');
 	contatti.classList.add('hide');
-    $.get('https://www.typerror.altervista.org/js/data.json');
+    $.get('https://www.andreazangheri.it/js/data.json');
 	$("#mid-head").empty();
 	$("#works").empty();
 	$("#works-ajax").empty();
@@ -196,7 +196,7 @@ Handlebars.registerHelper('encode', function(context){
 		xhttp = new ActiveXObject("Microsoft.XMLHTTP");
 	}
 	
-	xhttp.open("GET", "https://www.typerror.altervista.org/js/data.json");
+	xhttp.open("GET", "https://www.andreazangheri.it/js/data.json");
 				
 	xhttp.onerror = function(){
 	console.log("Connection error");
@@ -238,7 +238,7 @@ Handlebars.registerHelper('encode', function(context){
 var lavoriEvento = function lavoriEvento(){
 back.classList.remove("show");
 back.classList.add("hide");
-$.get('https://www.typerror.altervista.org/js/data.json');		
+$.get('https://www.andreazangheri.it/js/data.json');		
 $("#works-ajax").empty();
 $('#meXhttp').prop("onclick", null);
 $('#meXhttp').removeAttr("onclick");
@@ -260,7 +260,7 @@ if (window.XMLHttpRequest) {
 } else {
 	xhttp = new ActiveXObject("Microsoft.XMLHTTP");
 }
-	xhttp.open("GET", "https://www.typerror.altervista.org/js/data.json");		
+	xhttp.open("GET", "https://www.andreazangheri.it/js/data.json");		
 	
 	xhttp.onerror = function(){
 	console.log("Connection error");
