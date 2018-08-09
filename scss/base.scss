@@ -7,17 +7,17 @@
 @import 'lightbox';
 
 /*@include font-face(Ogg,  "../font/OggRoman");*/
-@include font-face(SharpThin, "../font/SharpGrotesk-Thin20");
-@include font-face(SharpLight, "../font/SharpGrotesk-Light20");
-@include font-face(SharpReg, "../font/SharpGrotesk-Book20");
-@include font-face(SharpMed, "../font/SharpGrotesk-Medium20");
+@include font-face(STSGThin, "../font/STSG-Thin20");
+@include font-face(STSGLight, "../font/STSG-Light20");
+@include font-face(STSGBook, "../font/STSG-Book20");
+@include font-face(STSGMedium, "../font/STSG-Medium20");
 
 /* === MAIN ==== */
 
-$SharpThin: 'SharpThin', sans-serif;
-$SharpLight: 'SharpLight', sans-serif;
-$SharpRegular: 'SharpReg', sans-serif;
-$SharpMedium: 'SharpMed', sans-serif;
+$STSGThin: 'STSGThin', sans-serif;
+$STSGLight: 'STSGLight', sans-serif;
+$STSGBook: 'STSGBook', sans-serif;
+$STSGMedium: 'STSGMedium', sans-serif;
 
 /* === Primary Colours === */
 
@@ -58,7 +58,7 @@ a {
 	background-color: $light;
     border-radius: 12px;
 	color: $dark;
-	font-family: $SharpLight;
+	font-family: $STSGLight;
 	text-decoration: none;
 	visibility: visible;
 }
@@ -69,7 +69,7 @@ div a:hover, footer a:hover {
 }*/
 
 body {
-	font-family: $SharpMedium;
+	font-family: $STSGMedium;
 	line-height: 1.5em;
 	width: 100%;
     //height: 100%;
@@ -183,7 +183,7 @@ footer {
 }
 
 footer a, .small {
-	font-family: $SharpLight;
+	font-family: $STSGLight;
 	font-size: 0.8em;
 }
 
@@ -193,12 +193,12 @@ footer #right {
 }
 
 .wf-loading * {
-	//cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="60" style="font-family: SharpGrotesk-Thin20; font-size: 30px;"><text y="22">&#8593;</text></svg>'), auto;
+	//cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="60" style="font-family: STSG-Thin20; font-size: 30px;"><text y="22">&#8593;</text></svg>'), auto;
 	visibility: hidden;
 }
 
 .wf-active *, .wf-inactive * {
-	//cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="60" style="font-family: SharpGrotesk-Thin20; font-size: 30px;"><text y="22">&#8593;</text></svg>'), auto;
+	//cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="60" style="font-family: STSG-Thin20; font-size: 30px;"><text y="22">&#8593;</text></svg>'), auto;
 	animation: fade-in 0.6s ease-in-out;
 	visibility: visible;
 }
@@ -269,7 +269,7 @@ li h1 {
 }
 /*
 li#back {
-	font-family: 'SharpLight', sans-serif;
+	font-family: 'STSGLight', sans-serif;
 	//font-size: 1.2em;
 }*/
 
@@ -278,7 +278,7 @@ li#back:hover {
 }
 
 li#back span {
-	font-family: $SharpLight;
+	font-family: $STSGLight;
 	padding: 0 6px;
 	margin-right: 6px;
 	background: #fff;
@@ -286,7 +286,7 @@ li#back span {
 }
 
 .light {
-	font-family: 'SharpLight', sans-serif;
+	font-family: 'STSGLight', sans-serif;
 }
 
 #logo {
@@ -301,7 +301,7 @@ li#back span {
 
 .wf-active .light, .wf-inactive .light {
 	visibility: visible;
-	font-family: $SharpMedium;
+	font-family: $STSGMedium;
 }
 
 li.work-list {
@@ -321,7 +321,7 @@ li.work-list {
 }
 
 noscript {
-	font-family: 'SharpLight', sans-serif;
+	font-family: 'STSGLight', sans-serif;
 }
 
 .portfolio-immagine {
@@ -373,7 +373,7 @@ noscript {
 }
 
 .thin {
-	font-family: 'SharpThin', sans-serif;
+	font-family: 'STSGThin', sans-serif;
 }
 
 .wf-loading .thin {
@@ -382,7 +382,7 @@ noscript {
 
 .wf-active .thin, .wf-inactive .thin {
 	visibility: visible;
-	font-family: $SharpLight;
+	font-family: $STSGLight;
 }
 
 ul#head {
@@ -600,7 +600,7 @@ video {
 		display: none;
 	}
 	div#image-container {
-		font-family: $SharpLight;
+		font-family: $STSGLight;
 		float: right;
 		width: 46vw;
 	}

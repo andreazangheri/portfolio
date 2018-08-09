@@ -272,17 +272,17 @@ html.lb-disable-scrolling {
 
 /*@include font-face(Ogg,  "../font/OggRoman");*/
 @font-face {
-  font-family: "SharpThin";
-  src: url("../font/SharpGrotesk-Thin20.eot?") format("eot"), url("../font/SharpGrotesk-Thin20.woff2") format("woff2"), url("../font/SharpGrotesk-Thin20.woff") format("woff"), url("../font/SharpGrotesk-Thin20.ttf") format("truetype"), url("../font/SharpGrotesk-Thin20.svg#SharpThin") format("svg"); }
+  font-family: "STSGThin";
+  src: url("../font/STSG-Thin20.eot?") format("eot"), url("../font/STSG-Thin20.woff2") format("woff2"), url("../font/STSG-Thin20.woff") format("woff"), url("../font/STSG-Thin20.ttf") format("truetype"), url("../font/STSG-Thin20.svg#STSGThin") format("svg"); }
 @font-face {
-  font-family: "SharpLight";
-  src: url("../font/SharpGrotesk-Light20.eot?") format("eot"), url("../font/SharpGrotesk-Light20.woff2") format("woff2"), url("../font/SharpGrotesk-Light20.woff") format("woff"), url("../font/SharpGrotesk-Light20.ttf") format("truetype"), url("../font/SharpGrotesk-Light20.svg#SharpLight") format("svg"); }
+  font-family: "STSGLight";
+  src: url("../font/STSG-Light20.eot?") format("eot"), url("../font/STSG-Light20.woff2") format("woff2"), url("../font/STSG-Light20.woff") format("woff"), url("../font/STSG-Light20.ttf") format("truetype"), url("../font/STSG-Light20.svg#STSGLight") format("svg"); }
 @font-face {
-  font-family: "SharpReg";
-  src: url("../font/SharpGrotesk-Book20.eot?") format("eot"), url("../font/SharpGrotesk-Book20.woff2") format("woff2"), url("../font/SharpGrotesk-Book20.woff") format("woff"), url("../font/SharpGrotesk-Book20.ttf") format("truetype"), url("../font/SharpGrotesk-Book20.svg#SharpReg") format("svg"); }
+  font-family: "STSGBook";
+  src: url("../font/STSG-Book20.eot?") format("eot"), url("../font/STSG-Book20.woff2") format("woff2"), url("../font/STSG-Book20.woff") format("woff"), url("../font/STSG-Book20.ttf") format("truetype"), url("../font/STSG-Book20.svg#STSGBook") format("svg"); }
 @font-face {
-  font-family: "SharpMed";
-  src: url("../font/SharpGrotesk-Medium20.eot?") format("eot"), url("../font/SharpGrotesk-Medium20.woff2") format("woff2"), url("../font/SharpGrotesk-Medium20.woff") format("woff"), url("../font/SharpGrotesk-Medium20.ttf") format("truetype"), url("../font/SharpGrotesk-Medium20.svg#SharpMed") format("svg"); }
+  font-family: "STSGMedium";
+  src: url("../font/STSG-Medium20.eot?") format("eot"), url("../font/STSG-Medium20.woff2") format("woff2"), url("../font/STSG-Medium20.woff") format("woff"), url("../font/STSG-Medium20.ttf") format("truetype"), url("../font/STSG-Medium20.svg#STSGMedium") format("svg"); }
 /* === MAIN ==== */
 /* === Primary Colours === */
 /* === Layout ===*/
@@ -295,7 +295,7 @@ a {
   background-color: #fff;
   border-radius: 12px;
   color: #000;
-  font-family: "SharpLight", sans-serif;
+  font-family: "STSGLight", sans-serif;
   text-decoration: none;
   visibility: visible; }
 
@@ -305,7 +305,7 @@ div a:hover, footer a:hover {
 	transition: vibration 0.2s ease-in;
 }*/
 body {
-  font-family: "SharpMed", sans-serif;
+  font-family: "STSGMedium", sans-serif;
   line-height: 1.5em;
   width: 100%;
   position: absolute;
@@ -398,7 +398,7 @@ footer {
   padding-bottom: 3vh; }
 
 footer a, .small {
-  font-family: "SharpLight", sans-serif;
+  font-family: "STSGLight", sans-serif;
   font-size: 0.8em; }
 
 footer #right {
@@ -492,21 +492,21 @@ li h1 {
 
 /*
 li#back {
-	font-family: 'SharpLight', sans-serif;
+	font-family: 'STSGLight', sans-serif;
 	//font-size: 1.2em;
 }*/
 li#back:hover {
   cursor: default; }
 
 li#back span {
-  font-family: "SharpLight", sans-serif;
+  font-family: "STSGLight", sans-serif;
   padding: 0 6px;
   margin-right: 6px;
   background: #fff;
   border-radius: 12px; }
 
 .light {
-  font-family: 'SharpLight', sans-serif; }
+  font-family: 'STSGLight', sans-serif; }
 
 #logo {
   width: 60px;
@@ -518,7 +518,7 @@ li#back span {
 
 .wf-active .light, .wf-inactive .light {
   visibility: visible;
-  font-family: "SharpMed", sans-serif; }
+  font-family: "STSGMedium", sans-serif; }
 
 li.work-list {
   margin-bottom: 4vh; }
@@ -534,7 +534,7 @@ li.work-list {
   top: 62vh; }
 
 noscript {
-  font-family: 'SharpLight', sans-serif; }
+  font-family: 'STSGLight', sans-serif; }
 
 .portfolio-immagine {
   width: 100%;
@@ -576,14 +576,14 @@ noscript {
   filter: invert(1); }
 
 .thin {
-  font-family: 'SharpThin', sans-serif; }
+  font-family: 'STSGThin', sans-serif; }
 
 .wf-loading .thin {
   visibility: hidden; }
 
 .wf-active .thin, .wf-inactive .thin {
   visibility: visible;
-  font-family: "SharpLight", sans-serif; }
+  font-family: "STSGLight", sans-serif; }
 
 ul#head {
   display: flex;
@@ -745,7 +745,7 @@ video {
     display: none; }
 
   div#image-container {
-    font-family: "SharpLight", sans-serif;
+    font-family: "STSGLight", sans-serif;
     float: right;
     width: 46vw; }
 
